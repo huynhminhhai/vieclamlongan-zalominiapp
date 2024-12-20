@@ -1,4 +1,5 @@
-import { Banner, SearchInputMap } from "types";
+import { Banner, SearchInputMap, Utinity } from "types";
+import { Icon } from "@iconify/react";
 
 export const SEARCHINPUT: SearchInputMap = {
     '1': {
@@ -41,14 +42,6 @@ export const BANNERURL: Banner[] = [
 
 export const COMPANY: {imgurl: string, name: string}[] = [
     {
-        imgurl: 'http://vieclamlongan.vn/img/SVL/imgcompany.png',
-        name: 'CÔNG TY TNHH QUICKPACK VIỆT NAM'
-    },
-    {
-        imgurl: 'http://vieclamlongan.vn/img/SVL/imgcompany.png',
-        name: 'CÔNG TY TNHH IN ĐỈNH CAO'
-    },
-    {
         imgurl: 'http://quantri.vieclamlongan.vn/images/20240122112215_cty%20ba%20hu%C3%A2n.jpg',
         name: 'CÔNG TY CỔ PHẦN BA HUÂN'
     },
@@ -62,6 +55,42 @@ export const COMPANY: {imgurl: string, name: string}[] = [
     },
     {
         imgurl: 'http://vieclamlongan.vn/img/SVL/imgcompany.png',
+        name: 'CÔNG TY TNHH QUICKPACK VIỆT NAM'
+    },
+    {
+        imgurl: 'http://vieclamlongan.vn/img/SVL/imgcompany.png',
+        name: 'CÔNG TY TNHH IN ĐỈNH CAO'
+    },
+    {
+        imgurl: 'http://vieclamlongan.vn/img/SVL/imgcompany.png',
         name: 'CÔNG TY TNHH FASWELL VIỆT NAM'
     },
 ]
+
+export const APP_UTINITIES: Array<Utinity> = [
+    {
+        key: "job-list",
+        label: "Việc làm tốt nhất",
+        iconSrc: 'ic:round-business-center',
+        path: "/job-list/1",
+    },
+    {
+        key: "job-list",
+        label: "Việc làm theo Nghị định 70/2023",
+        iconSrc: 'ic:round-business-center',
+        path: "/job-list/1",
+    },
+    {
+        key: "job-list",
+        label: "Doanh Nghiệp Cần Tuyển",
+        iconSrc: 'ion:business',
+        path: "/job-list/1",
+    },
+    {
+        key: "job-list",
+        label: "Người lao động tìm việc",
+        iconSrc: 'ic:baseline-people',
+        path: "/job-list/1",
+    },
+    
+];

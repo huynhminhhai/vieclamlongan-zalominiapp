@@ -22,3 +22,13 @@ export type Utinity = {
     path?: string;
     link?: string;
 };
+
+export type News = {
+    imgurl: string,
+    title: string,
+    desc: string,
+    view: number,
+    createAt: string,
+    type: 1,
+    author: string
+}

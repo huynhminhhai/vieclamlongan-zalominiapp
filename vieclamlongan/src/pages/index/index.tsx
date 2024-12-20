@@ -6,6 +6,7 @@ import { Banner } from "./banner";
 import { Divider } from "components/divider";
 import { CompanyList } from "./companyList";
 import { UtinitiesSection } from "./utinities";
+import { NewsSection } from "./newsSection";
 
 const HomePage: React.FunctionComponent = () => {
     return (
@@ -18,6 +19,8 @@ const HomePage: React.FunctionComponent = () => {
             <CompanyList />
             <Divider />
             <UtinitiesSection />
+            <Divider />
+            <NewsSection />
         </Box>
       </Page>
     );

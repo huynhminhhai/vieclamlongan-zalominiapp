@@ -201,3 +201,18 @@ body {
 .news-item .zaui-text-xxSmall {
   line-height: 18px;
 }
+
+/**
+* BOTTOM NAVIGATION
+*/ 
+
+.zaui-bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+#footer .zaui-bottom-navigation-content {
+  padding-block: 12px;
+  height: fit-content;
+}

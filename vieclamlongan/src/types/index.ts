@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 export type SearchInputItem = {
     url: string;
@@ -31,4 +31,18 @@ export type News = {
     createAt: string,
     type: 1,
     author: string
+}
+
+export type Video = {
+    title: string,
+    createAt: string,
+    type: number,
+    iframe: string,
+    imgUrl: string
+}
+
+export interface MenuItem {
+    label: string;
+    icon: ReactNode;
+    activeIcon?: ReactNode;
 }

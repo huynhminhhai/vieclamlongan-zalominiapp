@@ -1,4 +1,4 @@
-import { Banner, News, SearchInputMap, Utinity } from "types";
+import { Banner, News, SearchInputMap, Utinity, Video } from "types";
 import { Icon } from "@iconify/react";
 
 export const SEARCHINPUT: SearchInputMap = {
@@ -129,3 +129,34 @@ export const NEWS_LIST: News[] = [
 export const NEWS_TYPE = {
     1: "Tin tức"
 }
+
+export const VIDEO_LIST: Video[] = [
+    {
+        title: 'Tăng cường tư vấn, giới thiệu việc làm cho người lao động',
+        createAt: '02/07/2024',
+        iframe: '<iframe width="711" height="500" src="https://www.youtube.com/embed/82JhMLtjazM" title="Tăng cường tư vấn, giới thiệu việc làm cho người lao động | LONG AN TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+        type: 1,
+        imgUrl: 'http://vieclamlongan.vn/Content/images/video.png'
+    },
+    {
+        title: 'ĐẠI HỌC KHÔNG PHẢI LÀ CON ĐƯỜNG DUY NHẤT: "LÀM VIỆC Ở NƯỚC NGOÀI -ĐI LÀM THUÊ, VỀ LÀM CHỦ"',
+        createAt: '21/07/2024',
+        iframe: '<iframe width="711" height="500" src="https://www.youtube.com/embed/jJcdtiB5fHI" title="ĐẠI HỌC KHÔNG PHẢI LÀ CON ĐƯỜNG DUY NHẤT: &quot;LÀM VIỆC Ở NƯỚC NGOÀI -ĐI LÀM THUÊ, VỀ LÀM CHỦ&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+        type: 1,
+        imgUrl: 'http://vieclamlongan.vn/Content/images/video.png'
+    },
+    {
+        title: 'Hưởng trợ cấp thất nghiệp có được MIỄN PHÍ học nghề đào tạo thường xuyên không?',
+        createAt: '29/08/2024',
+        iframe: '<iframe width="711" height="500" src="https://www.youtube.com/embed/zfk6Wc-yiRs" title="hưởng trợ cấp thất nghiệp có được MIỄN PHÍ học nghề đào tạo thường xuyên  không? #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+        type: 1,
+        imgUrl: 'http://vieclamlongan.vn/Content/images/video.png'
+    },
+    {
+        title: 'Bản tin các nghề thường xuyên được đào tạo tại Trung tâm Dịch vụ việc làm Long An',
+        createAt: '26/09/2024',
+        iframe: '<iframe width="711" height="500" src="https://www.youtube.com/embed/dYAbSh-X2d4" title="CÁC NGHỀ THƯỜNG XUYÊN ĐƯỢC ĐÀO TẠO TẠI TRUNG TÂM DỊCH VỤ VIỆC LÀM LONG AN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
+        type: 1,
+        imgUrl: 'http://vieclamlongan.vn/Content/images/video.png'
+    },
+]

@@ -11,13 +11,15 @@ export const Inquiry: FC = () => {
 
     const { Option } = Select;
     return (
-        <Box p={4} className="bg-white">
-            <Input.Search
-                className="input-search"
-                onFocus={() => navigate(SEARCHINPUT[optionSeach].url)}
-                placeholder={SEARCHINPUT[optionSeach].placeholder}
-            />
-            <div className="mt-3 w-[200px]">
+        <div className="bg-white p-4 flex flex-col gap-2">
+            <div className="w-[100%]">
+                <Input.Search
+                    className="input-search"
+                    onFocus={() => navigate(SEARCHINPUT[optionSeach].url)}
+                    placeholder={SEARCHINPUT[optionSeach].placeholder}
+                />
+            </div>
+            <div className="w-[100%]">
                 <Select
                     defaultValue="1"
                     onChange={(value:string) => setOptionSearch(value)}
@@ -27,6 +29,6 @@ export const Inquiry: FC = () => {
                     <Option value="3" title="Nghị định 70" />
                 </Select>
             </div>
-        </Box>
+        </div>
     );
 };

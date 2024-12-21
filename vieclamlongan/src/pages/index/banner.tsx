@@ -8,7 +8,7 @@ export const Banner: FC = () => {
 
   return (
     <Box className="bg-white banner-custom">
-      <Swiper autoplay duration={6000} loop >
+      <Swiper autoplay duration={8000} loop >
         {
           BANNERURL.map((item, index) => (
             <Swiper.Slide key={index}>

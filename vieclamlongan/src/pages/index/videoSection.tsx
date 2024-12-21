@@ -8,7 +8,7 @@ import { COMPANY, VIDEO_LIST } from "constants";
 export const VideoSection: FC = () => {
 
     return (
-        <Section title="Video" padding="title-only">
+        <Section title="Video" padding="title-only" seemore={true} seemoreUrl="/danh-sach-video/1">
             <Swiper
                 spaceBetween={20}
                 slidesPerView={1.15}

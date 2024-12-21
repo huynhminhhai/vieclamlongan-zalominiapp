@@ -1,17 +1,16 @@
 import { Banner, News, SearchInputMap, Utinity, Video } from "types";
-import { Icon } from "@iconify/react";
 
 export const SEARCHINPUT: SearchInputMap = {
     '1': {
-        url: '/search-1',
+        url: '/search-hstd',
         placeholder: 'Tuyển dụng của công ty'
     },
     '2': {
-        url: '/search-2',
+        url: '/search-hstv',
         placeholder: 'Tìm kiếm hồ sơ tìm việc'
     }, 
     '3': {
-        url: '/search-3',
+        url: '/search-content',
         placeholder: 'Tìm kiếm theo nghị định 70'
     }
 }
@@ -96,6 +95,15 @@ export const APP_UTINITIES: Array<Utinity> = [
 ];
 
 export const NEWS_LIST: News[] = [
+    {
+        imgurl: 'http://quantri.vieclamlongan.vn/images/20241221082434_Th%C3%B4ng%20b%C3%A1o.png',
+        title: 'Tuyển chọn lao động đi làm việc tại Autralia trong ngành nông nghiệp (VLMA)',
+        desc: 'Tuyển chọn lao động đi làm việc tại Autralia trong ngành nông nghiệp (VLMA), Ngành nghề: Chế biến thịt',
+        view: 1,
+        createAt: '20/12/2024',
+        type: 1,
+        author: "Phòng Đào tạo - Giới thiệu việc làm"
+    },
     {
         imgurl: 'http://quantri.vieclamlongan.vn/images/20241220112632_a.jpg',
         title: 'Tư vấn việc làm cho hạ sĩ quan và binh sĩ chuẩn bị xuất ngũ',

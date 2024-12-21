@@ -1,7 +1,7 @@
 import { SEARCHINPUT } from "constants";
 import React, { useState } from "react";
 import { FC } from "react";
-import { Box, Input, useNavigate, Select, Grid } from "zmp-ui";
+import { Input, useNavigate, Select } from "zmp-ui";
 
 export const Inquiry: FC = () => {
 

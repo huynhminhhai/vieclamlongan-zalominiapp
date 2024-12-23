@@ -3,7 +3,7 @@ import { Divider4 } from "components/divider4";
 import React, { FunctionComponent } from "react";
 import { Box, Text } from "zmp-ui";
 
-const JobSearchItem: FunctionComponent = () => {
+const JobNd70SearchItem: FunctionComponent = () => {
 
     return (
         <>
@@ -26,6 +26,7 @@ const JobSearchItem: FunctionComponent = () => {
                             <Icon className="mt-[1px]" icon='weui:location-filled' />
                             <Text className="flex-1" size="xSmall">Nhà xưởng E1, lô H, KCN Tân Kim, KP Tân Phước, TT Cần Giuộc</Text>
                         </div>
+                        <Text className="flex-1 mt-1 text-[#5d5d5d]" size="xSmall">TD82324202412211157</Text>
                     </Box>
                 </div>
             </Box>
@@ -34,4 +35,4 @@ const JobSearchItem: FunctionComponent = () => {
     );
 };
 
-export default JobSearchItem;
+export default JobNd70SearchItem;

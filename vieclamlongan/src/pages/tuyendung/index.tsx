@@ -3,7 +3,7 @@ import { CompanyList } from "pages/index/companyList";
 import { Inquiry } from "pages/index/inquiry";
 import React from "react";
 import { Box, Header, Page } from "zmp-ui";
-import { TuyendungSection } from "./TuyendungSection";
+import { JobSection } from "../../components/job/JobSection";
 import { NewsSection } from "pages/index/newsSection";
 
 const TuyendungPage: React.FunctionComponent = () => {
@@ -16,7 +16,7 @@ const TuyendungPage: React.FunctionComponent = () => {
         <Divider />
         <CompanyList />
         <Divider />
-        <TuyendungSection />
+        <JobSection />
         <Divider />
         <NewsSection />
       </Box>

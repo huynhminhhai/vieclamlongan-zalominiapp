@@ -1,11 +1,9 @@
 import { Divider } from "components/divider";
-import { JobSearchList } from "components/search";
 import { JobSearchSection } from "components/search/JobSearchSection";
-import TotalResult from "components/search/TotalResult";
 import { CompanyList } from "pages/index/companyList";
 import { Inquiry } from "pages/index/inquiry";
 import React from "react";
-import { Box, Header, Page, Text } from "zmp-ui";
+import { Box, Header, Page } from "zmp-ui";
 
 const SearchHstdPage: React.FunctionComponent = () => {
 

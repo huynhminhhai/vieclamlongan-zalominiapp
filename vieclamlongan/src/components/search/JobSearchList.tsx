@@ -2,22 +2,20 @@ import React, { FunctionComponent } from "react";
 import JobSearchItem from "./JobSearchItem";
 import Seemore from "./Seemore";
 
-const JobSearchList: FunctionComponent<{nd70: boolean}> = props => {
-
-    const {nd70} = props
+const JobSearchList: FunctionComponent = () => {
 
     return (
         <div className="px-4">
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
-            <JobSearchItem nd70={nd70} />
+            <JobSearchItem />
+            <JobSearchItem />
+            <JobSearchItem />
+            <JobSearchItem />
+            <JobSearchItem />
+            <JobSearchItem />
+            <JobSearchItem />
+            <JobSearchItem />
+            <JobSearchItem />
+            <JobSearchItem />
             <Seemore />
         </div>
     )

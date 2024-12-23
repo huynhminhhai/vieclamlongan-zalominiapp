@@ -3,9 +3,9 @@ import { Divider4 } from "components/divider4";
 import React, { FunctionComponent } from "react";
 import { Box, Text } from "zmp-ui";
 
-const TuyendungItem: FunctionComponent<{ nd70: boolean }> = props => {
+const JobItem: FunctionComponent<{detail: boolean }> = props => {
 
-    const { nd70 } = props
+    const { detail } = props
 
     return (
         <>
@@ -24,16 +24,18 @@ const TuyendungItem: FunctionComponent<{ nd70: boolean }> = props => {
                             className="text-[#005AFF] mb-2"
                             onClick={() => console.log('company detail')}
                         >CÔNG TY TNHH PRO ALLIANCE COSME</Text>
-                        {
-                            nd70 ?
-                                <Text className="text-[#5d5d5d]" bold size="xSmall">Nhân viên kinh doanh</Text>
-                                :
-                                <Text className="text-[#5d5d5d]" bold size="xSmall">Trên 20 triệu</Text>
-                        }
+                        <Text className="text-[#5d5d5d]" bold size="xSmall">Trên 20 triệu</Text>
                         <div className="flex items-start gap-1 text-[#5d5d5d]">
                             <Icon className="mt-[1px]" icon='weui:location-filled' />
                             <Text className="flex-1" size="xSmall">Nhà xưởng E1, lô H, KCN Tân Kim, KP Tân Phước, TT Cần Giuộc</Text>
                         </div>
+                        {
+                            detail &&
+                            <div className="flex items-start gap-1 text-[#5d5d5d]">
+                                <Icon className="mt-[1px]" icon='mingcute:time-fill' />
+                                <Text className="flex-1" size="xSmall">Hạn nộp: 28/02/2025</Text>
+                            </div>
+                        }
                     </Box>
                 </div>
             </Box>
@@ -42,4 +44,4 @@ const TuyendungItem: FunctionComponent<{ nd70: boolean }> = props => {
     );
 };
 
-export default TuyendungItem;
+export default JobItem;

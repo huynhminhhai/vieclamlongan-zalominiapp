@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 import { Icon } from "@iconify/react";
 import React, { FunctionComponent } from "react";
-import { Text } from "zmp-ui";
+import { Text, useNavigate } from "zmp-ui";
 
 export interface UtinityItemProps {
     label?: string;
@@ -14,12 +14,14 @@ export interface UtinityItemProps {
 }
 
 const UtinityItem: FunctionComponent<UtinityItemProps> = props => {
-    const { iconSrc, label } = props;
+    const { iconSrc, label, path } = props;
+
+    const navigate = useNavigate()
 
     return (
         <div
             className="flex flex-col items-center gap-3"
-            onClick={() => console.log(123)}
+            onClick={() => navigate(path || '/')}
         >
             {iconSrc && (
                 <div className="rounded-2xl bg-icon_bg relative w-[100%] h-[95px] inline-flex justify-center items-center">

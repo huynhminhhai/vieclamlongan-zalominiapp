@@ -10,7 +10,7 @@ const DanhsachtuyendungPage: React.FunctionComponent = () => {
     <Page className="relative flex-1 flex flex-col bg-white pb-[66px]">
       <Header title="Danh sách tuyển dụng" />
       <Box className="flex-1 overflow-auto">
-        <Inquiry/>
+        <Inquiry option="1"/>
         <Divider />
         <DanhsachSection />
       </Box>

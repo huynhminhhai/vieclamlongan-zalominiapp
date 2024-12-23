@@ -17,7 +17,7 @@ export const CvSection: FC = () => {
                 </p>
                 <button
                     onClick={() => console.log(123)}
-                    className="text-[18px] font-medium text-white bg-[#ff7d55] px-6 py-3 rounded-lg leading-[1]"
+                    className="text-[18px] font-medium text-white bg-[#ff7d55] px-6 py-3 rounded-lg"
                 >
                     Tạo cv ngay
                 </button>

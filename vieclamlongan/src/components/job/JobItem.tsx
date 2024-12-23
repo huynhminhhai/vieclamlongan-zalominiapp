@@ -1,11 +1,13 @@
 import { Icon } from "@iconify/react";
 import { Divider4 } from "components/divider4";
 import React, { FunctionComponent } from "react";
-import { Box, Text } from "zmp-ui";
+import { Box, Text, useNavigate } from "zmp-ui";
 
 const JobItem: FunctionComponent<{detail: boolean }> = props => {
 
     const { detail } = props
+
+    const navigate = useNavigate()
 
     return (
         <>
@@ -17,12 +19,12 @@ const JobItem: FunctionComponent<{detail: boolean }> = props => {
                     <Box className="flex-1">
                         <Text.Title
                             className="mb-1"
-                            onClick={() => console.log('job detail')}
+                            onClick={() => navigate('/detail-job')}
                         >NV kinh doanh - chuyên thị trường quốc tế</Text.Title>
                         <Text
                             size="small"
                             className="text-[#005AFF] mb-2"
-                            onClick={() => console.log('company detail')}
+                            onClick={() => console.log('detail comany')}
                         >CÔNG TY TNHH PRO ALLIANCE COSME</Text>
                         <Text className="text-[#5d5d5d]" bold size="xSmall">Trên 20 triệu</Text>
                         <div className="flex items-start gap-1 text-[#5d5d5d]">

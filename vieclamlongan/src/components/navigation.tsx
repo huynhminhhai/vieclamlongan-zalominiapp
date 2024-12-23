@@ -26,10 +26,10 @@ const tabs: Record<string, MenuItem> = {
 
 export type TabKeys = keyof typeof tabs;
 
-export const NO_BOTTOM_NAVIGATION_PAGES = ["/search", "/category", "/result"];
+export const NO_BOTTOM_NAVIGATION_PAGES = ["/detail-job", "/detail-job-70"];
 
 export const Navigation: FC = () => {
-  //   const keyboardVisible = useVirtualKeyboardVisible();
+    // const keyboardVisible = useVirtualKeyboardVisible();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -39,9 +39,9 @@ export const Navigation: FC = () => {
     return NO_BOTTOM_NAVIGATION_PAGES.includes(location.pathname);
   }, [location]);
 
-  //   if (noBottomNav || keyboardVisible) {
-  //     return <></>;
-  //   }
+    if (noBottomNav) {
+      return <></>;
+    }
 
   return (
     <>

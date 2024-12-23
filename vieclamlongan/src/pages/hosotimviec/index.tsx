@@ -11,7 +11,7 @@ const HosotimviecPage: React.FunctionComponent = () => {
     <Page className="relative flex-1 flex flex-col bg-white pb-[66px]">
       <Header title="Hồ sơ tìm việc" />
       <Box className="flex-1 overflow-auto">
-        <Inquiry/>
+        <Inquiry option="2"/>
         <Divider />
         <CompanyList />
         <EmploySection />

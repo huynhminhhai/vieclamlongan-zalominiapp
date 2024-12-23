@@ -1,11 +1,13 @@
 import { Icon } from "@iconify/react";
 import { Divider4 } from "components/divider4";
 import React, { FunctionComponent } from "react";
-import { Box, Text } from "zmp-ui";
+import { Box, Text, useNavigate } from "zmp-ui";
 
 const JobNd70Item: FunctionComponent<{detail: boolean }> = props => {
 
     const { detail } = props
+
+    const navigate = useNavigate()
 
     return (
         <>
@@ -17,7 +19,7 @@ const JobNd70Item: FunctionComponent<{detail: boolean }> = props => {
                     <Box className="flex-1">
                         <Text.Title
                             className="mb-1"
-                            onClick={() => console.log('job detail')}
+                            onClick={() => navigate('/detail-job-70')}
                         >NV kinh doanh - chuyên thị trường quốc tế</Text.Title>
                         <Text
                             size="small"

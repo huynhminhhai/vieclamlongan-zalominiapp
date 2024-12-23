@@ -71,25 +71,25 @@ export const APP_UTINITIES: Array<Utinity> = [
         key: "job-list",
         label: "Việc làm tốt nhất",
         iconSrc: 'ic:round-business-center',
-        path: "/job-list/1",
+        path: "/danh-sach-tuyen-dung/?category=True-1",
     },
     {
         key: "job-list-70",
         label: "Việc làm theo Nghị định 70/2023",
         iconSrc: 'ic:round-business-center',
-        path: "/job-list-70/1",
+        path: "/danh-sach-tuyen-dung-70",
     },
     {
         key: "job-list-business",
         label: "Doanh Nghiệp Cần Tuyển",
         iconSrc: 'ion:business',
-        path: "/job-list-business/1",
+        path: "/danh-sach-tuyen-dung/?category=False-1",
     },
     {
         key: "job-list-employee",
         label: "Người lao động tìm việc",
         iconSrc: 'ic:baseline-people',
-        path: "/job-list-employee/1",
+        path: "/ho-so-tim-viec",
     },
     
 ];

@@ -6,7 +6,7 @@ import React, { FC } from "react"
 export const UtinitiesSection: FC = () => {
 
     return (
-        <Section title="Danh mục" padding="title-only">
+        <Section title="Danh sách" padding="title-only">
             <Utinities utinities={APP_UTINITIES} />
         </Section>
     )

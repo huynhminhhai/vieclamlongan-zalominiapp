@@ -1,5 +1,6 @@
 import { Divider } from "components/divider";
 import { JobSearchList } from "components/search";
+import { JobSearchSection } from "components/search/JobSearchSection";
 import TotalResult from "components/search/TotalResult";
 import { CompanyList } from "pages/index/companyList";
 import { Inquiry } from "pages/index/inquiry";
@@ -15,8 +16,7 @@ const SearchHstdPage: React.FunctionComponent = () => {
                 <Inquiry option="1" autoFocus />
                 <Divider />
                 <CompanyList />
-                <TotalResult />
-                <JobSearchList nd70={false} />
+                <JobSearchSection />
             </Box>
         </Page>
     );

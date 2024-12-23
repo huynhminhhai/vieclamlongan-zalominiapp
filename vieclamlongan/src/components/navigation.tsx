@@ -17,7 +17,7 @@ const tabs: Record<string, MenuItem> = {
     icon: <Icon icon="ic:round-business-center" />,
     activeIcon: <Icon icon="ic:round-business-center" />
   },
-  "/ho-so-tim-viec/1": {
+  "/ho-so-tim-viec": {
     label: "Tìm việc",
     icon: <Icon icon="icon-park-solid:people" />,
     activeIcon: <Icon icon="icon-park-solid:people" />

@@ -1,6 +1,5 @@
 import { Divider } from "components/divider";
-import { JobSearchList } from "components/search";
-import TotalResult from "components/search/TotalResult";
+import { JobSearchSection } from "components/search/JobSearchSection";
 import { CompanyList } from "pages/index/companyList";
 import { Inquiry } from "pages/index/inquiry";
 import React from "react";
@@ -15,8 +14,7 @@ const SearchContentPage: React.FunctionComponent = () => {
                 <Inquiry option="3" autoFocus />
                 <Divider />
                 <CompanyList />
-                <TotalResult />
-                <JobSearchList nd70={true} />
+                <JobSearchSection nd70 />
             </Box>
         </Page>
   );

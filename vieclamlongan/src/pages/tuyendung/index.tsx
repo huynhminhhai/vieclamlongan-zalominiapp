@@ -10,13 +10,14 @@ const TuyendungPage: React.FunctionComponent = () => {
 
   return (
     <Page className="relative flex-1 flex flex-col bg-white pb-[66px]">
-      <Header title="Tìm kiếm hồ sơ tìm việc" />
+      <Header title="Tuyển dụng" />
       <Box className="flex-1 overflow-auto">
         <Inquiry/>
         <Divider />
         <CompanyList />
         <Divider />
         <TuyendungSection />
+        <Divider />
         <NewsSection />
       </Box>
     </Page>

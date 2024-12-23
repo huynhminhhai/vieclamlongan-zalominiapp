@@ -1,14 +1,19 @@
 import { Icon } from "@iconify/react";
 import { Divider4 } from "components/divider4";
 import React, { FunctionComponent } from "react";
-import { Box, Text } from "zmp-ui";
+import { Box, Text, useNavigate } from "zmp-ui";
 
 const EmploySearchItem: FunctionComponent<any> = props => {
+
+    const navigate = useNavigate()
 
     return (
         <>
             <Box py={4}>
-                <div className="flex items-start gap-3">
+                <div
+                    onClick={() => navigate('/detail-employ') }
+                    className="flex items-start gap-3"
+                >
                     <Box width={100} height={100}>
                         <img className="w-[100%] h-[100%] object-contain rounded-lg overflow-hidden" src="http://vieclamlongan.vn/uploads/images/Avata/noimage.jpg" alt="Nguyễn Văn A" />
                     </Box>

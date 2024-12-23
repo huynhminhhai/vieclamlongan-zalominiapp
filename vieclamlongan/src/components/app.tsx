@@ -13,6 +13,7 @@ import DanhsachtuyendungPage from "pages/danhsachtuyendung";
 import Danhsachtuyendung70Page from "pages/danhsachtuyendungnd70";
 import DetailJob from "pages/danhsachtuyendung/detailJob";
 import DetailJob70 from "pages/danhsachtuyendungnd70/detailJob70";
+import DetailEmploy from "pages/hosotimviec/detailEmploy";
 
 const MyApp = () => {
   return (
@@ -32,6 +33,7 @@ const MyApp = () => {
               <Route path="/danh-sach-tuyen-dung-70" element={<Danhsachtuyendung70Page></Danhsachtuyendung70Page>}></Route>
               <Route path="/detail-job" element={<DetailJob></DetailJob>}></Route>
               <Route path="/detail-job-70" element={<DetailJob70></DetailJob70>}></Route>
+              <Route path="/detail-employ" element={<DetailEmploy></DetailEmploy>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

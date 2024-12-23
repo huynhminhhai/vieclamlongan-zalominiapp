@@ -12,7 +12,7 @@ const SearchContentPage: React.FunctionComponent = () => {
     <Page className="relative flex-1 flex flex-col bg-white pb-[66px]">
             <Header title="Tìm kiếm việc ND 70" />
             <Box className="flex-1 overflow-auto">
-                <Inquiry />
+                <Inquiry option="3" />
                 <Divider />
                 <CompanyList />
                 <TotalResult />

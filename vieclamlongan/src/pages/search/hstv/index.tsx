@@ -8,13 +8,11 @@ import { Box, Header, Page } from "zmp-ui";
 
 const SearchHstvPage: React.FunctionComponent = () => {
 
-  console.log('hstv')
-
   return (
     <Page className="relative flex-1 flex flex-col bg-white pb-[66px]">
       <Header title="Tìm kiếm hồ sơ tìm việc" />
       <Box className="flex-1 overflow-auto">
-        <Inquiry />
+        <Inquiry option="2" />
         <Divider />
         <CompanyList />
         <TotalResult />

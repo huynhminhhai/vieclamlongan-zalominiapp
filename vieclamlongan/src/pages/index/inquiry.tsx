@@ -1,27 +1,41 @@
 import { SEARCHINPUT } from "constants";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FC } from "react";
 import { Input, useNavigate, Select } from "zmp-ui";
+import { InputRef } from "zmp-ui/input";
 
-export const Inquiry: FC = () => {
+export const Inquiry: FC<{option?: string}> = (props) => {
 
-    const [optionSeach, setOptionSearch] = useState<string>("1")
+    const {option} = props
+
+    const [optionSeach, setOptionSearch] = useState<string>(option || "1")
 
     const navigate = useNavigate();
 
     const { Option } = Select;
+
+    const inputRef = useRef<InputRef>(null);
+
+    useEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, []);
+    
     return (
         <div className="bg-white p-4 flex flex-col gap-2">
             <div className="w-[100%]">
                 <Input.Search
+                    ref={inputRef}
                     className="input-search"
-                    onFocus={() => navigate(SEARCHINPUT[optionSeach].url)}
+                    onClick={() => navigate(SEARCHINPUT[optionSeach].url)}
                     placeholder={SEARCHINPUT[optionSeach].placeholder}
+                    onChange={(e) => console.log(e.target.value)}
                 />
             </div>
             <div className="w-[100%]">
                 <Select
-                    defaultValue="1"
+                    defaultValue={option || "1"}
                     onChange={(value:string) => setOptionSearch(value)}
                 >
                     <Option value="1" title="Hồ sơ tuyển dụng" />

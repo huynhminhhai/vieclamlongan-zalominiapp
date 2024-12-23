@@ -12,7 +12,7 @@ const SearchHstdPage: React.FunctionComponent = () => {
         <Page className="relative flex-1 flex flex-col bg-white pb-[66px]">
             <Header title="Tìm kiếm hồ sơ tuyển dụng" />
             <Box className="flex-1 overflow-auto">
-                <Inquiry option="1" />
+                <Inquiry option="1" autoFocus />
                 <Divider />
                 <CompanyList />
                 <TotalResult />

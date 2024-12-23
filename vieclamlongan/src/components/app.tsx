@@ -7,6 +7,7 @@ import SearchHstvPage from "pages/search/hstv";
 import Layout from "./layout";
 import SearchContentPage from "pages/search/content";
 import SearchHstdPage from "pages/search/hstd";
+import TuyendungPage from "pages/tuyendung";
 
 const MyApp = () => {
   return (
@@ -20,6 +21,7 @@ const MyApp = () => {
               <Route path="/search-hstd" element={<SearchHstdPage></SearchHstdPage>} ></Route>
               <Route path="/search-hstv" element={<SearchHstvPage></SearchHstvPage>}></Route>
               <Route path="/search-content" element={<SearchContentPage></SearchContentPage>}></Route>
+              <Route path="/tuyendung" element={<TuyendungPage></TuyendungPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

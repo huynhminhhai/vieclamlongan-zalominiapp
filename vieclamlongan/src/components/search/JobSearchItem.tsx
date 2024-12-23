@@ -26,8 +26,7 @@ const JobSearchItem: FunctionComponent<{nd70: boolean}> = props => {
                         </div>
                         <div className="flex items-start gap-1 text-[#5d5d5d]">
                             <Icon className="mt-[1px]" icon='weui:location-filled' />
-                            <Text className="flex-1" size="xSmall">Nhà xưởng E1, lô H, KCN Tân Kim, KP Tân Phước, TT Cần Giuộc,
-                                - Có tối đa 5 năm kinh nghiệm ở vị trí tương đương</Text>
+                            <Text className="flex-1" size="xSmall">Nhà xưởng E1, lô H, KCN Tân Kim, KP Tân Phước, TT Cần Giuộc</Text>
                         </div>
                         {
                             nd70 && 

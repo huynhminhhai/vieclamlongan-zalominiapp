@@ -4,9 +4,9 @@ import { FC } from "react";
 import { Input, useNavigate, Select } from "zmp-ui";
 import { InputRef } from "zmp-ui/input";
 
-export const Inquiry: FC<{option?: string}> = (props) => {
+export const Inquiry: FC<{option?: string, autoFocus?: boolean}> = (props) => {
 
-    const {option} = props
+    const {option, autoFocus= false} = props
 
     const [optionSeach, setOptionSearch] = useState<string>(option || "1")
 
@@ -17,7 +17,7 @@ export const Inquiry: FC<{option?: string}> = (props) => {
     const inputRef = useRef<InputRef>(null);
 
     useEffect(() => {
-        if (inputRef.current) {
+        if (inputRef.current && autoFocus) {
             inputRef.current.focus();
         }
     }, []);

@@ -22,11 +22,11 @@ export const menus1: Record<string, MenuItem> = {
         label: "Đào tạo",
         icon: <Icon icon="material-symbols-light:model-training" />
     },
-    "/danh-sach-bao-hiem/1": {
+    "/insurance-list": {
         label: "Bảo hiểm thất nghiệp",
         icon: <Icon icon="material-symbols-light:news-outline" />
     },
-    "/viec-lam-nuoc-ngoai/1": {
+    "/foreign-list": {
         label: "Việc làm nước ngoài",
         icon: <Icon icon="material-symbols-light:news-outline" />
     },

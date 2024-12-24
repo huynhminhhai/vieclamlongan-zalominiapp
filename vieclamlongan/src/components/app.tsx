@@ -20,6 +20,10 @@ import VideoPage from "pages/video";
 import VideoDetailPage from "pages/video/detailPage";
 import TrainingPage from "pages/training";
 import TrainingDetailPage from "pages/training/detail";
+import InsurancePage from "pages/insurance";
+import InsuranceDetailPage from "pages/insurance/detail";
+import ForeignDetailPage from "pages/foreignjob/detail";
+import ForeignPage from "pages/foreignjob";
 
 const MyApp = () => {
   return (
@@ -46,6 +50,10 @@ const MyApp = () => {
               <Route path="/video-detail" element={<VideoDetailPage></VideoDetailPage>}></Route>
               <Route path="/training-list" element={<TrainingPage></TrainingPage>}></Route>
               <Route path="/training-detail" element={<TrainingDetailPage></TrainingDetailPage>}></Route>
+              <Route path="/insurance-list" element={<InsurancePage></InsurancePage>}></Route>
+              <Route path="/insurance-detail" element={<InsuranceDetailPage></InsuranceDetailPage>}></Route>
+              <Route path="/foreign-list" element={<ForeignPage></ForeignPage>}></Route>
+              <Route path="/foreign-detail" element={<ForeignDetailPage></ForeignDetailPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

@@ -2,13 +2,15 @@ import React, { FC } from "react";
 import { Section } from "components/section";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Box, Text } from "zmp-ui";
-import { COMPANY, VIDEO_LIST } from "constants";
+import { Box, Text, useNavigate } from "zmp-ui";
+import { VIDEO_LIST } from "constants";
 
 export const VideoSection: FC = () => {
 
+    const navigate = useNavigate()
+
     return (
-        <Section title="Video" padding="title-only" seemore={true} seemoreUrl="/danh-sach-video/1">
+        <Section title="Video" padding="title-only" seemore={true} seemoreUrl="/video-list">
             <Swiper
                 spaceBetween={20}
                 slidesPerView={1.15}
@@ -18,7 +20,7 @@ export const VideoSection: FC = () => {
                     VIDEO_LIST.map((item, index) => (
                         <SwiperSlide key={index}>
                             <div
-                                onClick={() => console.log(123)}
+                                onClick={() => navigate('/video-detail')}
                             >
                                 <Box
                                     className="relative border-[1px] border-[#f5f5f5] rounded-lg overflow-hidden">

@@ -12,39 +12,42 @@ type SheetProps = {
 export const menus1: Record<string, MenuItem> = {
     "/gioi-thieu": {
         label: "Giới thiệu",
-        icon: <Icon icon="iconoir:page" />,
-        activeIcon: <Icon icon="iconoir:page" />
+        icon: <Icon icon="mingcute:information-line" />
     },
     "/news": {
         label: "Tin tức",
-        icon: <Icon icon="iconoir:page" />
+        icon: <Icon icon="fluent:news-24-regular" />
     },
     "/dao-tao/1": {
         label: "Đào tạo",
-        icon: <Icon icon="iconoir:page" />
+        icon: <Icon icon="material-symbols-light:model-training" />
     },
     "/danh-sach-bao-hiem/1": {
         label: "Bảo hiểm thất nghiệp",
-        icon: <Icon icon="iconoir:page" />
+        icon: <Icon icon="material-symbols-light:news-outline" />
     },
     "/viec-lam-nuoc-ngoai/1": {
         label: "Việc làm nước ngoài",
-        icon: <Icon icon="iconoir:page" />
+        icon: <Icon icon="material-symbols-light:news-outline" />
     },
     "/danh-sach-van-ban/1": {
         label: "Văn bản",
-        icon: <Icon icon="iconoir:page" />
+        icon: <Icon icon="material-symbols-light:news-outline" />
     },
 }
 
 export const menus2: Record<string, MenuItem> = {
+    "/account": {
+        label: "Tài khoản",
+        icon: <Icon icon="material-symbols:person-outline" />
+    },
     "/hoi-dap/1": {
         label: "Hỏi đáp",
-        icon: <Icon icon="iconoir:page" />
+        icon: <Icon icon="stash:question" />
     },
     "/lien-he/1": {
         label: "Liên hệ",
-        icon: <Icon icon="iconoir:page" />
+        icon: <Icon icon="hugeicons:contact-02" />
     },
 }
 

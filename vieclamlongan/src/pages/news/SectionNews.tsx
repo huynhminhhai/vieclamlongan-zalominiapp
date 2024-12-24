@@ -3,8 +3,8 @@ import { Section } from "components/section"
 import { NEWS_LIST } from "constants"
 import React, { FC } from "react"
 import NewsMainItem from "./MainNews"
-import TotalNews from "./TotalNews"
 import { Button } from "zmp-ui"
+import TotalComponent from "components/total"
 
 export const NewsSection: FC = () => {
 
@@ -13,7 +13,7 @@ export const NewsSection: FC = () => {
 
     return (
         <>
-            <TotalNews />
+            <TotalComponent amount="12 bài viết" />
             <NewsMainItem item={mainNewsList} />
             <NewsList news={subNewsList} noDescNews={true} />
             <NewsList news={subNewsList} noDescNews={true} />

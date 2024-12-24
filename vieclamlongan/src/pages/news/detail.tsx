@@ -18,7 +18,7 @@ const NewsDetailPage: React.FunctionComponent = () => {
 
   return (
     <Page className="relative flex-1 flex flex-col bg-white pb-[66px]">
-      <Header title="Chi tiết" />
+      <Header title="Chi tiết tin tức" />
       <Box className="flex-1 overflow-auto">
         <Inquiry/>
         <Divider />

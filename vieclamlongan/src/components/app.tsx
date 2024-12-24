@@ -18,6 +18,8 @@ import NewsPage from "pages/news";
 import NewsDetailPage from "pages/news/detail";
 import VideoPage from "pages/video";
 import VideoDetailPage from "pages/video/detailPage";
+import TrainingPage from "pages/training";
+import TrainingDetailPage from "pages/training/detail";
 
 const MyApp = () => {
   return (
@@ -42,6 +44,8 @@ const MyApp = () => {
               <Route path="/news-detail" element={<NewsDetailPage></NewsDetailPage>}></Route>
               <Route path="/video-list" element={<VideoPage></VideoPage>}></Route>
               <Route path="/video-detail" element={<VideoDetailPage></VideoDetailPage>}></Route>
+              <Route path="/training-list" element={<TrainingPage></TrainingPage>}></Route>
+              <Route path="/training-detail" element={<TrainingDetailPage></TrainingDetailPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

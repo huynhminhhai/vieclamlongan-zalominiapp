@@ -48,7 +48,7 @@ export const Navigation: FC = () => {
       <BottomNavigation
         id="footer"
         activeKey={location.pathname}
-        className="z-50"
+        className="z-10"
       >
         {Object.keys(tabs).map((path: TabKeys) => (
           <BottomNavigation.Item

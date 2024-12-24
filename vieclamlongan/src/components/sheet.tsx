@@ -18,7 +18,7 @@ export const menus1: Record<string, MenuItem> = {
         label: "Tin tức",
         icon: <Icon icon="fluent:news-24-regular" />
     },
-    "/dao-tao/1": {
+    "/training-list": {
         label: "Đào tạo",
         icon: <Icon icon="material-symbols-light:model-training" />
     },

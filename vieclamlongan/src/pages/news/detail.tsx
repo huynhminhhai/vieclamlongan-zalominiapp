@@ -38,6 +38,10 @@ const NewsDetailPage: React.FunctionComponent = () => {
               <Icon icon='mingcute:time-fill' />
               20/12/2024
             </div>
+            <div className="text-[14px] flex items-center gap-1">
+              <Icon icon='mdi:eye' />
+              12 lượt xem
+            </div>
             <Box className="news-detail" mt={6}>
                 <p>
                     Sáng ngày 20/12/2024 Trung tâm Dịch vụ việc làm Long An phối hợp với Ban Chỉ huy quân sự Tiểu đoàn bộ binh 1 tư vấn và giới thiệu việc làm cho hơn 200 hạ sĩ quan và binh sĩ chuẩn bị xuất ngũ.

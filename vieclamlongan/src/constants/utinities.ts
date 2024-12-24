@@ -96,6 +96,7 @@ export const APP_UTINITIES: Array<Utinity> = [
 
 export const NEWS_LIST: News[] = [
     {
+        id: 1,
         imgurl: 'http://quantri.vieclamlongan.vn/images/20241221082434_Th%C3%B4ng%20b%C3%A1o.png',
         title: 'Tuyển chọn lao động đi làm việc tại Autralia trong ngành nông nghiệp (VLMA)',
         desc: 'Tuyển chọn lao động đi làm việc tại Autralia trong ngành nông nghiệp (VLMA), Ngành nghề: Chế biến thịt',
@@ -105,6 +106,7 @@ export const NEWS_LIST: News[] = [
         author: "Phòng Đào tạo - Giới thiệu việc làm"
     },
     {
+        id: 2,
         imgurl: 'http://quantri.vieclamlongan.vn/images/20241220112632_a.jpg',
         title: 'Tư vấn việc làm cho hạ sĩ quan và binh sĩ chuẩn bị xuất ngũ',
         desc: 'Sáng ngày 20/12/2024 Trung tâm Dịch vụ việc làm Long An phối hợp với Ban Chỉ huy quân sự Tiểu đoàn bộ binh 1 tư vấn',
@@ -114,6 +116,7 @@ export const NEWS_LIST: News[] = [
         author: "Phòng Đào tạo - Giới thiệu việc làm"
     },
     {
+        id: 3,
         imgurl: 'http://quantri.vieclamlongan.vn/images/20241219154850_1234.jpg',
         title: 'Hỗ trợ tư vấn việc làm cho bộ đội chuẩn bị xuất ngũ tại huyện Thạnh Hóa',
         desc: 'Sáng ngày 19/12/2024, Trung tâm Dịch vụ việc làm Long An phối hợp với Bộ Chi huy quân sự huyện Thạnh Hóa tư vấn, giới thiệu việc làm cho gần 20 quân nhân chuẩn bị xuất',
@@ -123,6 +126,7 @@ export const NEWS_LIST: News[] = [
         author: "Phòng Đào tạo - Giới thiệu việc làm"
     },
     {
+        id: 4,
         imgurl: 'http://quantri.vieclamlongan.vn/images/20241219102852_z6143533893947_e7c02fd198b78489c4eff647f96c5e7e.jpg',
         title: 'Tư vấn việc làm cho quân nhân chuẩn bị xuất ngũ huyện Mộc Hóa năm 2024',
         desc: 'Chiều 18.12.2024, Trung tâm Dịch vụ việc làm Long An phối hợp Với Bộ Chỉ huy Quân sự huyện Mộc Hóa tư vấn và giới thiệu việc làm cho hơn 20 quân nhân chuẩn bị xuất ngũ tìm',

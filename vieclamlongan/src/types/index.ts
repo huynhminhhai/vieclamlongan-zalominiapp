@@ -24,6 +24,7 @@ export type Utinity = {
 };
 
 export type News = {
+    id: number,
     imgurl: string,
     title: string,
     desc: string,

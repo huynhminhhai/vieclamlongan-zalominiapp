@@ -206,6 +206,13 @@ body {
   overflow: hidden;
 }
 
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .news-item:first-child {
   padding-top: 0;
 }
@@ -236,4 +243,9 @@ body {
 .sheet-custom svg {
   width: 40px;
   height: auto;
+}
+
+
+.news-detail p {
+  margin-bottom: 12px;
 }

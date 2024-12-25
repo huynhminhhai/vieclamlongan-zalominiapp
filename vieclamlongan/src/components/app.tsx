@@ -26,6 +26,10 @@ import ForeignDetailPage from "pages/foreignjob/detail";
 import ForeignPage from "pages/foreignjob";
 import DocumentPage from "pages/document";
 import DocumentDetailPage from "pages/document/detail";
+import AboutPage from "pages/about";
+import IntroductionPage from "pages/about/introduction";
+import DiagramCompanyPage from "pages/about/diagram";
+import MapPage from "pages/about/map";
 
 const MyApp = () => {
   return (
@@ -58,6 +62,10 @@ const MyApp = () => {
               <Route path="/foreign-detail" element={<ForeignDetailPage></ForeignDetailPage>}></Route>
               <Route path="/document-list" element={<DocumentPage></DocumentPage>}></Route>
               <Route path="/document-detail" element={<DocumentDetailPage></DocumentDetailPage>}></Route>
+              <Route path="/about" element={<AboutPage></AboutPage>}></Route>
+              <Route path="/gioi-thieu-chung" element={<IntroductionPage></IntroductionPage>}></Route>
+              <Route path="/so-do-to-chuc" element={<DiagramCompanyPage></DiagramCompanyPage>}></Route>
+              <Route path="/dia-chi" element={<MapPage></MapPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

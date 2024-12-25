@@ -10,7 +10,7 @@ type SheetProps = {
 };
 
 export const menus1: Record<string, MenuItem> = {
-    "/gioi-thieu": {
+    "/about": {
         label: "Giới thiệu",
         icon: <Icon icon="mingcute:information-line" />
     },

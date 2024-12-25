@@ -263,3 +263,34 @@ body {
 .zaui-sheet-wrapper {
   z-index: 1001;
 }
+
+.list-custom.zaui-list .zaui-list-item:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.about-detail .zaui-text {
+  margin-bottom: 8px;
+}
+
+.about-detail ul {
+  margin-block: 0px 12px;
+}
+
+.about-detail ul li {
+  margin-bottom: 6px;
+}
+
+.list-map .zaui-list-item-title {
+  font-size: 18px;
+  line-height: 20px;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.list-map .zaui-list-item-title-container {
+  white-space: unset;
+}
+
+.list-map .zaui-list-item {
+  padding-inline: 0;
+}

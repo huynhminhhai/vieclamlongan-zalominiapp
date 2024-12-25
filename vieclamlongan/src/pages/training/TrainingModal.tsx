@@ -1,5 +1,6 @@
 import { SearchableSelect } from "components/form";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useStore } from "store/store";
 import { Box, Button, Input, Modal, Text, useSnackbar } from "zmp-ui";
 
 const optionsCourse = [
@@ -40,6 +41,11 @@ type TrainingModalProps = {
 
 const TrainingModal: React.FunctionComponent<TrainingModalProps> = ({popupVisible, setPopupVisible}) => {
 
+    const toggleIsHidden = useStore((state) => state.toggleHideBottomNavigation)
+
+    useEffect(() => {
+        toggleIsHidden(popupVisible)
+    }, [popupVisible])
     
     const [valueCourse, setValueCourse] = useState<string | "">("");
     const [valueStatus, setValueStatus] = useState<string | "">("");

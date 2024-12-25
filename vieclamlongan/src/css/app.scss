@@ -260,10 +260,6 @@ body {
   height: 38px;
 }
 
-.zaui-sheet-wrapper {
-  z-index: 1001;
-}
-
 .list-custom.zaui-list .zaui-list-item:not(:last-child) {
   margin-bottom: 0;
 }
@@ -293,4 +289,8 @@ body {
 
 .list-map .zaui-list-item {
   padding-inline: 0;
+}
+
+.zaui-sheet-content {
+  position: fixed;
 }

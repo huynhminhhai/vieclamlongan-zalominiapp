@@ -1,4 +1,5 @@
 import { SearchableSelect } from "components/form";
+import ConfirmModal from "components/ModalConfirm";
 import React, { useEffect, useState } from "react";
 import { useStore } from "store/store";
 import { Box, Button, Input, Modal, Text, useSnackbar } from "zmp-ui";
@@ -39,14 +40,15 @@ type TrainingModalProps = {
     setPopupVisible: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-const TrainingModal: React.FunctionComponent<TrainingModalProps> = ({popupVisible, setPopupVisible}) => {
+const TrainingModal: React.FunctionComponent<TrainingModalProps> = ({ popupVisible, setPopupVisible }) => {
 
     const toggleIsHidden = useStore((state) => state.toggleHideBottomNavigation)
+    const [isConfirmVisible, setConfirmVisible] = useState(false);
 
     useEffect(() => {
         toggleIsHidden(popupVisible)
     }, [popupVisible])
-    
+
     const [valueCourse, setValueCourse] = useState<string | "">("");
     const [valueStatus, setValueStatus] = useState<string | "">("");
 
@@ -82,96 +84,116 @@ const TrainingModal: React.FunctionComponent<TrainingModalProps> = ({popupVisibl
 
     const handleSubmit = () => {
         if (validate()) {
-            console.log("Dữ liệu hợp lệ:", formData);
-            setPopupVisible(false);
-            openSnackbar({
-                icon: true,
-                text: "Đăng ký thành công",
-                type: 'success',
-                action: {
-                  text: "Đóng",
-                  close: true,
-                },
-                duration: 5000,
-            });
-            setFormData({
-                fullName: "",
-                phoneNumber: "",
-                course: valueCourse,
-                status: valueStatus,
-            })
-            setValueCourse("")
-            setValueStatus("")
+            setConfirmVisible(true);
         } else {
             errors
         }
     };
 
+    const handleConfirm = () => {
+        console.log("Dữ liệu hợp lệ:", formData);
+        setPopupVisible(false);
+        setConfirmVisible(false)
+        openSnackbar({
+            icon: true,
+            text: "Đăng ký thành công",
+            type: 'success',
+            action: {
+                text: "Đóng",
+                close: true,
+            },
+            duration: 5000,
+        });
+        setFormData({
+            fullName: "",
+            phoneNumber: "",
+            course: "",
+            status: "",
+        })
+        setValueCourse("")
+        setValueStatus("")
+    };
+
+    const handleCancel = () => {
+        console.log("Cancelled!");
+        setConfirmVisible(false);
+    };
+
     return (
-        <Modal
-            visible={popupVisible}
-            title="Đăng ký khóa học"
-            onClose={() => {
-                setPopupVisible(false);
-            }}
-            verticalActions
-        >
-            <Box className="form form-training">
-                <Box mb={5} className="relative">
-                    <Text size="small" className="mb-1">Khóa học: <span className="text-red-600">(*)</span></Text>
-                    <SearchableSelect
-                        name="course"
-                        options={optionsCourse}
-                        selectedValue={valueCourse}
-                        setSelectedValue={setValueCourse}
-                        handleInputChange={handleInputChange}
-                        errors={errors.course}
-                    />
+        <>
+            <Modal
+                visible={popupVisible}
+                title="Đăng ký khóa học"
+                onClose={() => {
+                    setPopupVisible(false);
+                }}
+                verticalActions
+            >
+                <Box className="form form-training">
+                    <Box mb={5} className="relative">
+                        <Text size="small" className="mb-1">Khóa học: <span className="text-red-600">(*)</span></Text>
+                        <SearchableSelect
+                            name="course"
+                            options={optionsCourse}
+                            selectedValue={valueCourse}
+                            setSelectedValue={setValueCourse}
+                            handleInputChange={handleInputChange}
+                            errors={errors.course}
+                        />
+                    </Box>
+                    <Box mb={5} className="relative">
+                        <Text size="small" className="mb-1">Tình trạng: <span className="text-red-600">(*)</span></Text>
+                        <SearchableSelect
+                            name="status"
+                            options={optionsStatus}
+                            selectedValue={valueStatus}
+                            setSelectedValue={setValueStatus}
+                            handleInputChange={handleInputChange}
+                            errors={errors.status}
+                        />
+                    </Box>
+                    <Box mb={5} className="relative">
+                        <Text size="small" className="mb-1">Họ tên: <span className="text-red-600">(*)</span></Text>
+                        <Input type="text" value={formData.fullName}
+                            onChange={(e) => handleInputChange("fullName", e.target.value)} />
+                        {errors.fullName && (
+                            <Text size="xSmall" className="text-red-600 absolute left-0 top-[100%]">
+                                {errors.fullName}
+                            </Text>
+                        )}
+                    </Box>
+                    <Box mb={5} className="relative">
+                        <Text size="small" className="mb-1">Số điện thoại: <span className="text-red-600">(*)</span></Text>
+                        <Input type="number" value={formData.phoneNumber}
+                            onChange={(e) => handleInputChange("phoneNumber", e.target.value)} />
+                        {errors.phoneNumber && (
+                            <Text size="xSmall" className="text-red-600 absolute left-0 top-[100%]">
+                                {errors.phoneNumber}
+                            </Text>
+                        )}
+                    </Box>
+                    <Box py={4}>
+                        <Button
+                            size="medium"
+                            onClick={() => {
+                                handleSubmit()
+                            }}
+                            fullWidth
+                        >
+                            Xác nhận
+                        </Button>
+                    </Box>
                 </Box>
-                <Box mb={5} className="relative">
-                    <Text size="small" className="mb-1">Tình trạng: <span className="text-red-600">(*)</span></Text>
-                    <SearchableSelect
-                        name="status"
-                        options={optionsStatus}
-                        selectedValue={valueStatus}
-                        setSelectedValue={setValueStatus}
-                        handleInputChange={handleInputChange}
-                        errors={errors.status}
-                    />
-                </Box>
-                <Box mb={5} className="relative">
-                    <Text size="small" className="mb-1">Họ tên: <span className="text-red-600">(*)</span></Text>
-                    <Input type="text" value={formData.fullName}
-                        onChange={(e) => handleInputChange("fullName", e.target.value)} />
-                    {errors.fullName && (
-                        <Text size="xSmall" className="text-red-600 absolute left-0 top-[100%]">
-                            {errors.fullName}
-                        </Text>
-                    )}
-                </Box>
-                <Box mb={5} className="relative">
-                    <Text size="small" className="mb-1">Số điện thoại: <span className="text-red-600">(*)</span></Text>
-                    <Input type="number" value={formData.phoneNumber}
-                        onChange={(e) => handleInputChange("phoneNumber", e.target.value)} />
-                    {errors.phoneNumber && (
-                        <Text size="xSmall" className="text-red-600 absolute left-0 top-[100%]">
-                            {errors.phoneNumber}
-                        </Text>
-                    )}
-                </Box>
-                <Box py={4}>
-                    <Button
-                        size="medium"
-                        onClick={() => {
-                            handleSubmit()
-                        }}
-                        fullWidth
-                    >
-                        Xác nhận
-                    </Button>
-                </Box>
-            </Box>
-        </Modal>
+            </Modal>
+            <ConfirmModal
+                visible={isConfirmVisible}
+                title="Xác nhận"
+                message="Bạn có chắc chắn muốn đăng ký khóa học không?"
+                onConfirm={handleConfirm}
+                onCancel={handleCancel}
+            />
+        </>
+
     )
 }
 

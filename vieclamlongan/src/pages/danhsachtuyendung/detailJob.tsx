@@ -5,6 +5,7 @@ import { Icon } from "@iconify/react";
 import JobItem from "components/job/JobItem";
 import { Divider } from "components/divider";
 import JobModal from "components/ModalJob";
+import ConfirmModal from "components/ModalConfirm";
 
 const DetailJob: React.FunctionComponent = () => {
 
@@ -219,7 +220,7 @@ const DetailJob: React.FunctionComponent = () => {
           </Box>
         </Section>
       </Box>
-      <JobModal popupVisible={popupVisible} setPopupVisible={setPopupVisible}  />
+      <JobModal popupVisible={popupVisible} setPopupVisible={setPopupVisible} />
     </Page>
   );
 };

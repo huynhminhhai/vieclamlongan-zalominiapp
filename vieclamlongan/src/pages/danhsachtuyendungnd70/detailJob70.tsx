@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Header, Page, Tabs, Text } from "zmp-ui";
 import { Section } from "components/section";
 import { Icon } from "@iconify/react";
 import JobItem from "components/job/JobItem";
 import { Divider } from "components/divider";
+import JobModal from "components/ModalJob";
+import ConfirmModal from "components/ModalConfirm";
 
 const DetailJob70: React.FunctionComponent = () => {
+
+  const [popupVisible, setPopupVisible] = useState(false);
 
   return (
     <Page className="detail-job relative flex-1 flex flex-col bg-white pb-[0px]">
@@ -229,6 +233,7 @@ const DetailJob70: React.FunctionComponent = () => {
           </Box>
         </Section>
       </Box>
+      <JobModal popupVisible={popupVisible} setPopupVisible={setPopupVisible} />
     </Page>
   );
 };

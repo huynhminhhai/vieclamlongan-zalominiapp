@@ -294,3 +294,14 @@ body {
 .zaui-sheet-content {
   position: fixed;
 }
+
+.form-job ul li {
+  display: flex;
+  align-items: self-start;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.form-job ul li .zaui-text:first-child {
+  white-space: nowrap;
+}

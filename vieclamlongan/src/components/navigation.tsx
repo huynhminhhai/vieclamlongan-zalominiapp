@@ -26,7 +26,7 @@ const tabs: Record<string, MenuItem> = {
 
 export type TabKeys = keyof typeof tabs;
 
-export const NO_BOTTOM_NAVIGATION_PAGES = ["/detail-job", "/detail-job-70", "/detail-employ"];
+export const NO_BOTTOM_NAVIGATION_PAGES = ["/detail-job", "/detail-job-70"];
 
 export const Navigation: FC = () => {
     // const keyboardVisible = useVirtualKeyboardVisible();

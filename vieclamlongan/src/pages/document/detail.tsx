@@ -33,7 +33,7 @@ const DocumentDetailPage: React.FunctionComponent = () => {
                             <Icon icon='mingcute:time-fill' />
                             20/12/2024
                         </div>
-                        <Box className="news-detail" mt={6}>
+                        <Box className="news-detail max-h-[610px] overflow-hidden" mt={6}>
                             <PdfViewer pdfUrl='http://quantri.vieclamlongan.vn/uploads/20241028154549_252 TB-TTDVVL.pdf' />
                         </Box>
 

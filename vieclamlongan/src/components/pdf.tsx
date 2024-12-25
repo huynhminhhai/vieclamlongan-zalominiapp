@@ -1,24 +1,14 @@
-import React, { useEffect } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
-import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import React from 'react';
 
-const PdfViewer = ({ pdfUrl }) => {
-  
-  
-  useEffect(() => {
-    if (pdfjs) {
-      pdfjs.GlobalWorkerOptions.workerSrc = '/pdf.worker.min.js';
-    }
-  }, []);
-  
-  return (
-    <div>
-      <h2>PDF Viewer</h2>
-      <Document file={pdfUrl}>
-        <Page pageNumber={1} />
-      </Document>
-    </div>
-  );
-};
+const PdfViewer = ({ pdfUrl }) => (
+  <div style={{ height: '750px' }}>
+    <iframe
+    src={`https://docs.google.com/viewer?url=${pdfUrl}&embedded=true`}
+    width="100%"
+    height="600px"
+    title="PDF Viewer"
+  />
+  </div>
+);
 
 export default PdfViewer;

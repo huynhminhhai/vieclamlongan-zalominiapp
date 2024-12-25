@@ -30,7 +30,7 @@ export const menus1: Record<string, MenuItem> = {
         label: "Việc làm nước ngoài",
         icon: <Icon icon="material-symbols-light:news-outline" />
     },
-    "/danh-sach-van-ban/1": {
+    "/document-list": {
         label: "Văn bản",
         icon: <Icon icon="material-symbols-light:news-outline" />
     },

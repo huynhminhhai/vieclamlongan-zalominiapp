@@ -24,6 +24,8 @@ import InsurancePage from "pages/insurance";
 import InsuranceDetailPage from "pages/insurance/detail";
 import ForeignDetailPage from "pages/foreignjob/detail";
 import ForeignPage from "pages/foreignjob";
+import DocumentPage from "pages/document";
+import DocumentDetailPage from "pages/document/detail";
 
 const MyApp = () => {
   return (
@@ -54,6 +56,8 @@ const MyApp = () => {
               <Route path="/insurance-detail" element={<InsuranceDetailPage></InsuranceDetailPage>}></Route>
               <Route path="/foreign-list" element={<ForeignPage></ForeignPage>}></Route>
               <Route path="/foreign-detail" element={<ForeignDetailPage></ForeignDetailPage>}></Route>
+              <Route path="/document-list" element={<DocumentPage></DocumentPage>}></Route>
+              <Route path="/document-detail" element={<DocumentDetailPage></DocumentDetailPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

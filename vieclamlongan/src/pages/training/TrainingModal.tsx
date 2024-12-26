@@ -1,4 +1,5 @@
 import { SearchableSelect } from "components/form";
+import InputField from "components/form/InputField";
 import ConfirmModal from "components/ModalConfirm";
 import React, { useEffect, useState } from "react";
 import { useStore } from "store/store";
@@ -130,48 +131,40 @@ const TrainingModal: React.FunctionComponent<TrainingModalProps> = ({ popupVisib
                 verticalActions
             >
                 <Box className="form form-training">
-                    <Box mb={5} className="relative">
-                        <Text size="small" className="mb-1">Khóa học: <span className="text-red-600">(*)</span></Text>
-                        <SearchableSelect
-                            name="course"
-                            options={optionsCourse}
-                            selectedValue={valueCourse}
-                            setSelectedValue={setValueCourse}
-                            handleInputChange={handleInputChange}
-                            errors={errors.course}
-                        />
-                    </Box>
-                    <Box mb={5} className="relative">
-                        <Text size="small" className="mb-1">Tình trạng: <span className="text-red-600">(*)</span></Text>
-                        <SearchableSelect
-                            name="status"
-                            options={optionsStatus}
-                            selectedValue={valueStatus}
-                            setSelectedValue={setValueStatus}
-                            handleInputChange={handleInputChange}
-                            errors={errors.status}
-                        />
-                    </Box>
-                    <Box mb={5} className="relative">
-                        <Text size="small" className="mb-1">Họ tên: <span className="text-red-600">(*)</span></Text>
-                        <Input type="text" value={formData.fullName}
-                            onChange={(e) => handleInputChange("fullName", e.target.value)} />
-                        {errors.fullName && (
-                            <Text size="xSmall" className="text-red-600 absolute left-0 top-[100%]">
-                                {errors.fullName}
-                            </Text>
-                        )}
-                    </Box>
-                    <Box mb={5} className="relative">
-                        <Text size="small" className="mb-1">Số điện thoại: <span className="text-red-600">(*)</span></Text>
-                        <Input type="number" value={formData.phoneNumber}
-                            onChange={(e) => handleInputChange("phoneNumber", e.target.value)} />
-                        {errors.phoneNumber && (
-                            <Text size="xSmall" className="text-red-600 absolute left-0 top-[100%]">
-                                {errors.phoneNumber}
-                            </Text>
-                        )}
-                    </Box>
+                    <SearchableSelect
+                        label="Khóa học"
+                        required
+                        options={optionsCourse}
+                        selectedValue={valueCourse}
+                        setSelectedValue={setValueCourse}
+                        onChange={(value) => handleInputChange("course", value)}
+                        errors={errors.course}
+                    />
+                    <SearchableSelect
+                        label="Tình trạng"
+                        required
+                        options={optionsStatus}
+                        selectedValue={valueStatus}
+                        setSelectedValue={setValueStatus}
+                        onChange={(value) => handleInputChange("status", value)}
+                        errors={errors.status}
+                    />
+                    <InputField
+                        label="Họ tên"
+                        type="text"
+                        value={formData.fullName}
+                        required
+                        error={errors.fullName}
+                        onChange={(value) => handleInputChange("fullName", value)}
+                    />
+                    <InputField
+                        label="Số điện thoại"
+                        type="number"
+                        value={formData.phoneNumber}
+                        required
+                        error={errors.phoneNumber}
+                        onChange={(value) => handleInputChange("phoneNumber", value)}
+                    />
                     <Box py={4}>
                         <Button
                             size="medium"

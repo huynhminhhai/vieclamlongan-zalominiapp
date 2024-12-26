@@ -30,6 +30,8 @@ import AboutPage from "pages/about";
 import IntroductionPage from "pages/about/introduction";
 import DiagramCompanyPage from "pages/about/diagram";
 import MapPage from "pages/about/map";
+import LoginPage from "pages/account/login";
+import AccountPage from "pages/account";
 
 const MyApp = () => {
   return (
@@ -66,6 +68,8 @@ const MyApp = () => {
               <Route path="/gioi-thieu-chung" element={<IntroductionPage></IntroductionPage>}></Route>
               <Route path="/so-do-to-chuc" element={<DiagramCompanyPage></DiagramCompanyPage>}></Route>
               <Route path="/dia-chi" element={<MapPage></MapPage>}></Route>
+              <Route path="/login" element={<LoginPage></LoginPage>}></Route>
+              <Route path="/account" element={<AccountPage></AccountPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

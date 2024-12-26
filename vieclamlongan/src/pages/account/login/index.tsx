@@ -1,5 +1,4 @@
 import InputField from "components/form/InputField";
-import ConfirmModal from "components/ModalConfirm";
 import React, { useState } from "react";
 import { Box, Button, Header, Page, Text, useNavigate, useSnackbar } from "zmp-ui";
 
@@ -56,7 +55,7 @@ const LoginPage: React.FunctionComponent = () => {
     return (
         <Page className="relative flex-1 flex flex-col pb-[66px]">
             <Header title="Đăng nhập" />
-            <Box p={4} className="w-[100%]">
+            <Box>
                 <Box p={4} py={6} className="form form-login bg-white w-[100%] rounded">
                     <Text.Title className="text-center mb-6" size="xLarge">Đăng nhập</Text.Title>
 

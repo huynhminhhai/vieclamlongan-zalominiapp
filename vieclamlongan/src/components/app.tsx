@@ -32,6 +32,7 @@ import DiagramCompanyPage from "pages/about/diagram";
 import MapPage from "pages/about/map";
 import LoginPage from "pages/account/login";
 import AccountPage from "pages/account";
+import RegisterPage from "pages/account/register";
 
 const MyApp = () => {
   return (
@@ -70,6 +71,7 @@ const MyApp = () => {
               <Route path="/dia-chi" element={<MapPage></MapPage>}></Route>
               <Route path="/login" element={<LoginPage></LoginPage>}></Route>
               <Route path="/account" element={<AccountPage></AccountPage>}></Route>
+              <Route path="/register" element={<RegisterPage></RegisterPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

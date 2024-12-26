@@ -14,7 +14,7 @@ const NewsMainItem: FunctionComponent<{ item: News }> = props => {
     return (
         <div
             className="news-item p-4 pb-0"
-            onClick={() => navigate(`/news-detail/${queryParams}`)}
+            onClick={() => navigate(`/news-detail/?${queryParams}`)}
         >
             <div className="w-[100%] h-auto">
                 <img className="h-[100%] w-[100%] object-cover" src={item.imgurl} alt={item.title} />

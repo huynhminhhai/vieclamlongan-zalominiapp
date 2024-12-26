@@ -1,6 +1,7 @@
 import { openMediaPicker } from "zmp-sdk";
 
 export interface PickFileParams {
+    type: "video" | "zcamera" | "zcamera_photo" | "zcamera_video" | "zcamera_scan" | "photo" | "file";
     maxItemSize?: number;
     maxSelectItem?: number;
     serverUploadUrl: string;
@@ -16,7 +17,7 @@ export const pickFile = async (
 ): Promise<any> => {
     try {
         const res = await openMediaPicker({
-            type: "file",
+            type: params.type,
             maxItemSize: params.maxItemSize || 1024 * 1024,
             maxSelectItem: params.maxSelectItem || 1,
             serverUploadUrl: params.serverUploadUrl,

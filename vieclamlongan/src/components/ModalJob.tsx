@@ -81,7 +81,7 @@ const JobModal: React.FunctionComponent<JobModalProps> = ({ popupVisible, setPop
                     </Box>
 
                     <Box>
-                        <ChooseFile />
+                        <ChooseFile type='file' />
                     </Box>
 
                     <Box py={4}>

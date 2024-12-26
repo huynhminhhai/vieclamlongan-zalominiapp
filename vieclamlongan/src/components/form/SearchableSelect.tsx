@@ -9,6 +9,7 @@ type OptionSelect = {
 
 type SearchableSelectProps = {
     label: string;
+    placeholder?: string;
     required?: boolean;
     options: OptionSelect[],
     selectedValue: string | "",
@@ -19,6 +20,7 @@ type SearchableSelectProps = {
 
 const SearchableSelect: React.FC<SearchableSelectProps> = ({
     label,
+    placeholder = "Chọn một giá trị",
     required = false,
     options,
     selectedValue,
@@ -43,7 +45,7 @@ const SearchableSelect: React.FC<SearchableSelectProps> = ({
                 <Input
                     readOnly
                     onClick={() => setIsSheetOpen(true)}
-                    value={selectedValue || "Chọn một giá trị"}
+                    value={selectedValue || placeholder}
                 />
 
                 {errors && (

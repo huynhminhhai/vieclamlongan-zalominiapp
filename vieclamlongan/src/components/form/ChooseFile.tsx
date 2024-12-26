@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import { pickFile } from "service/zalo";
 
-const ChooseFile = ({ label = "Choose File", accept = "*" }) => {
+type ChooseFileProps = {
+  label?: string;
+  type: "video" | "zcamera" | "zcamera_photo" | "zcamera_video" | "zcamera_scan" | "photo" | "file";
+}
+
+const ChooseFile: React.FC<ChooseFileProps> = ({ label = "Choose File", type }) => {
   const [fileName, setFileName] = useState("No file selected");
 
   const handleFilePick = async () => {
     pickFile({
+        type,
         maxSelectItem: 1,
         serverUploadUrl: 'http://vieclamlongan.vn/'
     })

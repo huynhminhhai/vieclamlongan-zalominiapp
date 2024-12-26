@@ -26,6 +26,18 @@ const AccountPage: React.FunctionComponent = () => {
                             prefix={<Icon fontSize={22} icon="icon-park-outline:people-plus" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
+                        <Item
+                            onClick={() => navigate('/profile')}
+                            title="Tổng quan"
+                            prefix={<Icon fontSize={22} icon="gg:profile" />}
+                            suffix={<Icon fontSize={18} icon="formkit:right" />}
+                        />
+                        <Item
+                            onClick={() => navigate('/register')}
+                            title="Đăng xuất"
+                            prefix={<Icon fontSize={22} icon="majesticons:logout" />}
+                            suffix={<Icon fontSize={18} icon="formkit:right" />}
+                        />
                     </List>
                 </Box>
             </Box>

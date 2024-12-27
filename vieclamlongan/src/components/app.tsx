@@ -34,7 +34,8 @@ import LoginPage from "pages/account/login";
 import AccountPage from "pages/account";
 import RegisterPage from "pages/account/register";
 import ProfilePage from "pages/account/profile";
-import ProfileDetailPage from "pages/account/profile/detail";
+import ProfileDetailPage from "pages/account/profile/profileDetail";
+import AccountDetailPage from "pages/account/profile/accountDetail";
 
 const MyApp = () => {
   return (
@@ -76,6 +77,7 @@ const MyApp = () => {
               <Route path="/register" element={<RegisterPage></RegisterPage>}></Route>
               <Route path="/profile" element={<ProfilePage></ProfilePage>}></Route>
               <Route path="/profile-detail" element={<ProfileDetailPage></ProfileDetailPage>}></Route>
+              <Route path="/account-detail" element={<AccountDetailPage></AccountDetailPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

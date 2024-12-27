@@ -9,6 +9,7 @@ interface InputFieldProps {
   error?: string;
   onChange: (value: string) => void;
   placeholder?: string;
+  disabled?: boolean;
 }
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -18,7 +19,8 @@ const InputField: React.FC<InputFieldProps> = ({
   required = false,
   error,
   onChange,
-  placeholder
+  placeholder,
+  disabled = false
 }) => {
   return (
     <Box mb={5} className="relative">
@@ -26,6 +28,7 @@ const InputField: React.FC<InputFieldProps> = ({
         {label}: {required && <span className="text-red-600">(*)</span>}
       </Text>
       <Input
+        disabled={disabled}
         type={type}
         value={value}
         placeholder={placeholder}

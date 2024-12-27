@@ -6,7 +6,7 @@ import SelectNormal from "components/form/SelectNormal";
 import ConfirmModal from "components/ModalConfirm";
 import React, { useState } from "react";
 import { pickFile } from "service/zalo";
-import { Avatar, Box, Button, Header, Page, useNavigate, useSnackbar } from "zmp-ui";
+import { Avatar, Box, Button, Header, Page, useSnackbar } from "zmp-ui";
 
 const initialFormValues = {
     phoneNumber: "0848551555",
@@ -170,7 +170,6 @@ const optionsCertificate = [
 const ProfileDetailPage: React.FunctionComponent = () => {
 
     const { openSnackbar } = useSnackbar();
-    const navigate = useNavigate()
 
     const [formData, setFormData] = useState(initialFormValues);
     const [errors, setErrors] = useState<{ [key: string]: string | any }>({});

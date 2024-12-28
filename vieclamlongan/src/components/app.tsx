@@ -40,6 +40,7 @@ import ChangePasswordPage from "pages/account/profile/changePassword";
 import HstvPage from "pages/account/profile/hstv";
 import EditHstvPage from "pages/account/profile/hstv/edit";
 import ApplicationDetailPage from "pages/account/profile/hstv/application-detail";
+import ContactPage from "pages/contact";
 
 const MyApp = () => {
   return (
@@ -86,6 +87,7 @@ const MyApp = () => {
               <Route path="/hstv" element={<HstvPage></HstvPage>}></Route>
               <Route path="/hstv-edit" element={<EditHstvPage></EditHstvPage>}></Route>
               <Route path="/application-detail" element={<ApplicationDetailPage></ApplicationDetailPage>}></Route>
+              <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

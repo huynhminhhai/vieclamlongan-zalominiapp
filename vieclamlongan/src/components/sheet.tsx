@@ -45,7 +45,7 @@ export const menus2: Record<string, MenuItem> = {
         label: "Hỏi đáp",
         icon: <Icon icon="stash:question" />
     },
-    "/lien-he/1": {
+    "/contact": {
         label: "Liên hệ",
         icon: <Icon icon="hugeicons:contact-02" />
     },

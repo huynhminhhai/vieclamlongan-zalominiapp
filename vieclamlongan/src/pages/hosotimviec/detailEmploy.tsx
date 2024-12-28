@@ -8,7 +8,7 @@ import { Divider } from "components/divider";
 const DetailEmploy: React.FunctionComponent = () => {
 
   return (
-    <Page className="detail-job relative flex-1 flex flex-col bg-white pb-[0px]">
+    <Page className="detail-job relative flex-1 flex flex-col bg-white pb-[96px]">
       <Header title="Chi tiết hồ sơ" />
       <Box className="flex-1 overflow-auto">
         <Section title="" padding="none">

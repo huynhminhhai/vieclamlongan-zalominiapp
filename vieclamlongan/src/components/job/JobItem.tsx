@@ -12,14 +12,14 @@ const JobItem: FunctionComponent<{detail: boolean }> = props => {
     return (
         <>
             <Box py={4}>
-                <div className="flex items-start gap-3">
+                <div className="flex items-start gap-3" onClick={() => navigate('/detail-job')}>
                     <Box width={100} height={100}>
                         <img className="w-[100%] h-[100%] object-contain rounded-lg overflow-hidden" src="http://vieclamlongan.vn/uploads/images/2024-12/20241218112759_LOOGO.jpg" alt="NV kinh doanh - chuyên thị trường quốc tế" />
                     </Box>
                     <Box className="flex-1">
                         <Text.Title
                             className="mb-1"
-                            onClick={() => navigate('/detail-job')}
+                            
                         >NV kinh doanh - chuyên thị trường quốc tế</Text.Title>
                         <Text
                             size="small"

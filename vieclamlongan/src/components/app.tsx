@@ -36,6 +36,7 @@ import RegisterPage from "pages/account/register";
 import ProfilePage from "pages/account/profile";
 import ProfileDetailPage from "pages/account/profile/profileDetail";
 import AccountDetailPage from "pages/account/profile/accountDetail";
+import ChangePasswordPage from "pages/account/profile/changePassword";
 
 const MyApp = () => {
   return (
@@ -78,6 +79,7 @@ const MyApp = () => {
               <Route path="/profile" element={<ProfilePage></ProfilePage>}></Route>
               <Route path="/profile-detail" element={<ProfileDetailPage></ProfileDetailPage>}></Route>
               <Route path="/account-detail" element={<AccountDetailPage></AccountDetailPage>}></Route>
+              <Route path="/change-password" element={<ChangePasswordPage></ChangePasswordPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

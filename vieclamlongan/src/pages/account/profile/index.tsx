@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import React from "react";
-import { Avatar, Box, Button, Header, List, Page, Text, useNavigate } from "zmp-ui";
+import { Avatar, Box, Header, List, Page, useNavigate } from "zmp-ui";
 
 const ProfilePage: React.FunctionComponent = () => {
 
@@ -36,7 +36,7 @@ const ProfilePage: React.FunctionComponent = () => {
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
-                            onClick={() => navigate('/accountInfor')}
+                            onClick={() => navigate('/change-password')}
                             title="Đổi mật khẩu"
                             prefix={<Icon fontSize={22} icon="material-symbols:change-circle-outline" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}

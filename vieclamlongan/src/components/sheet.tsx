@@ -39,7 +39,7 @@ export const menus1: Record<string, MenuItem> = {
 export const menus2: Record<string, MenuItem> = {
     "/account": {
         label: "Tài khoản",
-        icon: <Icon icon="material-symbols:person-outline" />
+        icon: <Icon icon="clarity:user-line" />
     },
     "/hoi-dap/1": {
         label: "Hỏi đáp",

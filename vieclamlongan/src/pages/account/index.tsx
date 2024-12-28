@@ -9,7 +9,7 @@ const AccountPage: React.FunctionComponent = () => {
     const navigate = useNavigate()
 
     return (
-        <Page className="relative flex-1 flex flex-col pb-[66px]">
+        <Page className="relative flex-1 flex flex-col pb-[66px] min-h-[100vh]">
             <Header title="Tài khoản" />
             <Box p={4}>
                 <Box className="bg-white rounded-lg overflow-hidden">

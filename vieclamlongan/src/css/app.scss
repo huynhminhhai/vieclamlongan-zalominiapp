@@ -39,6 +39,7 @@ body {
 
 .zaui-input-affix-wrapper {
   margin: 0;
+  border-radius: 4px;
 }
 
 .border-inset {
@@ -258,6 +259,7 @@ body {
 .form .zaui-input {
   font-size: 14px;
   height: 38px;
+  border-radius: 4px;
 }
 
 .list-custom.zaui-list .zaui-list-item:not(:last-child) {

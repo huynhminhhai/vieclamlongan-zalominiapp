@@ -71,17 +71,16 @@ const AccountDetailPage: React.FunctionComponent = () => {
             <Header title="Thông tin người dùng" />
             <Box>
                 <Box p={4} py={6} className="form form-account bg-white w-[100%]">
-                    <Box disabled>
-                        <InputField
-                            disabled
-                            label="Username"
-                            type="text"
-                            value={formData.username}
-                            required
-                            error={errors.username}
-                            onChange={(value) => handleInputChange("username", value)}
-                        />
-                    </Box>
+                    
+                    <InputField
+                        disabled
+                        label="Username"
+                        type="text"
+                        value={formData.username}
+                        required
+                        error={errors.username}
+                        onChange={(value) => handleInputChange("username", value)}
+                    />
 
                     <InputField
                         label="Họ tên"

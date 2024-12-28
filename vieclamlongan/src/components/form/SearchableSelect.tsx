@@ -20,7 +20,7 @@ type SearchableSelectProps = {
 
 const SearchableSelect: React.FC<SearchableSelectProps> = ({
     label,
-    placeholder = "Chọn một giá trị",
+    placeholder = "",
     required = false,
     options,
     selectedValue,
@@ -45,8 +45,10 @@ const SearchableSelect: React.FC<SearchableSelectProps> = ({
                 <Input
                     readOnly
                     onClick={() => setIsSheetOpen(true)}
-                    value={selectedValue || placeholder}
+                    value={options.find(option => option.value === selectedValue)?.label || placeholder}
                 />
+
+                <Icon className="absolute right-3 top-[60%]" icon='formkit:down' fontSize={9} />
 
                 {errors && (
                     <Text size="xSmall" className="text-red-600 absolute left-0 top-[100%]">

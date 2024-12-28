@@ -37,6 +37,9 @@ import ProfilePage from "pages/account/profile";
 import ProfileDetailPage from "pages/account/profile/profileDetail";
 import AccountDetailPage from "pages/account/profile/accountDetail";
 import ChangePasswordPage from "pages/account/profile/changePassword";
+import HstvPage from "pages/account/profile/hstv";
+import EditHstvPage from "pages/account/profile/hstv/edit";
+import ApplicationDetailPage from "pages/account/profile/hstv/application-detail";
 
 const MyApp = () => {
   return (
@@ -80,6 +83,9 @@ const MyApp = () => {
               <Route path="/profile-detail" element={<ProfileDetailPage></ProfileDetailPage>}></Route>
               <Route path="/account-detail" element={<AccountDetailPage></AccountDetailPage>}></Route>
               <Route path="/change-password" element={<ChangePasswordPage></ChangePasswordPage>}></Route>
+              <Route path="/hstv" element={<HstvPage></HstvPage>}></Route>
+              <Route path="/hstv-edit" element={<EditHstvPage></EditHstvPage>}></Route>
+              <Route path="/application-detail" element={<ApplicationDetailPage></ApplicationDetailPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

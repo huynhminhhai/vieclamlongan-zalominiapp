@@ -30,6 +30,12 @@ const ProfilePage: React.FunctionComponent = () => {
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
+                            onClick={() => navigate('/hstv')}
+                            title="Thông tin hồ sơ tìm việc"
+                            prefix={<Icon fontSize={22} icon="bi:person-vcard" />}
+                            suffix={<Icon fontSize={18} icon="formkit:right" />}
+                        />
+                        <Item
                             onClick={() => navigate('/account-detail')}
                             title="Thông tin tài khoản"
                             prefix={<Icon fontSize={22} icon="mdi:file-account-outline" />}

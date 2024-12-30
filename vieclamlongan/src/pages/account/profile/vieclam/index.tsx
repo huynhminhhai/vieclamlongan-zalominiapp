@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Header, Page } from "zmp-ui";
 import ViecLamNd70Section from "./ViecLamNd70Section";
 import ViecLamSection from "./ViecLamSection";
+import ApplicationSection from "./ApplicationSection";
 
 const VieclamPage: React.FunctionComponent = () => {
 
@@ -10,7 +11,7 @@ const VieclamPage: React.FunctionComponent = () => {
             <Header title="Thông tin việc làm" />
                 <ViecLamNd70Section />
                 <ViecLamSection />
-            
+                <ApplicationSection />
         </Page>
     );
 };

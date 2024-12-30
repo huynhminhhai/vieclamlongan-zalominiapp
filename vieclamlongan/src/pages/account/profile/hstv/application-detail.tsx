@@ -11,15 +11,15 @@ const ApplicationDetailPage: React.FunctionComponent = () => {
                     <h4 className="text-[18px] font-semibold mb-1">Cty Wondo Vina</h4>
                     <h5 className="text-[16px] font-semibold mb-3">may mặc</h5>
                     <div className="flex items-start gap-1 mb-1">
-                        <div>Sđt: </div>
+                        <div className="font-medium">Sđt: </div>
                         <div className="flex-1">0907104804</div>
                     </div>
                     <div className="flex items-start gap-1 mb-1">
-                        <div>Mail: </div>
+                        <div className="font-medium">Mail: </div>
                         <div className="flex-1">Chưa có</div>
                     </div>
                     <div className="flex items-start gap-1 mb-1">
-                        <div>Địa chỉ:</div>
+                        <div className="font-medium">Địa chỉ:</div>
                         <div className="flex-1">Âp Tân bình xã long bình điền huyện chợ gạo tiền giang</div>
                     </div>
                 </Box>
@@ -27,19 +27,19 @@ const ApplicationDetailPage: React.FunctionComponent = () => {
                 <Box py={4} className="border-b-[1px]">
                     <h4 className="text-[18px] font-semibold mb-2">Thông tin công việc</h4>
                     <div className="flex items-start gap-1 mb-1">
-                        <div>Tên công việc: </div>
+                        <div className="font-medium">Tên công việc: </div>
                         <div className="flex-1">nhân viên phòng rập</div>
                     </div>
                     <div className="flex items-start gap-1 mb-1">
-                        <div>Vị trí công việc: </div>
+                        <div className="font-medium">Vị trí công việc: </div>
                         <div className="flex-1">Nhân viên / Chuyên viên</div>
                     </div>
                     <div className="flex items-start gap-1 mb-1">
-                        <div>Hạn nộp: </div>
+                        <div className="font-medium">Hạn nộp: </div>
                         <div className="flex-1">28/02/2025</div>
                     </div>
                     <div className="flex items-start gap-1 mb-1">
-                        <div>Số lượng: </div>
+                        <div className="font-medium">Số lượng: </div>
                         <div className="flex-1">3</div>
                     </div>
                 </Box>

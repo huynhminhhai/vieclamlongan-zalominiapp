@@ -10,7 +10,7 @@ const VieclamListPage: React.FunctionComponent = () => {
             <Box p={4} className="text-[#606468]">
                 <Box>
                     {/* <h4 className="text-[18px] font-semibold mb-5 mt-8">Danh sách hồ sơ đã nộp</h4> */}
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col">
                         <ViecLamItem />
                         <ViecLamItem />
                         <ViecLamItem />

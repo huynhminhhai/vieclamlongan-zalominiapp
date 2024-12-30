@@ -1,8 +1,6 @@
 import { Icon } from "@iconify/react";
 import React from "react";
-import { useState } from "react";
 import { Box, Button, useNavigate, useSnackbar } from "zmp-ui";
-import ViecLamNd70Item from "./ViecLamNd70Item";
 import ViecLamItem from "./ViecLamItem";
 
 type ViecLamSectionProps = {
@@ -12,10 +10,9 @@ type ViecLamSectionProps = {
 const ViecLamSection: React.FC<ViecLamSectionProps> = () => {
 
     const navigate = useNavigate()
-    const { openSnackbar } = useSnackbar();
 
     return (
-        <Box p={4} className="text-[#606468]">
+        <Box p={4} mt={4} className="text-[#606468] border-t-[1px]">
             <h4 className="text-[20px] font-semibold mb-5">Việc làm đã tạo</h4>
             <Box>
                 <div

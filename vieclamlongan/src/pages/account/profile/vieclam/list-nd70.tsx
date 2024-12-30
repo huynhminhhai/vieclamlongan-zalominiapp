@@ -41,7 +41,7 @@ const VieclamNd70ListPage: React.FunctionComponent = () => {
                             <span className="text-[14px] font-medium leading-[1]">Tải mẫu ND70</span>
                         </div>
                     </Box>
-                    <div className="flex flex-col gap-3">
+                    <div className="flex flex-col">
                         <ViecLamNd70Item setDownLoadList={setDownLoadList} />
                         <ViecLamNd70Item setDownLoadList={setDownLoadList} />
                         <ViecLamNd70Item setDownLoadList={setDownLoadList} />

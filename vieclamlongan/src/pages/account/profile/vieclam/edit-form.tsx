@@ -422,7 +422,7 @@ const EditViecLamPage: React.FunctionComponent = () => {
                         value={formData.experience}
                         required
                         error={errors.experience}
-                        onChange={(value) => handleInputChange(".experience", value)}
+                        onChange={(value) => handleInputChange("experience", value)}
                     />
 
                     <InputAreaField
@@ -430,14 +430,14 @@ const EditViecLamPage: React.FunctionComponent = () => {
                         value={formData.qualification}
                         required
                         error={errors.qualification}
-                        onChange={(value) => handleInputChange(".qualification", value)}
+                        onChange={(value) => handleInputChange("qualification", value)}
                     />
 
                     <InputAreaField
                         label="Phúc lợi (nếu có)"
                         value={formData.benefits}
                         error={errors.benefits}
-                        onChange={(value) => handleInputChange(".benefits", value)}
+                        onChange={(value) => handleInputChange("benefits", value)}
                     />
 
                     <Box py={4}>

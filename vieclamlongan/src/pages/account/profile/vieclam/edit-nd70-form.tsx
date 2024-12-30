@@ -183,7 +183,7 @@ const EditViecLamNd70Page: React.FunctionComponent = () => {
                         value={formData.qualification}
                         required
                         error={errors.qualification}
-                        onChange={(value) => handleInputChange(".qualification", value)}
+                        onChange={(value) => handleInputChange("qualification", value)}
                     />
 
                     <InputAreaField
@@ -191,14 +191,14 @@ const EditViecLamNd70Page: React.FunctionComponent = () => {
                         value={formData.experience}
                         required
                         error={errors.experience}
-                        onChange={(value) => handleInputChange(".experience", value)}
+                        onChange={(value) => handleInputChange("experience", value)}
                     />
 
                     <InputAreaField
                         label="Yêu cầu khác "
                         value={formData.other}
                         error={errors.other}
-                        onChange={(value) => handleInputChange(".other", value)}
+                        onChange={(value) => handleInputChange("other", value)}
                     />
 
 

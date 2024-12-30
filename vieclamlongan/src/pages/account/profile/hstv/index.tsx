@@ -51,8 +51,12 @@ const HstvPage: React.FunctionComponent = () => {
                     <div className="flex flex-col gap-3">
                         <ApplicationItem />
                         <ApplicationItem />
-                        <ApplicationItem />
-                        <ApplicationItem />
+                        <div className="flex items-center justify-center mt-6">
+                        <Button
+                            onClick={() => navigate('/hstv-list')}
+                            size="medium"
+                        >Xem tất cả</Button>
+                        </div>
                     </div>
                 </Box>
             </Box>

@@ -23,7 +23,7 @@ body {
 }
 
 .zaui-page {
-  min-height: unset;
+  min-height: calc(100vh);
 }
 
 .zaui-header {

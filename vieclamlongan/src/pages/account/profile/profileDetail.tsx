@@ -174,11 +174,11 @@ const ProfileDetailPage: React.FunctionComponent = () => {
     const [formData, setFormData] = useState(initialFormValues);
     const [errors, setErrors] = useState<{ [key: string]: string | any }>({});
     const [isConfirmVisible, setConfirmVisible] = useState(false);
-    const [valueProvince, setValueProvince] = useState<string | "">("");
-    const [valueDistrict, setValueDistrict] = useState<string | "">("");
-    const [valueWard, setValueWard] = useState<string | "">("");
-    const [valueStatus, setValueStatus] = useState<string | "">("");
-    const [valueCertificate, setValueCertificate] = useState<string | "">("");
+    const [valueProvince, setValueProvince] = useState<string | "">(initialFormValues.province || "");
+    const [valueDistrict, setValueDistrict] = useState<string | "">(initialFormValues.district || "");
+    const [valueWard, setValueWard] = useState<string | "">(initialFormValues.ward || "");
+    const [valueStatus, setValueStatus] = useState<string | "">(initialFormValues.status || "");
+    const [valueCertificate, setValueCertificate] = useState<string | "">(initialFormValues.certificate || "");
 
     const handleFilePick = async () => {
         pickFile({

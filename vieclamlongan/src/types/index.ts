@@ -11,7 +11,8 @@ export type SearchInputMap = {
 
 export type Banner = {
     url: string,
-    alt: string
+    alt: string,
+    link: string
 }
 
 export type Utinity = {

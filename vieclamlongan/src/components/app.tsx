@@ -41,6 +41,8 @@ import HstvPage from "pages/account/profile/hstv";
 import EditHstvPage from "pages/account/profile/hstv/edit";
 import ApplicationDetailPage from "pages/account/profile/hstv/application-detail";
 import ContactPage from "pages/contact";
+import QAPage from "pages/qa";
+import ProfileDNDetailPage from "pages/account/profile/profileDnDetail";
 
 const MyApp = () => {
   return (
@@ -82,12 +84,14 @@ const MyApp = () => {
               <Route path="/register" element={<RegisterPage></RegisterPage>}></Route>
               <Route path="/profile" element={<ProfilePage></ProfilePage>}></Route>
               <Route path="/profile-detail" element={<ProfileDetailPage></ProfileDetailPage>}></Route>
+              <Route path="/profile-dn-detail" element={<ProfileDNDetailPage></ProfileDNDetailPage>}></Route>
               <Route path="/account-detail" element={<AccountDetailPage></AccountDetailPage>}></Route>
               <Route path="/change-password" element={<ChangePasswordPage></ChangePasswordPage>}></Route>
               <Route path="/hstv" element={<HstvPage></HstvPage>}></Route>
               <Route path="/hstv-edit" element={<EditHstvPage></EditHstvPage>}></Route>
               <Route path="/application-detail" element={<ApplicationDetailPage></ApplicationDetailPage>}></Route>
               <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
+              <Route path="/qa" element={<QAPage></QAPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

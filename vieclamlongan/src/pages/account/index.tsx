@@ -27,8 +27,14 @@ const AccountPage: React.FunctionComponent = () => {
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
-                            onClick={() => navigate('/profile')}
-                            title="Tổng quan"
+                            onClick={() => navigate('/profile?type=nld')}
+                            title="Tổng quan (người lao động)"
+                            prefix={<Icon fontSize={22} icon="gg:profile" />}
+                            suffix={<Icon fontSize={18} icon="formkit:right" />}
+                        />
+                        <Item
+                            onClick={() => navigate('/profile?type=dn')}
+                            title="Tổng quan (doanh nghiệp)"
                             prefix={<Icon fontSize={22} icon="gg:profile" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />

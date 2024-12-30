@@ -8,7 +8,7 @@ export const SEARCHINPUT: SearchInputMap = {
     '2': {
         url: '/search-hstv',
         placeholder: 'Tìm kiếm hồ sơ tìm việc'
-    }, 
+    },
     '3': {
         url: '/search-content',
         placeholder: 'Tìm kiếm theo nghị định 70'
@@ -17,29 +17,24 @@ export const SEARCHINPUT: SearchInputMap = {
 
 export const BANNERURL: Banner[] = [
     {
+        link: "/document-detail",
         url: 'http://quantri.vieclamlongan.vn/images/20240827100344_PANO%20HUONG%20DAN%20NOP%20HO%20SO.jpg',
         alt: 'slide 1'
     },
     {
+        link: "/document-list",
         url: 'http://quantri.vieclamlongan.vn/images/20241205074418_PANO%20NHAN%20BHTN%20WEB.jpg',
         alt: 'slide 2'
     },
     {
+        link: "/news-detail",
         url: 'http://quantri.vieclamlongan.vn/images/20241205101007_thi%20cong%20nghe%20thong%20tin.jpg',
         alt: 'slide 3'
-    },
-    {
-        url: 'http://quantri.vieclamlongan.vn/images/20240923093309_banner%20web.jpg',
-        alt: 'slide 4'
-    },
-    {
-        url: 'http://quantri.vieclamlongan.vn/images/20241205102707_S%C3%A0n%20tr%E1%BB%B1c%20tuy%E1%BA%BFn123.jpg',
-        alt: 'slide 5'
     }
 
 ]
 
-export const COMPANY: {imgurl: string, name: string}[] = [
+export const COMPANY: { imgurl: string, name: string }[] = [
     {
         imgurl: 'http://quantri.vieclamlongan.vn/images/20240122112215_cty%20ba%20hu%C3%A2n.jpg',
         name: 'CÔNG TY CỔ PHẦN BA HUÂN'
@@ -91,7 +86,7 @@ export const APP_UTINITIES: Array<Utinity> = [
         iconSrc: 'ic:baseline-people',
         path: "/ho-so-tim-viec",
     },
-    
+
 ];
 
 export const NEWS_LIST: News[] = [

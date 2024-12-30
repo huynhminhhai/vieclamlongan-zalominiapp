@@ -13,7 +13,7 @@ export const Banner: FC = () => {
           BANNERURL.map((item, index) => (
             <Swiper.Slide key={index}>
               <Box
-                onClick={() => navigate('/detail')}
+                onClick={() => navigate(item.link)}
               >
                 <img src={item.url} alt={item.alt} />
               </Box>

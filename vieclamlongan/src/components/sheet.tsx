@@ -41,7 +41,7 @@ export const menus2: Record<string, MenuItem> = {
         label: "Tài khoản",
         icon: <Icon icon="clarity:user-line" />
     },
-    "/hoi-dap/1": {
+    "/qa": {
         label: "Hỏi đáp",
         icon: <Icon icon="stash:question" />
     },

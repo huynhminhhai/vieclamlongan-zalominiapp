@@ -1,10 +1,8 @@
 import React from "react";
-import { Box, Button, Header, Page, useNavigate } from "zmp-ui";
+import { Box, Button, Header, Page } from "zmp-ui";
 import ApplicationItem from "./ApplicationItem";
 
 const HstvListPage: React.FunctionComponent = () => {
-
-    const navigate = useNavigate()
 
     return (
         <Page className="relative flex-1 flex flex-col pb-[66px] bg-white">

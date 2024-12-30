@@ -28,7 +28,6 @@ const SearchableSelect: React.FC<SearchableSelectProps> = ({
     onChange,
     errors
 }) => {
-
     const [isSheetOpen, setIsSheetOpen] = useState(false);
     const [search, setSearch] = useState("");
 
@@ -45,20 +44,20 @@ const SearchableSelect: React.FC<SearchableSelectProps> = ({
                 <Input
                     readOnly
                     onClick={() => setIsSheetOpen(true)}
-                    value={options.find(option => option.value === selectedValue)?.label || placeholder}
+                    value={options.find((option) => option.value === selectedValue)?.label || placeholder}
                 />
-
-                <Icon className="absolute right-3 top-[60%]" icon='formkit:down' fontSize={9} />
-
+                <Icon className="absolute right-3 top-[60%]" icon="formkit:down" fontSize={9} />
                 {errors && (
                     <Text size="xSmall" className="text-red-600 absolute left-0 top-[100%]">
                         {errors}
                     </Text>
                 )}
-
                 <Sheet
                     visible={isSheetOpen}
-                    onClose={() => setIsSheetOpen(false)}
+                    onClose={() => {
+                        setIsSheetOpen(false);
+                        setSearch(""); // Reset search on close
+                    }}
                     title="Chọn một giá trị"
                     className="z-20"
                 >
@@ -70,21 +69,25 @@ const SearchableSelect: React.FC<SearchableSelectProps> = ({
                             onChange={(e) => setSearch(e.target.value)}
                             className="w-[100%] p-2 border-[1px] border-[#ccc] rounded mb-4"
                         />
-
                         <div className="max-h-[50vh] overflow-y-auto">
                             {filteredOptions.map((option) => (
                                 <div
                                     key={option.value}
                                     onClick={() => {
-                                        setSelectedValue(option.label);
-                                        onChange(option.value)
+                                        setSelectedValue(option.value); // Save value, not label
+                                        onChange(option.value);
                                         setIsSheetOpen(false);
                                     }}
                                     className="flex justify-between items-center p-[8px] border-b-[1px] cursor-pointer"
                                 >
-                                    <span className={`${selectedValue === option.label && 'text-[#006af5]'}`}>{option.label}</span>
-                                    {selectedValue === option.label && (
-                                        <Icon className="text-[#006af5]" icon='teenyicons:tick-outline' />
+                                    <span
+                                        className={`${selectedValue === option.value && "text-[#006af5]"
+                                            }`}
+                                    >
+                                        {option.label}
+                                    </span>
+                                    {selectedValue === option.value && (
+                                        <Icon className="text-[#006af5]" icon="teenyicons:tick-outline" />
                                     )}
                                 </div>
                             ))}
@@ -100,5 +103,6 @@ const SearchableSelect: React.FC<SearchableSelectProps> = ({
         </Box>
     );
 };
+
 
 export default SearchableSelect;

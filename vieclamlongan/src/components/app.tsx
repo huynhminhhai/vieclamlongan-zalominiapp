@@ -44,6 +44,11 @@ import ContactPage from "pages/contact";
 import QAPage from "pages/qa";
 import ProfileDNDetailPage from "pages/account/profile/profileDnDetail";
 import HstvListPage from "pages/account/profile/hstv/list";
+import VieclamPage from "pages/account/profile/vieclam";
+import EditViecLamNd70Page from "pages/account/profile/vieclam/edit-nd70-form";
+import EditViecLamPage from "pages/account/profile/vieclam/edit-form";
+import VieclamListPage from "pages/account/profile/vieclam/list";
+import VieclamNd70ListPage from "pages/account/profile/vieclam/list-nd70";
 
 const MyApp = () => {
   return (
@@ -92,6 +97,11 @@ const MyApp = () => {
               <Route path="/hstv-list" element={<HstvListPage></HstvListPage>}></Route>
               <Route path="/hstv-edit" element={<EditHstvPage></EditHstvPage>}></Route>
               <Route path="/application-detail" element={<ApplicationDetailPage></ApplicationDetailPage>}></Route>
+              <Route path="/vieclam" element={<VieclamPage></VieclamPage>}></Route>
+              <Route path="/vieclam-list" element={<VieclamListPage></VieclamListPage>}></Route>
+              <Route path="/vieclam-nd70-list" element={<VieclamNd70ListPage></VieclamNd70ListPage>}></Route>
+              <Route path="/vieclam-nd70-edit" element={<EditViecLamNd70Page></EditViecLamNd70Page>}></Route>
+              <Route path="/vieclam-edit" element={<EditViecLamPage></EditViecLamPage>}></Route>
               <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
               <Route path="/qa" element={<QAPage></QAPage>}></Route>
             </Route>

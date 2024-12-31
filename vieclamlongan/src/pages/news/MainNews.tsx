@@ -20,7 +20,7 @@ const NewsMainItem: FunctionComponent<{ item: News }> = props => {
                 <img className="h-[100%] w-[100%] object-cover" src={item.imgurl} alt={item.title} />
             </div>
             <div className="flex-1 flex flex-col justify-center mt-3 border-b-[1px] pb-4 mb-4">
-                <Text size="xLarge" bold className="line-clamp-3 mb-2">{item.title}</Text>
+                <Text size="large" bold className="line-clamp-3 mb-1">{item.title}</Text>
                 <div className="tag flex items-center text-[#ff7d55] bg-[#ffece6] w-fit py-[4px] px-3 rounded-md mb-2">
                     <Icon icon='jam:thunder-f' />
                     <Text size="small" className="leading-1" bold>Tin tức</Text>

@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unused-prop-types */
 import { Icon } from "@iconify/react";
 import React, { FunctionComponent } from "react";
-import { Text, useNavigate } from "zmp-ui";
+import { Box, Text, useNavigate } from "zmp-ui";
 
 export interface UtinityItemProps {
     label?: string;
@@ -30,7 +30,9 @@ const UtinityItem: FunctionComponent<UtinityItemProps> = props => {
                     </div>
                 </div>
             )}
-            <Text className="text-center " size="small" bold>{label}</Text>
+            <Box px={4}>
+                <Text className="text-center " size="small" bold>{label}</Text>
+            </Box>
         </div>
     );
 };

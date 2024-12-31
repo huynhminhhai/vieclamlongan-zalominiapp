@@ -22,8 +22,9 @@ const JobItem: FunctionComponent<{detail: boolean }> = props => {
                             
                         >NV kinh doanh - chuyên thị trường quốc tế</Text.Title>
                         <Text
-                            size="small"
-                            className="text-[#005AFF] mb-2"
+                            size="xxSmall"
+                            bold
+                            className="text-[#005AFF] mb-1"
                             onClick={() => console.log('detail comany')}
                         >CÔNG TY TNHH PRO ALLIANCE COSME</Text>
                         <Text className="text-[#5d5d5d]" bold size="xSmall">Trên 20 triệu</Text>

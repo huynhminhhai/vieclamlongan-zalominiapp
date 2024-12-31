@@ -30,15 +30,15 @@ const VideoDetailPage: React.FunctionComponent = () => {
                                 <li className="flex items-start gap-3 mb-4">
                                     <Icon fontSize={28} icon='lets-icons:date-fill' />
                                     <div>
-                                        <Text size="small" className="uppercase mb-1 text-[#949697]">Ngày tạo</Text>
-                                        <Text size="small">26/09/2024</Text>
+                                        <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Ngày tạo</Text>
+                                        <Text size="xSmall">26/09/2024</Text>
                                     </div>
                                 </li>
                                 <li className="flex items-start gap-3 mb-4">
                                     <Icon fontSize={28} icon='bxs:layer' />
                                     <div>
-                                        <Text size="small" className="uppercase mb-1 text-[#949697]">Chuyên Mục</Text>
-                                        <Text size="small">Video Đào tạo</Text>
+                                        <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Chuyên Mục</Text>
+                                        <Text size="xSmall">Video Đào tạo</Text>
                                     </div>
                                 </li>
                             </ul>

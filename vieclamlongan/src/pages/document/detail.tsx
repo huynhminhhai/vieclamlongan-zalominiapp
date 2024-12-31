@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Header, Page } from "zmp-ui";
+import { Box, Header, Page, Text } from "zmp-ui";
 import { OtherList } from "components/others";
 import { Divider } from "components/divider";
 import { Section } from "components/section";
@@ -25,14 +25,22 @@ const DocumentDetailPage: React.FunctionComponent = () => {
                         <h2 className="text-[20px] leading-6 font-medium mb-2">
                             HƯỚNG DẪN NGƯỜI SỬ DỤNG LAO ĐỘNG THAM GIA PHIÊN GIAO DỊCH VIỆC LÀM TRỰC TUYẾN
                         </h2>
-                        <div className="text-[14px] flex items-center gap-1">
-                            <Icon icon='mynaui:user-solid' />
-                            Trung tâm DVVL Long An
-                        </div>
-                        <div className="text-[14px] flex items-center gap-1">
-                            <Icon icon='mingcute:time-fill' />
-                            20/12/2024
-                        </div>
+                        <ul className="text-[#555555] mt-6">
+                            <li className="flex items-start gap-3 mb-4">
+                                <Icon fontSize={28} icon='icon-park-solid:people' />
+                                <div>
+                                    <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Tác giả</Text>
+                                    <Text size="xSmall">Trung tâm DVVL Long An</Text>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3 mb-4">
+                                <Icon fontSize={28} icon='lets-icons:date-fill' />
+                                <div>
+                                    <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Ngày tạo</Text>
+                                    <Text size="xSmall">26/12/2024</Text>
+                                </div>
+                            </li>
+                        </ul>
                         <Box className="news-detail max-h-[610px] overflow-hidden" mt={6}>
                             <PdfViewer pdfUrl='http://quantri.vieclamlongan.vn/uploads/20241028154549_252 TB-TTDVVL.pdf' />
                         </Box>

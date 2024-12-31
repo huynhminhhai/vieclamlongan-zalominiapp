@@ -17,8 +17,8 @@ const MapPage: React.FunctionComponent = () => {
         <Page className="relative flex-1 flex flex-col pb-[66px] bg-white">
             <Header title="Địa chỉ" />
             <Box p={4}>
-                <Text.Title className="mb-5 text-center">TRUNG TÂM DỊCH VỤ VIỆC LÀM LONG AN</Text.Title>
-                <Text size="xLarge" className="text-[#80d0c7] mb-2" bold>Địa chỉ</Text>
+                <Text.Title className="mb-5 text-center px-2">TRUNG TÂM DỊCH VỤ VIỆC LÀM LONG AN</Text.Title>
+                <Text size="xLarge" className="text-[#80d0c7] mb-2" bold>Thông tin địa chỉ</Text>
                 <Box className="about-detail">
                     <Text>
                         Trung tâm dịch vụ việc làm Long An là đơn vị sự nghiệp thuộc Sở Lao động – Thương binh và Xã hội Long An
@@ -38,8 +38,9 @@ const MapPage: React.FunctionComponent = () => {
                         </li>
                     </ul>
                 </Box>
-                <Box>
-                    <List className="list-map">
+                <Box mt={8}>
+                    <Text size="xLarge" className="text-[#80d0c7] mb-2" bold>Danh sách địa chỉ</Text>
+                    <List className="list-map border-t-[1px] border-b-[1px]">
                         <Item
                             onClick={() => handleWebsiteClick('https://www.google.com/maps/place/Trung+t%C3%A2m+D%E1%BB%8Bch+v%E1%BB%A5+vi%E1%BB%87c+l%C3%A0m+Long+An/@10.6369388,106.4830912,204m/data=!3m1!1e3!4m14!1m7!3m6!1s0x310acc7ccf771051:0x9e016537871be4a1!2zVHJ1bmcgdMOibSBE4buLY2ggduG7pSB2aeG7h2MgbMOgbSBMb25nIEFu!8m2!3d10.6369375!4d106.4837349!16s%2Fg%2F1hc3jpj24!3m5!1s0x310acc7ccf771051:0x9e016537871be4a1!8m2!3d10.6369375!4d106.4837349!16s%2Fg%2F1hc3jpj24?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D')}
                             title="Trung tâm Dịch vụ việc làm Long An"

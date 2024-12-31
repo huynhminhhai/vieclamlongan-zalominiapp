@@ -15,8 +15,6 @@ export const NewsSection: FC = () => {
             <TotalComponent amount="12 bài viết" />
             <NewsMainItem item={mainNewsList} />
             <NewsList news={subNewsList} noDescNews={true} />
-            <NewsList news={subNewsList} noDescNews={true} />
-            <NewsList news={subNewsList} noDescNews={true} />
             <div className="flex items-center justify-center gap-3 py-6">
                 <Button onClick={() => console.log(123)} size="medium">Xem thêm</Button>
             </div>

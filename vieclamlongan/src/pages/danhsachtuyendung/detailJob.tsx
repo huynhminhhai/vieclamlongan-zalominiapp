@@ -58,7 +58,7 @@ const DetailJob: React.FunctionComponent = () => {
           </Box>
           <Divider />
           <Box>
-            <Tabs id="job-detail-tab" className="text-[#555555]">
+            <Tabs id="job-detail-tab" className="text-[#555555] job-detail-tab">
               <Tabs.Tab key="infor" label="Thông tin">
                 <Box p={4}>
                   <Box mt={3}>
@@ -66,29 +66,29 @@ const DetailJob: React.FunctionComponent = () => {
                       <li className="flex items-start gap-3 mb-4">
                         <Icon fontSize={28} icon='lets-icons:date-fill' />
                         <div>
-                          <Text size="small" className="uppercase mb-1 text-[#949697]">Ngày Đăng Tuyển</Text>
-                          <Text size="small">06/12/2024</Text>
+                          <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Ngày Đăng Tuyển</Text>
+                          <Text size="xSmall">06/12/2024</Text>
                         </div>
                       </li>
                       <li className="flex items-start gap-3 mb-4">
                         <Icon fontSize={28} icon='bxs:layer' />
                         <div>
-                          <Text size="small" className="uppercase mb-1 text-[#949697]">Cấp Bậc</Text>
-                          <Text size="small">Nhân viên / Chuyên viên</Text>
+                          <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Cấp Bậc</Text>
+                          <Text size="xSmall">Nhân viên / Chuyên viên</Text>
                         </div>
                       </li>
                       <li className="flex items-start gap-3 mb-4">
                         <Icon fontSize={28} icon='ix:work-case-filled' />
                         <div>
-                          <Text size="small" className="uppercase mb-1 text-[#949697]">Ngành Nghề</Text>
-                          <Text size="small">BẢO TRÌ CƠ KHÍ</Text>
+                          <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Ngành Nghề</Text>
+                          <Text size="xSmall">BẢO TRÌ CƠ KHÍ</Text>
                         </div>
                       </li>
                       <li className="flex items-start gap-3 mb-4">
                         <Icon fontSize={28} icon='flowbite:language-outline' />
                         <div>
-                          <Text size="small" className="uppercase mb-1 text-[#949697]">Ngôn Ngữ Trình Bày Hồ Sơ</Text>
-                          <Text size="small">Bất kỳ</Text>
+                          <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Ngôn Ngữ Trình Bày Hồ Sơ</Text>
+                          <Text size="xSmall">Bất kỳ</Text>
                         </div>
                       </li>
                     </ul>
@@ -100,82 +100,86 @@ const DetailJob: React.FunctionComponent = () => {
                         <div className="w-[28px] h-[28px] flex items-center justify-center rounded-full border-[1px] border-[#555555]">
                           <Icon icon='ic:baseline-attach-money' />
                         </div>
-                        <Text className="flex-1" size="small">Theo quy định của công ty</Text>
+                        <Text className="flex-1" size="xSmall">Theo quy định của công ty</Text>
                       </li>
                       <li className="flex items-center gap-2 mb-2">
                         <div className="w-[28px] h-[28px] flex items-center justify-center rounded-full border-[1px] border-[#555555]">
                           <Icon icon='solar:health-bold' />
                         </div>
-                        <Text className="flex-1" size="small">Bảo hiểm theo quy định Nhà Nước</Text>
+                        <Text className="flex-1" size="xSmall">Bảo hiểm theo quy định Nhà Nước</Text>
                       </li>
                       <li className="flex items-center gap-2">
                         <div className="w-[28px] h-[28px] flex items-center justify-center rounded-full border-[1px] border-[#555555]">
                           <Icon icon='simple-icons:chianetwork' />
                         </div>
-                        <Text className="flex-1" size="small">Môi trường làm việc chuyên nghiệp, cơ hội thăng tiến</Text>
+                        <Text className="flex-1" size="xSmall">Môi trường làm việc chuyên nghiệp, cơ hội thăng tiến</Text>
                       </li>
                     </ul>
                   </Box>
                   <Box mt={3}>
                     <Text.Title className="uppercase">Mô Tả Công Việc</Text.Title>
-                    <ul className="py-4">
-                      <li className="mb-1">
-                        Nghiên cứu và phân tích thị trường nước ngoài để xác định khách hàng tiềm năng và nhu cầu của họ.
-                      </li>
-                      <li className="mb-1">
-                        Thu thập thông tin về nhân khẩu học khách hàng, chẳng hạn như giá cả, đối thủ cạnh tranh hiện tại và nhu cầu của khách hàng.
-                      </li>
-                      <li className="mb-1">
-                        Sử dụng các thông tin thu thập được để phát triển các chiến lược và kế hoạch tiếp cận những khách hàng tiềm năng này.
-                      </li>
-                      <li className="mb-1">
-                        Nghiên cứu và hiểu nhu cầu của khách hàng để có thể giới thiệu đúng sản phẩm hoặc dịch vụ.
-                      </li>
-                      <li className="mb-1">
-                        Sau khi hiểu nhu cầu của khách hàng, cần đưa ra khuyến nghị về các sản phẩm hoặc dịch vụ có thể đáp ứng những nhu cầu đó.
-                      </li>
-                      <li className="mb-1">
-                        Giải thích các tính năng và lợi ích của sản phẩm hoặc dịch vụ, đồng thời trả lời mọi câu hỏi mà khách hàng có.
-                      </li>
-                      <li className="mb-1">
-                        Nếu khách hàng quan tâm đến sản phẩm hoặc dịch vụ, Nhân viên Kinh doanh quốc tế sẽ cần thương lượng giá cả và các điều khoản khác của việc bán hàng.
-                      </li>
-                      <li className="mb-1">
-                        Lưu trữ thông tin các giao dịch đã hoàn tất với khách hàng quốc tế.
-                      </li>
-                      <li className="mb-1">
-                        Soạn thảo hợp đồng bán hàng, giám sát khách hàng trong quá trình ký kết và đảm bảo rằng các thỏa thuận được ký kết theo các điều khoản quy định.
-                      </li>
-                      <li className="mb-1">
-                        Chịu trách nhiệm báo cáo giao dịch cho cấp trên và tích cực phối hợp với các bộ phận phụ trách sản xuất và vận chuyển để đảm bảo sản phẩm được giao đến tay khách hàng trong thời gian sớm nhất.
-                      </li>
-                      <li className="mb-1">
-                        Theo dõi và theo dõi trạng thái đơn hàng trong suốt quá trình vận chuyển.
-                      </li>
-                    </ul>
+                    <div className="text-[13px] leading-[20px]">
+                      <ul className="py-4">
+                        <li className="mb-1">
+                          Nghiên cứu và phân tích thị trường nước ngoài để xác định khách hàng tiềm năng và nhu cầu của họ.
+                        </li>
+                        <li className="mb-1">
+                          Thu thập thông tin về nhân khẩu học khách hàng, chẳng hạn như giá cả, đối thủ cạnh tranh hiện tại và nhu cầu của khách hàng.
+                        </li>
+                        <li className="mb-1">
+                          Sử dụng các thông tin thu thập được để phát triển các chiến lược và kế hoạch tiếp cận những khách hàng tiềm năng này.
+                        </li>
+                        <li className="mb-1">
+                          Nghiên cứu và hiểu nhu cầu của khách hàng để có thể giới thiệu đúng sản phẩm hoặc dịch vụ.
+                        </li>
+                        <li className="mb-1">
+                          Sau khi hiểu nhu cầu của khách hàng, cần đưa ra khuyến nghị về các sản phẩm hoặc dịch vụ có thể đáp ứng những nhu cầu đó.
+                        </li>
+                        <li className="mb-1">
+                          Giải thích các tính năng và lợi ích của sản phẩm hoặc dịch vụ, đồng thời trả lời mọi câu hỏi mà khách hàng có.
+                        </li>
+                        <li className="mb-1">
+                          Nếu khách hàng quan tâm đến sản phẩm hoặc dịch vụ, Nhân viên Kinh doanh quốc tế sẽ cần thương lượng giá cả và các điều khoản khác của việc bán hàng.
+                        </li>
+                        <li className="mb-1">
+                          Lưu trữ thông tin các giao dịch đã hoàn tất với khách hàng quốc tế.
+                        </li>
+                        <li className="mb-1">
+                          Soạn thảo hợp đồng bán hàng, giám sát khách hàng trong quá trình ký kết và đảm bảo rằng các thỏa thuận được ký kết theo các điều khoản quy định.
+                        </li>
+                        <li className="mb-1">
+                          Chịu trách nhiệm báo cáo giao dịch cho cấp trên và tích cực phối hợp với các bộ phận phụ trách sản xuất và vận chuyển để đảm bảo sản phẩm được giao đến tay khách hàng trong thời gian sớm nhất.
+                        </li>
+                        <li className="mb-1">
+                          Theo dõi và theo dõi trạng thái đơn hàng trong suốt quá trình vận chuyển.
+                        </li>
+                      </ul>
+                    </div>
                   </Box>
                   <Box mt={3}>
                     <Text.Title className="uppercase">Yêu Cầu Công Việc</Text.Title>
-                    <ul className="py-4">
-                      <li className="mb-1">
-                        Trung thực, Cẩn thận, chính xác.
-                      </li>
-                      <li className="mb-1">
-                        Chịu được áp lực công việc.
-                      </li>
-                      <li>
-                        Trách nhiệm và sẵn sàng nhận nhiệm vụ.
-                      </li>
-                    </ul>
+                    <div className="text-[13px] leading-[20px]">
+                      <ul className="py-4">
+                        <li className="mb-1">
+                          Trung thực, Cẩn thận, chính xác.
+                        </li>
+                        <li className="mb-1">
+                          Chịu được áp lực công việc.
+                        </li>
+                        <li>
+                          Trách nhiệm và sẵn sàng nhận nhiệm vụ.
+                        </li>
+                      </ul>
+                    </div>
                   </Box>
                   <Box mt={3}>
                     <Text.Title className="uppercase">Địa Điểm Làm Việc</Text.Title>
                     <ul className="py-4">
-                      <li className="flex items-center gap-2 mb-2">
+                      <li className="flex items-start gap-2 mb-2">
                         <div className="w-[28px] h-[28px] flex items-center justify-center rounded-full border-[1px] border-[#555555]">
                           <Icon icon='mingcute:location-fill' />
                         </div>
-                        <Text className="flex-1" size="small">
+                        <Text className="flex-1" size="xSmall">
                           Lô B231-B232, Đường Số 8, KCN Thái Hòa, Ấp Tân Hòa, Xã Đức Lập Hạ, Huyện Đức Hoà, Tỉnh Long An</Text>
                       </li>
                     </ul>
@@ -186,13 +190,15 @@ const DetailJob: React.FunctionComponent = () => {
                 <Box p={4}>
                   <Box mt={3}>
                     <Text.Title className="uppercase">Giới thiệu</Text.Title>
-                    <ul className="py-4">
-                      <li className="mb-1">
-                        <Text className="flex-1" size="small">
-                          Sản xuất tấm mouse xốp PU FOAM các loại và nguyên liệu làm giày
-                        </Text>
-                      </li>
-                    </ul>
+                    <div className="text-[13px] leading-[20px]">
+                      <ul className="py-4">
+                        <li className="mb-1">
+                          <Text className="flex-1" size="small">
+                            Sản xuất tấm mouse xốp PU FOAM các loại và nguyên liệu làm giày
+                          </Text>
+                        </li>
+                      </ul>
+                    </div>
                   </Box>
                   <Box mt={3}>
                     <Text.Title className="uppercase">Địa Điểm Làm Việc</Text.Title>
@@ -201,7 +207,7 @@ const DetailJob: React.FunctionComponent = () => {
                         <div className="w-[28px] h-[28px] flex items-center justify-center rounded-full border-[1px] border-[#555555]">
                           <Icon icon='mingcute:location-fill' />
                         </div>
-                        <Text className="flex-1" size="small">
+                        <Text className="flex-1" size="xSmall">
                           Lô B231-B232, Đường Số 8, KCN Thái Hòa, Ấp Tân Hòa, Xã Đức Lập Hạ, Huyện Đức Hoà, Tỉnh Long An</Text>
                       </li>
                     </ul>

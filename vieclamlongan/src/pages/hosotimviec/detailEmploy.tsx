@@ -12,7 +12,7 @@ type ItemInforProps = {
 
 const ItemInfor: React.FC<ItemInforProps> = ({ label, value }) => {
   return (
-    <Text size="small" className="mb-2"><span className="font-medium">- {label}:</span> {value || 'không có'}</Text>
+    <Text size="xxSmall" className="mb-2"><span className="font-medium">- {label}:</span> {value || 'không có'}</Text>
   )
 }
 
@@ -32,8 +32,8 @@ const DetailEmploy: React.FunctionComponent = () => {
                 <div className="flex-1 w-[100%]">
                   <Text.Title size="large" className="mb-3 text-center">Nguyễn Văn A</Text.Title>
                   <div className="mt-2">
-                    <Text size="small" className="text-[#555555]"><span className="font-medium mb-2">Công việc:</span> Hành chính nhân sự. Chỉnh lý tài liệu</Text>
-                    <Text size="small" className="text-[#555555]"><span className="font-medium mb-2">Mức lương mong muốn:</span> Thỏa thuận</Text>
+                    <Text size="xSmall" className="text-[#555555]"><span className="font-medium mb-2">Công việc:</span> Hành chính nhân sự. Chỉnh lý tài liệu</Text>
+                    <Text size="xSmall" className="text-[#555555]"><span className="font-medium mb-2">Mức lương mong muốn:</span> Thỏa thuận</Text>
                   </div>
                 </div>
               </div>
@@ -48,29 +48,29 @@ const DetailEmploy: React.FunctionComponent = () => {
                   <li className="flex items-start gap-3 mb-4">
                     <Icon fontSize={28} icon='lets-icons:date-fill' />
                     <div>
-                      <Text size="small" className="uppercase mb-1 text-[#949697]">Ngày tạo</Text>
-                      <Text size="small">06/12/2024</Text>
+                      <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Ngày tạo</Text>
+                      <Text size="xSmall">06/12/2024</Text>
                     </div>
                   </li>
                   <li className="flex items-start gap-3 mb-4">
                     <Icon fontSize={28} icon='ion:male-female' />
                     <div>
-                      <Text size="small" className="uppercase mb-1 text-[#949697]">Giới tính</Text>
-                      <Text size="small">Nữ</Text>
+                      <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Giới tính</Text>
+                      <Text size="xSmall">Nữ</Text>
                     </div>
                   </li>
                   <li className="flex items-start gap-3 mb-4">
                     <Icon fontSize={28} icon='ix:work-case-filled' />
                     <div>
-                      <Text size="small" className="uppercase mb-1 text-[#949697]">Chuyên Ngành</Text>
-                      <Text size="small">KẾ TOÁN</Text>
+                      <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Chuyên Ngành</Text>
+                      <Text size="xSmall">KẾ TOÁN</Text>
                     </div>
                   </li>
                   <li className="flex items-start gap-3 mb-4">
                     <Icon fontSize={28} icon='ix:work-case-filled' />
                     <div>
-                      <Text size="small" className="uppercase mb-1 text-[#949697]">Kinh nghiệm</Text>
-                      <Text size="small">Trên 5 năm</Text>
+                      <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Kinh nghiệm</Text>
+                      <Text size="xSmall">Trên 5 năm</Text>
                     </div>
                   </li>
                 </ul>

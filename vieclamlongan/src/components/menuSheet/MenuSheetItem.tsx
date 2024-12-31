@@ -12,7 +12,7 @@ const MenuSheetItem: FunctionComponent<{ path: string } & MenuSheetProps> = prop
         <Box
             key={path}
             p={2}
-            px={4}
+            px={3}
             className="border-[1px] rounded-lg"
             onClick={() => navigation(path)}
         >

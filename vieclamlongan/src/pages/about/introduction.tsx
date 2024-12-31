@@ -14,7 +14,7 @@ const IntroductionPage: React.FunctionComponent = () => {
         <Page className="relative flex-1 flex flex-col pb-[66px] bg-white">
             <Header title="Giới thiệu chung" />
             <Box p={4}>
-                <Text.Title className="mb-5 text-center">TRUNG TÂM DỊCH VỤ VIỆC LÀM LONG AN</Text.Title>
+                <Text.Title className="mb-5 text-center px-2">TRUNG TÂM DỊCH VỤ VIỆC LÀM LONG AN</Text.Title>
                 <Text size="xLarge" className="text-[#80d0c7] mb-2" bold>Giới thiệu chung</Text>
                 <Box className="about-detail">
                     <Text>

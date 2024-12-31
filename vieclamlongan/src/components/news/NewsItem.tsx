@@ -31,8 +31,8 @@ const NewsItem: FunctionComponent<{ item: News, noDescNews: boolean }> = props =
                                 <Icon icon='jam:thunder-f' />
                                 <Text size="xxSmall" className="leading-1" bold>Tin tức</Text>
                             </div>
-                            <div className="inline-block mb-1 text-[12px] leading-[1]">{item.createAt}</div>
-                            <div className="inline-block text-[#ff7d55] text-[12px] leading-4">{item.author}</div>
+                            <div className="inline-block mb-1 text-[13px] leading-[1]">{item.createAt}</div>
+                            <div className="inline-block text-[#ff7d55] text-[13px] leading-4">{item.author}</div>
                         </>
                 }
             </div>

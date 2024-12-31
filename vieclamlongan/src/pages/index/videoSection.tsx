@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import { Section } from "components/section";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import { Box, Text, useNavigate } from "zmp-ui";
+import { Box, useNavigate } from "zmp-ui";
 import { VIDEO_LIST } from "constants";
 
 export const VideoSection: FC = () => {
@@ -12,8 +12,8 @@ export const VideoSection: FC = () => {
     return (
         <Section title="Video" padding="title-only" seemore={true} seemoreUrl="/video-list">
             <Swiper
-                spaceBetween={20}
-                slidesPerView={1.15}
+                spaceBetween={16}
+                slidesPerView={2.15}
                 className="px-4"
             >
                 {
@@ -22,12 +22,12 @@ export const VideoSection: FC = () => {
                             <div
                                 onClick={() => navigate('/video-detail')}
                             >
-                                <Box
-                                    className="relative border-[1px] border-[#f5f5f5] rounded-lg overflow-hidden">
-                                    <img className="w-[100%] h-[100%] object-contain" src={item.imgUrl} alt={item.title} />
-                                </Box>
+                                <div
+                                    className="relative border-[1px] border-[#f5f5f5] rounded-lg overflow-hidden h-[80px] flex items-center justify-center">
+                                    <img className="w-auto h-[45px] object-contain m-auto" src={item.imgUrl} alt={item.title} />
+                                </div>
                                 <Box>
-                                    <Text className="mt-2" size="small" bold>{item.title}</Text>
+                                    <h4 className="mt-2 text-[14px] leading-[18px] font-medium line-clamp-2">{item.title}</h4>
                                 </Box>
                             </div>
                         </SwiperSlide>

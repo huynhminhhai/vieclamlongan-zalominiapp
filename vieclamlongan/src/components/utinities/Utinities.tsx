@@ -8,7 +8,7 @@ interface UtinitiesProps {
 const Utinities: FunctionComponent<UtinitiesProps> = props => {
     const { utinities } = props;
     return (
-        <div className="grid grid-cols-2 gap-6 bg-ui_bg bg-center bg-no-repeat p-[16px] pt-[0px]">
+        <div className="grid grid-cols-2 gap-6 bg-ui_bg bg-center bg-no-repeat p-[16px]">
             {utinities.map(item => {
                 const { key, ...utinity } = item;
                 return <UtinityItem key={key} {...utinity} />;

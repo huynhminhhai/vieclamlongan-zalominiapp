@@ -1,8 +1,8 @@
-import { Icon } from "@iconify/react";
 import React, { Dispatch, FC, SetStateAction } from "react";
 import { MenuItem } from "types";
 import { Box, Sheet } from 'zmp-ui'
 import { MenuSheet } from "./menuSheet";
+import icons from "../assets/icons";
 
 type SheetProps = {
     sheetVisible: boolean;
@@ -12,42 +12,42 @@ type SheetProps = {
 export const menus1: Record<string, MenuItem> = {
     "/about": {
         label: "Giới thiệu",
-        icon: <Icon icon="mdi-light:information" />
+        icon: icons.aboutIcon
     },
     "/news": {
         label: "Tin tức",
-        icon: <Icon icon="fluent:news-24-regular" />
+        icon: icons.newsIcon
     },
     "/training-list": {
         label: "Đào tạo",
-        icon: <Icon icon="material-symbols-light:model-training" />
+        icon: icons.trainingIcon
     },
     "/insurance-list": {
         label: "Bảo hiểm thất nghiệp",
-        icon: <Icon icon="material-symbols-light:news-outline" />
+        icon: icons.insuranceIcon
     },
     "/foreign-list": {
         label: "Việc làm nước ngoài",
-        icon: <Icon icon="material-symbols-light:news-outline" />
+        icon: icons.jobIcon
     },
     "/document-list": {
         label: "Văn bản",
-        icon: <Icon icon="material-symbols-light:news-outline" />
+        icon: icons.documentIcon
     },
 }
 
 export const menus2: Record<string, MenuItem> = {
     "/account": {
         label: "Tài khoản",
-        icon: <Icon icon="clarity:user-line" />
+        icon: icons.accountIcon
     },
     "/qa": {
         label: "Hỏi đáp",
-        icon: <Icon icon="stash:question" />
+        icon: icons.qaIcon
     },
     "/contact": {
         label: "Liên hệ",
-        icon: <Icon icon="hugeicons:contact-02" />
+        icon: icons.contactIcon
     },
 }
 

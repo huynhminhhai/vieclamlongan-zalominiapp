@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import icons from "assets/icons";
 import React from "react";
 import { Box, Header, List, Page, useNavigate } from "zmp-ui";
 
@@ -17,19 +18,19 @@ const AboutPage: React.FunctionComponent = () => {
                         <Item
                             onClick={() => navigate('/gioi-thieu-chung')}
                             title="Giới thiệu chung"
-                            prefix={<Icon fontSize={22} icon="ix:about" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.aboutIcon} alt="Giới thiệu chung" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
                             onClick={() => navigate('/so-do-to-chuc')}
                             title="Sơ đồ tổ chức"
-                            prefix={<Icon fontSize={22} icon="la:project-diagram" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.diagramIcon} alt="Sơ đồ tổ chức" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
                             onClick={() => navigate('/dia-chi')}
                             title="Địa chỉ"
-                            prefix={<Icon fontSize={22} icon="lets-icons:map-light" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.mapIcon} alt="Địa chỉ" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                     </List>

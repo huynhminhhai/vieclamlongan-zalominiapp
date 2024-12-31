@@ -20,18 +20,16 @@ const UtinityItem: FunctionComponent<UtinityItemProps> = props => {
 
     return (
         <div
-            className="flex flex-col items-center gap-3"
+            className="flex flex-col items-center gap-3 rounded-lg"
             onClick={() => navigate(path || '/')}
         >
             {iconSrc && (
-                <div className="rounded-2xl bg-icon_bg relative w-[100%] h-[95px] inline-flex justify-center items-center">
-                    <div className="inline-block">
-                        <Icon className="w-[55px] h-auto text-[#818285]" icon={iconSrc} />
-                    </div>
+                <div className="rounded-2xl relative w-[100%] inline-flex justify-center items-center">
+                    <img src={iconSrc} alt={label} className="h-[45px] w-auto" />
                 </div>
             )}
-            <Box px={4}>
-                <Text className="text-center " size="small" bold>{label}</Text>
+            <Box>
+                <h4 className="text-center font-medium text-[14px] px-4">{label}</h4>
             </Box>
         </div>
     );

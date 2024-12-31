@@ -17,7 +17,10 @@ const MenuSheetItem: FunctionComponent<{ path: string } & MenuSheetProps> = prop
             onClick={() => navigation(path)}
         >
             <div className="flex flex-col items-center">
-                {menu[path].icon}
+                
+                <div className="mb-1">
+                    <img className="h-[32px] w-auto" src={menu[path].icon as string} alt={menu[path].label} />
+                </div>
                 <Text size="xSmall" bold className="text-center">{menu[path].label}</Text>
             </div>
         </Box>

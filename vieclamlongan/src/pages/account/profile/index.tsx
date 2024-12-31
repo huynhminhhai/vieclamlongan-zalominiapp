@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import icons from "assets/icons";
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import { Avatar, Box, Header, List, Page, useNavigate } from "zmp-ui";
@@ -36,13 +37,13 @@ const ProfilePage: React.FunctionComponent = () => {
                                     <Item
                                         onClick={() => navigate('/profile-detail')}
                                         title='Thông tin người lao động'
-                                        prefix={<Icon fontSize={22} icon="gg:profile" />}
+                                        prefix={<img className="h-[22px] w-auto" src={icons.cvIcon} alt="Giới thiệu chung" />}
                                         suffix={<Icon fontSize={18} icon="formkit:right" />}
                                     />
                                     <Item
                                         onClick={() => navigate('/hstv')}
                                         title='Thông tin hồ sơ tìm việc'
-                                        prefix={<Icon fontSize={22} icon="bi:person-vcard" />}
+                                        prefix={<img className="h-[22px] w-auto" src={icons.cvIcon} alt="Giới thiệu chung" />}
                                         suffix={<Icon fontSize={18} icon="formkit:right" />}
                                     />
                                 </>
@@ -51,13 +52,13 @@ const ProfilePage: React.FunctionComponent = () => {
                                     <Item
                                         onClick={() => navigate('/profile-dn-detail')}
                                         title='Thông tin doanh nghiệp'
-                                        prefix={<Icon fontSize={22} icon="gg:profile" />}
+                                        prefix={<img className="h-[22px] w-auto" src={icons.processIcon} alt="Giới thiệu chung" />}
                                         suffix={<Icon fontSize={18} icon="formkit:right" />}
                                     />
                                     <Item
                                         onClick={() => navigate('/vieclam')}
                                         title='Thông tin việc làm'
-                                        prefix={<Icon fontSize={22} icon="bi:person-vcard" />}
+                                        prefix={<img className="h-[22px] w-auto" src={icons.processIcon} alt="Giới thiệu chung" />}
                                         suffix={<Icon fontSize={18} icon="formkit:right" />}
                                     />
                                 </>
@@ -66,13 +67,13 @@ const ProfilePage: React.FunctionComponent = () => {
                         <Item
                             onClick={() => navigate('/account-detail')}
                             title="Thông tin tài khoản"
-                            prefix={<Icon fontSize={22} icon="mdi:file-account-outline" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.userIcon} alt="Giới thiệu chung" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
                             onClick={() => navigate('/change-password')}
                             title="Đổi mật khẩu"
-                            prefix={<Icon fontSize={22} icon="material-symbols:change-circle-outline" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.resetpwtIcon} alt="Giới thiệu chung" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                     </List>

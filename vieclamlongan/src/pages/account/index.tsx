@@ -1,4 +1,5 @@
 import { Icon } from "@iconify/react";
+import icons from "assets/icons";
 import React from "react";
 import { Box, Header, List, Page, useNavigate } from "zmp-ui";
 
@@ -17,31 +18,31 @@ const AccountPage: React.FunctionComponent = () => {
                         <Item
                             onClick={() => navigate('/login')}
                             title="Đăng nhập"
-                            prefix={<Icon fontSize={22} icon="material-symbols:login" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.loginIcon} alt="Giới thiệu chung" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
                             onClick={() => navigate('/register')}
                             title="Đăng ký tài khoản"
-                            prefix={<Icon fontSize={22} icon="icon-park-outline:people-plus" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.signuptIcon} alt="Giới thiệu chung" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
                             onClick={() => navigate('/profile?type=nld')}
                             title="Tổng quan (người lao động)"
-                            prefix={<Icon fontSize={22} icon="gg:profile" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.accountIcon} alt="Giới thiệu chung" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
                             onClick={() => navigate('/profile?type=dn')}
                             title="Tổng quan (doanh nghiệp)"
-                            prefix={<Icon fontSize={22} icon="gg:profile" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.accountIcon} alt="Giới thiệu chung" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                         <Item
                             onClick={() => navigate('/register')}
                             title="Đăng xuất"
-                            prefix={<Icon fontSize={22} icon="majesticons:logout" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.logoutIcon} alt="Giới thiệu chung" />}
                             suffix={<Icon fontSize={18} icon="formkit:right" />}
                         />
                     </List>

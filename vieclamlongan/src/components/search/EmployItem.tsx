@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { Divider4 } from "components/divider4";
 import React, { FunctionComponent } from "react";
 import { Box, Text, useNavigate } from "zmp-ui";
+import avatarIcon from 'static/boss.png'
 
 const EmploySearchItem: FunctionComponent<any> = props => {
 
@@ -15,7 +16,7 @@ const EmploySearchItem: FunctionComponent<any> = props => {
                     className="flex items-start gap-3"
                 >
                     <Box width={100} height={100}>
-                        <img className="w-[100%] h-[100%] object-contain rounded-lg overflow-hidden" src="http://vieclamlongan.vn/uploads/images/Avata/noimage.jpg" alt="Nguyễn Văn A" />
+                        <img className="w-[100%] h-[100%] object-contain rounded-lg overflow-hidden" src={avatarIcon} alt="Nguyễn Văn A" />
                     </Box>
                     <Box className="flex-1">
                         <Text.Title className="mb-1">Nguyễn Văn A</Text.Title>

@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import React from "react";
 import { Box, Header, List, Page, Text } from "zmp-ui";
 import zmp from 'zmp-sdk';
+import icons from "assets/icons";
 
 const ContactPage: React.FunctionComponent = () => {
 
@@ -22,22 +23,22 @@ const ContactPage: React.FunctionComponent = () => {
                     <List className="list-custom">
                         <Item
                             title="0842 871 711"
-                            prefix={<Icon fontSize={22} icon="ic:baseline-phone" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.contactIcon} alt="Giới thiệu chung" />}
                         />
                         <Item
                             title="02723 871711"
-                            prefix={<Icon fontSize={22} icon="ic:baseline-phone" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.contactIcon} alt="Giới thiệu chung" />}
                         />
 
                         <Item
                             title="Zalo"
-                            prefix={<Icon fontSize={22} icon="arcticons:zalo" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.zlIcon} alt="Giới thiệu chung" />}
                         />
 
                         <Item
                             onClick={() => handleWebsiteClick('https://www.facebook.com/dichvuvieclamlongan.vn')}
                             title="Facebook"
-                            prefix={<Icon fontSize={22} icon="ic:baseline-facebook" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.fbIcon} alt="Giới thiệu chung" />}
                         />
                     </List>
                 </Box>
@@ -47,12 +48,12 @@ const ContactPage: React.FunctionComponent = () => {
                         <Item
                             onClick={() => handleWebsiteClick('https://www.longan.gov.vn/')}
                             title="Cổng thông tin điện tử tỉnh Long An"
-                            prefix={<Icon fontSize={22} icon="material-symbols:link" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.linkIcon} alt="Giới thiệu chung" />}
                         />
                         <Item
                             onClick={() => handleWebsiteClick('https://dichvucong.gov.vn/p/home/dvc-gioi-thieu.html')}
                             title="Cổng dịch vụ công Quốc gia"
-                            prefix={<Icon fontSize={22} icon="material-symbols:link" />}
+                            prefix={<img className="h-[22px] w-auto" src={icons.linkIcon} alt="Giới thiệu chung" />}
                         />
                     </List>
                 </Box>

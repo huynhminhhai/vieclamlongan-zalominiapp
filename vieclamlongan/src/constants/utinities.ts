@@ -1,4 +1,5 @@
 import { Banner, News, SearchInputMap, Utinity, Video } from "types";
+import icons from "assets/icons";
 
 export const SEARCHINPUT: SearchInputMap = {
     '1': {
@@ -48,15 +49,15 @@ export const COMPANY: { imgurl: string, name: string }[] = [
         name: 'Chi nhánh Công ty Cổ phần Thương mại Bia Sài Gòn Sông Tiền tại Long An'
     },
     {
-        imgurl: 'http://vieclamlongan.vn/img/SVL/imgcompany.png',
+        imgurl: '',
         name: 'CÔNG TY TNHH QUICKPACK VIỆT NAM'
     },
     {
-        imgurl: 'http://vieclamlongan.vn/img/SVL/imgcompany.png',
+        imgurl: '',
         name: 'CÔNG TY TNHH IN ĐỈNH CAO'
     },
     {
-        imgurl: 'http://vieclamlongan.vn/img/SVL/imgcompany.png',
+        imgurl: '',
         name: 'CÔNG TY TNHH FASWELL VIỆT NAM'
     },
 ]
@@ -65,25 +66,25 @@ export const APP_UTINITIES: Array<Utinity> = [
     {
         key: "job-list",
         label: "Việc làm tốt nhất",
-        iconSrc: 'ic:round-business-center',
+        iconSrc: icons.goodJobIcon,
         path: "/danh-sach-tuyen-dung/?category=True-1",
     },
     {
         key: "job-list-70",
         label: "Việc làm theo Nghị định 70/2023",
-        iconSrc: 'ic:round-business-center',
+        iconSrc: icons.nd70JobIcon,
         path: "/danh-sach-tuyen-dung-70",
     },
     {
         key: "job-list-business",
         label: "Doanh Nghiệp Cần Tuyển",
-        iconSrc: 'ion:business',
+        iconSrc: icons.building,
         path: "/danh-sach-tuyen-dung/?category=False-1",
     },
     {
         key: "job-list-employee",
         label: "Người lao động tìm việc",
-        iconSrc: 'ic:baseline-people',
+        iconSrc: icons.cvIcon,
         path: "/ho-so-tim-viec",
     },
 
@@ -143,27 +144,27 @@ export const VIDEO_LIST: Video[] = [
         createAt: '02/07/2024',
         iframe: '<iframe width="711" height="500" src="https://www.youtube.com/embed/82JhMLtjazM" title="Tăng cường tư vấn, giới thiệu việc làm cho người lao động | LONG AN TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
         type: 1,
-        imgUrl: 'http://vieclamlongan.vn/Content/images/video.png'
+        imgUrl: icons.videoIcon
     },
     {
         title: 'ĐẠI HỌC KHÔNG PHẢI LÀ CON ĐƯỜNG DUY NHẤT: "LÀM VIỆC Ở NƯỚC NGOÀI -ĐI LÀM THUÊ, VỀ LÀM CHỦ"',
         createAt: '21/07/2024',
         iframe: '<iframe width="711" height="500" src="https://www.youtube.com/embed/jJcdtiB5fHI" title="ĐẠI HỌC KHÔNG PHẢI LÀ CON ĐƯỜNG DUY NHẤT: &quot;LÀM VIỆC Ở NƯỚC NGOÀI -ĐI LÀM THUÊ, VỀ LÀM CHỦ&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
         type: 1,
-        imgUrl: 'http://vieclamlongan.vn/Content/images/video.png'
+        imgUrl: icons.videoIcon
     },
     {
         title: 'Hưởng trợ cấp thất nghiệp có được MIỄN PHÍ học nghề đào tạo thường xuyên không?',
         createAt: '29/08/2024',
         iframe: '<iframe width="711" height="500" src="https://www.youtube.com/embed/zfk6Wc-yiRs" title="hưởng trợ cấp thất nghiệp có được MIỄN PHÍ học nghề đào tạo thường xuyên  không? #shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
         type: 1,
-        imgUrl: 'http://vieclamlongan.vn/Content/images/video.png'
+        imgUrl: icons.videoIcon
     },
     {
         title: 'Bản tin các nghề thường xuyên được đào tạo tại Trung tâm Dịch vụ việc làm Long An',
         createAt: '26/09/2024',
         iframe: '<iframe width="711" height="500" src="https://www.youtube.com/embed/dYAbSh-X2d4" title="CÁC NGHỀ THƯỜNG XUYÊN ĐƯỢC ĐÀO TẠO TẠI TRUNG TÂM DỊCH VỤ VIỆC LÀM LONG AN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>',
         type: 1,
-        imgUrl: 'http://vieclamlongan.vn/Content/images/video.png'
+        imgUrl: icons.videoIcon
     },
 ]

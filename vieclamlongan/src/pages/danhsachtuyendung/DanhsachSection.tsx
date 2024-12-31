@@ -1,5 +1,4 @@
 import { Section } from "components/section"
-import TuyendungList from "components/job/JobList"
 import React, { FC } from "react"
 import { useSearchParams } from "react-router-dom"
 import { Button } from "zmp-ui"

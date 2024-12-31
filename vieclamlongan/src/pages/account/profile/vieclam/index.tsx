@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Header, Page } from "zmp-ui";
+import { Header, Page } from "zmp-ui";
 import ViecLamNd70Section from "./ViecLamNd70Section";
 import ViecLamSection from "./ViecLamSection";
 import ApplicationSection from "./ApplicationSection";

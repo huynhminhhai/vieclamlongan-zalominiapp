@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, useNavigate, useSnackbar } from "zmp-ui";
+import { Box, Button, useNavigate } from "zmp-ui";
 import ApplicationItem from "./ApplicationItem";
 
 type ApplicationSectionProps = {

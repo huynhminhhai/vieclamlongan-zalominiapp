@@ -1,4 +1,4 @@
-import { Box, Checkbox, useNavigate } from "zmp-ui"
+import { useNavigate } from "zmp-ui"
 import React, { useState } from "react"
 import { Icon } from "@iconify/react"
 import ConfirmModal from "components/ModalConfirm";

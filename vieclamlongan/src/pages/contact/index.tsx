@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import React from "react";
-import { Box, Header, List, Page, Text, useNavigate } from "zmp-ui";
+import { Box, Header, List, Page, Text } from "zmp-ui";
 import zmp from 'zmp-sdk';
 
 const ContactPage: React.FunctionComponent = () => {

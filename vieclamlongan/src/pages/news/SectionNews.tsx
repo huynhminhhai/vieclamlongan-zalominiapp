@@ -1,5 +1,4 @@
 import { NewsList } from "components/news"
-import { Section } from "components/section"
 import { NEWS_LIST } from "constants"
 import React, { FC } from "react"
 import NewsMainItem from "./MainNews"

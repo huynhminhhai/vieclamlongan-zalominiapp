@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import React from "react";
-import { Box, Button, useNavigate, useSnackbar } from "zmp-ui";
+import { Box, Button, useNavigate } from "zmp-ui";
 import ViecLamItem from "./ViecLamItem";
 
 type ViecLamSectionProps = {

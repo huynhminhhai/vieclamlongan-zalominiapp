@@ -3,7 +3,7 @@ import InputField from "components/form/InputField";
 import ConfirmModal from "components/ModalConfirm";
 import React, { useEffect, useState } from "react";
 import { useStore } from "store/store";
-import { Box, Button, Input, Modal, Text, useSnackbar } from "zmp-ui";
+import { Box, Button, Modal, useSnackbar } from "zmp-ui";
 
 const optionsCourse = [
     { value: "1", label: "Cắt gọt kim loại" },

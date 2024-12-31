@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Header, Page, Tabs, Text } from "zmp-ui";
 import { Section } from "components/section";
 import { Icon } from "@iconify/react";
-import JobItem from "components/job/JobItem";
 import { Divider } from "components/divider";
 
 

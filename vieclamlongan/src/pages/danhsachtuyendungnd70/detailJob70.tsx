@@ -5,7 +5,6 @@ import { Icon } from "@iconify/react";
 import JobItem from "components/job/JobItem";
 import { Divider } from "components/divider";
 import JobModal from "components/ModalJob";
-import ConfirmModal from "components/ModalConfirm";
 
 const DetailJob70: React.FunctionComponent = () => {
 
@@ -13,18 +12,18 @@ const DetailJob70: React.FunctionComponent = () => {
 
   return (
     <Page className="detail-job relative flex-1 flex flex-col bg-white pb-[0px]">
-      <Header title="Chi tiết công việc" />
+      <Header title="Chi tiết công việc Nd70" />
       <Box className="flex-1 overflow-auto">
         <Section title="" padding="none" className="pb-[97px]">
           <Box p={4} pb={6}>
             <Box>
-              <div className="flex items-start gap-3">
-                <Box>
+              <div className="flex flex-col items-start gap-3">
+                <div className="flex items-center justify-center w-[100%]">
                   <img className="w-[100px] h-auto object-cover" src="http://vieclamlongan.vn/Content/SVL/v2/_next/img/tuyendung.png" alt="Chuyên gia kỹ thuật" />
-                </Box>
-                <div className="flex-1">
-                  <Text.Title size="large" className="mb-1">Chuyên gia kỹ thuật</Text.Title>
-                  <Text size="small" bold className="text-[#005aff]">Công Ty TNHH Limao Novatex Việt Nam</Text>
+                </div>
+                <div className="flex-1 w-[100%]">
+                  <Text.Title size="large" className="mb-1 text-center">Chuyên gia kỹ thuật</Text.Title>
+                  <Text size="small" bold className="text-[#005aff] text-center">Công Ty TNHH Limao Novatex Việt Nam</Text>
                 </div>
               </div>
               <div className="mt-2">

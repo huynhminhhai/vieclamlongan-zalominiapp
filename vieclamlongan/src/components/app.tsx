@@ -51,6 +51,7 @@ import VieclamListPage from "pages/account/profile/vieclam/list";
 import VieclamNd70ListPage from "pages/account/profile/vieclam/list-nd70";
 import ApplicationDNDetailPage from "pages/account/profile/vieclam/application-detail";
 import ApplicationDNListPage from "pages/account/profile/vieclam/application-list";
+import QADetailPage from "pages/qa/detail";
 
 const MyApp = () => {
   return (
@@ -108,6 +109,7 @@ const MyApp = () => {
               <Route path="/vieclam-edit" element={<EditViecLamPage></EditViecLamPage>}></Route>
               <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
               <Route path="/qa" element={<QAPage></QAPage>}></Route>
+              <Route path="/qa-detail" element={<QADetailPage></QADetailPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

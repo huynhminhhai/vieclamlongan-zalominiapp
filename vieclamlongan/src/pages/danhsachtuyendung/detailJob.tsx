@@ -5,7 +5,6 @@ import { Icon } from "@iconify/react";
 import JobItem from "components/job/JobItem";
 import { Divider } from "components/divider";
 import JobModal from "components/ModalJob";
-import ConfirmModal from "components/ModalConfirm";
 
 const DetailJob: React.FunctionComponent = () => {
 
@@ -18,13 +17,13 @@ const DetailJob: React.FunctionComponent = () => {
         <Section title="" padding="none" className="pb-[97px]">
           <Box p={4} pb={6}>
             <Box>
-              <div className="flex items-start gap-3">
-                <Box>
+              <div className="flex flex-col items-start gap-3">
+                <div className="flex items-center justify-center w-[100%]">
                   <img className="w-[100px] h-auto object-cover" src="http://vieclamlongan.vn/uploads/images/2024-12/20241218112759_LOOGO.jpg" alt="NV kinh doanh - chuyên thị trường quốc tế" />
-                </Box>
-                <div className="flex-1">
-                  <Text.Title size="large" className="mb-1">NV kinh doanh - chuyên thị trường quốc tế</Text.Title>
-                  <Text size="small" bold className="text-[#005aff]">CÔNG TY TNHH PRO ALLIANCE COSMETIC</Text>
+                </div>
+                <div className="flex-1 w-[100%]">
+                  <Text.Title size="large" className="mb-1 text-center">NV kinh doanh - chuyên thị trường quốc tế</Text.Title>
+                  <Text size="small" bold className="text-[#005aff] text-center">CÔNG TY TNHH PRO ALLIANCE COSMETIC</Text>
                 </div>
               </div>
               <div className="mt-2">

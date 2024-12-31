@@ -3,6 +3,7 @@ import { Inquiry } from "pages/index/inquiry";
 import React from "react";
 import { Box, Header, Page } from "zmp-ui";
 import { useStore } from "store/store";
+import QASection from "./QaSection";
 
 const QAPage: React.FunctionComponent = () => {
 
@@ -14,6 +15,7 @@ const QAPage: React.FunctionComponent = () => {
       <Box className="flex-1 overflow-auto">
         <Inquiry/>
         <Divider />
+        <QASection />
       </Box>
     </Page>
   );

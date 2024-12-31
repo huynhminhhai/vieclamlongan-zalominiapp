@@ -5,6 +5,18 @@ import { Icon } from "@iconify/react";
 import JobItem from "components/job/JobItem";
 import { Divider } from "components/divider";
 
+
+type ItemInforProps = {
+  label: string,
+  value?: string
+}
+
+const ItemInfor: React.FC<ItemInforProps> = ({ label, value }) => {
+  return (
+    <Text size="small" className="mb-2"><span className="font-medium">- {label}:</span> {value || 'không có'}</Text>
+  )
+}
+
 const DetailEmploy: React.FunctionComponent = () => {
 
   return (
@@ -14,22 +26,15 @@ const DetailEmploy: React.FunctionComponent = () => {
         <Section title="" padding="none">
           <Box p={4} pb={6}>
             <Box>
-              <div className="flex items-start gap-3">
-                <Box>
+              <div className="flex flex-col items-start gap-3">
+                <div className="flex justify-center w-[100%]">
                   <img className="w-[100px] h-auto object-cover" src="http://vieclamlongan.vn/uploads/images/Avata/noimage.jpg" alt="Nguyễn Văn A" />
-                </Box>
-                <div className="flex-1">
-                  <Text.Title size="large" className="mb-1">Nguyễn Văn A</Text.Title>
-                  <Text size="small" bold className="text-[#005aff]">CÔNG TY TNHH PRO ALLIANCE COSMETIC</Text>
+                </div>
+                <div className="flex-1 w-[100%]">
+                  <Text.Title size="large" className="mb-3 text-center">Nguyễn Văn A</Text.Title>
                   <div className="mt-2">
-                    <div className="flex items-start gap-1 text-[#5d5d5d] mb-1">
-                      <Icon className="mt-[1px]" icon='ic:baseline-email' />
-                      <Text className="flex-1" size="xSmall">nguyenvana@gmail.com</Text>
-                    </div>
-                    <div className="flex items-start gap-1 text-[#5d5d5d] mb-1">
-                      <Icon className="mt-[1px]" icon='mingcute:birthday-2-fill' />
-                      <Text className="flex-1" size="xSmall">12/12/2000</Text>
-                    </div>
+                    <Text size="small" className="text-[#555555]"><span className="font-medium mb-2">Công việc:</span> Hành chính nhân sự. Chỉnh lý tài liệu</Text>
+                    <Text size="small" className="text-[#555555]"><span className="font-medium mb-2">Mức lương mong muốn:</span> Thỏa thuận</Text>
                   </div>
                 </div>
               </div>
@@ -72,20 +77,18 @@ const DetailEmploy: React.FunctionComponent = () => {
                 </ul>
               </Box>
               <Box mt={3}>
-                <Text.Title className="uppercase">Số điện thoại</Text.Title>
-                <Text className="flex-1 py-4 pt-2" size="small">0848551444</Text>
+                <Text.Title className="uppercase mb-3">Thông tin hồ sơ</Text.Title>
+                <ItemInfor label="Trình độ văn hóa" value="12/12" />
+                <ItemInfor label="Trình độ ngoại ngữ" value="" />
+                <ItemInfor label="Trình độ Tin học" value="Chứng chỉ ứng dụng CNTT Cơ bản" />
+                <ItemInfor label="Trình độ Văn bằng" value="Cử nhân" />
               </Box>
               <Box mt={3}>
-                <Text.Title className="uppercase">Chuyên ngành</Text.Title>
-                <Text className="flex-1 py-4 pt-2" size="small">KẾ TOÁN</Text>
-              </Box>
-              <Box mt={3}>
-                <Text.Title className="uppercase">Kinh nghiệm</Text.Title>
-                <Text className="flex-1 py-4 pt-2" size="small">Trên 5 năm</Text>
-              </Box>
-              <Box mt={3}>
-                <Text.Title className="uppercase">Địa chỉ</Text.Title>
-                <Text className="flex-1 py-4 pt-2" size="small">Đường số 5, khu dân cư Kiến Phát, Phường 6, Tp Tân An</Text>
+                <Text.Title className="uppercase mb-3">Giới thiệu chung</Text.Title>
+                <ItemInfor label="Kinh nghiệm" value="Thực tập sinh Hành chính quản trị tại Tổng Công ty Điện lực miền Nam" />
+                <ItemInfor label="Kỹ năng" value="Kỹ năng nắm bắt tâm lý" />
+                <ItemInfor label="Ưu điểm" value="Thích ứng nhanh" />
+                <ItemInfor label="Khuyết điểm" value="Ngoại ngữ không tốt lắm" />
               </Box>
             </Box>
           </Box>

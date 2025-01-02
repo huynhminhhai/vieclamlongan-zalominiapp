@@ -23,6 +23,7 @@ const NewsItem: FunctionComponent<{ item: News, noDescNews: boolean }> = props =
                 {
                     !noDescNews ?
                         <>
+                            <div className="inline-block mb-1 text-[12px] leading-[1]">{item.createAt}</div>
                             <Text size="xxSmall" className="line-clamp-3 inline-block">{item.desc}</Text>
                         </>
                         :

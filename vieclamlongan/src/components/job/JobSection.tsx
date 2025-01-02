@@ -32,7 +32,7 @@ export const JobSection: FC = () => {
                 <Tabs.Tab key="nd70" label="ND70/2023">
                     <JobNd70List />
                     <div className="flex items-center justify-center gap-3 py-6">
-                        <Button onClick={() => console.log('detail DN')} size="medium">Đăng ký tuyển dụng</Button>
+                        <Button onClick={() => navigate('/profile-detail')} size="medium">Đăng ký tuyển dụng</Button>
                         <Button onClick={() => navigate('/danh-sach-tuyen-dung-70')} size="medium">Xem tất cả</Button>
                     </div>
                 </Tabs.Tab>

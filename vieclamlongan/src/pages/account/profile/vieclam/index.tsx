@@ -2,7 +2,7 @@ import React from "react";
 import { Header, Page } from "zmp-ui";
 import ViecLamNd70Section from "./ViecLamNd70Section";
 import ViecLamSection from "./ViecLamSection";
-import ApplicationSection from "./ApplicationSection";
+import ApplicationSection from "./ApplySection";
 
 const VieclamPage: React.FunctionComponent = () => {
 

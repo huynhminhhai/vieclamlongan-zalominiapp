@@ -49,8 +49,8 @@ import EditViecLamNd70Page from "pages/account/profile/vieclam/edit-nd70-form";
 import EditViecLamPage from "pages/account/profile/vieclam/edit-form";
 import VieclamListPage from "pages/account/profile/vieclam/list";
 import VieclamNd70ListPage from "pages/account/profile/vieclam/list-nd70";
-import ApplicationDNDetailPage from "pages/account/profile/vieclam/application-detail";
-import ApplicationDNListPage from "pages/account/profile/vieclam/application-list";
+import ApplicationDNDetailPage from "pages/account/profile/vieclam/apply-detail";
+import ApplicationDNListPage from "pages/account/profile/vieclam/apply-list";
 import QADetailPage from "pages/qa/detail";
 import CVPage from "pages/cv";
 

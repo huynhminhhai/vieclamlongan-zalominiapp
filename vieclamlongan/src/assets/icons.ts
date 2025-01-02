@@ -23,6 +23,13 @@ import userIcon from 'static/user.png'
 import fbIcon from 'static/facebook.png'
 import zlIcon from 'static/icons8-zalo-400.png'
 import linkIcon from 'static/link.png'
+import templateCV1 from 'static/cv_template_2.jpg'
+import templateCV2 from 'static/cv_template_7.jpg'
+import templateCV3 from 'static/cv_template_11.jpg'
+import freeDesign from 'static/free_design-1.jpg'
+import pdfDownload from 'static/pdf_download.jpg'
+import applyAnywhere from 'static/apply_anywhere.jpg'
+import threeSteps from 'static/three_steps_cv.jpg'
 
 const icons = {
     aboutIcon,
@@ -50,6 +57,13 @@ const icons = {
     fbIcon,
     zlIcon,
     linkIcon,
+    templateCV1,
+    templateCV2,
+    templateCV3,
+    freeDesign,
+    pdfDownload,
+    applyAnywhere,
+    threeSteps
   };
   
   export default icons;

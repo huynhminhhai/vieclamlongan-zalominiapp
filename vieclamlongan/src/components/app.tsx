@@ -39,7 +39,7 @@ import AccountDetailPage from "pages/account/profile/accountDetail";
 import ChangePasswordPage from "pages/account/profile/changePassword";
 import HstvPage from "pages/account/profile/hstv";
 import EditHstvPage from "pages/account/profile/hstv/edit";
-import ApplicationDetailPage from "pages/account/profile/hstv/application-detail";
+import ApplicationDetailPage from "pages/account/profile/hstv/apply-detail";
 import ContactPage from "pages/contact";
 import QAPage from "pages/qa";
 import ProfileDNDetailPage from "pages/account/profile/profileDnDetail";
@@ -52,6 +52,7 @@ import VieclamNd70ListPage from "pages/account/profile/vieclam/list-nd70";
 import ApplicationDNDetailPage from "pages/account/profile/vieclam/application-detail";
 import ApplicationDNListPage from "pages/account/profile/vieclam/application-list";
 import QADetailPage from "pages/qa/detail";
+import CVPage from "pages/cv";
 
 const MyApp = () => {
   return (
@@ -110,6 +111,7 @@ const MyApp = () => {
               <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
               <Route path="/qa" element={<QAPage></QAPage>}></Route>
               <Route path="/qa-detail" element={<QADetailPage></QADetailPage>}></Route>
+              <Route path="/cv" element={<CVPage></CVPage>}></Route>
             </Route>
             </AnimationRoutes>
           </ZMPRouter>

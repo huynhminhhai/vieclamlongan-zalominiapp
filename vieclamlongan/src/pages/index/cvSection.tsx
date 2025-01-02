@@ -1,8 +1,12 @@
 import React, { FC } from "react";
 import { Section } from "components/section";
 import 'swiper/css';
+import { useNavigate } from "zmp-ui";
+import ButtonCV from "components/buttonCv";
 
 export const CvSection: FC = () => {
+
+    const navigate = useNavigate()
 
     return (
         <Section title="" padding="none">
@@ -15,12 +19,13 @@ export const CvSection: FC = () => {
                     Tạo mẫu CV nhanh chóng và miễn phí, để nhà tuyển dụng phải
                     <b> "Wow!"</b> ngay khi nhìn thấy CV của bạn.
                 </p>
-                <button
-                    onClick={() => console.log(123)}
+                {/* <button
+                    onClick={() => navigate('/cv')}
                     className="text-[16px] font-medium text-white bg-[#ff7d55] px-5 py-3 rounded-lg"
                 >
                     Tạo cv ngay
-                </button>
+                </button> */}
+                <ButtonCV onClick={() => navigate('/cv')} label="Tạo cv ngay" />
             </div>
         </Section>
     )

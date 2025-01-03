@@ -54,6 +54,7 @@ import ApplicationDNListPage from "pages/account/profile/vieclam/apply-list";
 import QADetailPage from "pages/qa/detail";
 import CVPage from "pages/cv";
 import { Navigation } from "./navigation";
+import ScrollToTop from "./scrollToTop";
 
 const MyApp = () => {
   return (
@@ -61,6 +62,7 @@ const MyApp = () => {
       <App>
         <SnackbarProvider>
           <ZMPRouter>
+            <ScrollToTop />
             {/* <AnimationRoutes> */}
             <Routes>
               {/* HOME */}

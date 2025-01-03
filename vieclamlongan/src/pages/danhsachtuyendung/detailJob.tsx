@@ -118,7 +118,7 @@ const DetailJob: React.FunctionComponent = () => {
                   </Box>
                   <Box mt={3}>
                     <Text.Title className="uppercase">Mô Tả Công Việc</Text.Title>
-                    <div className="text-[13px] leading-[20px]">
+                    <div className="text-[14px] leading-[22px]">
                       <ul className="py-4">
                         <li className="mb-1">
                           Nghiên cứu và phân tích thị trường nước ngoài để xác định khách hàng tiềm năng và nhu cầu của họ.
@@ -158,7 +158,7 @@ const DetailJob: React.FunctionComponent = () => {
                   </Box>
                   <Box mt={3}>
                     <Text.Title className="uppercase">Yêu Cầu Công Việc</Text.Title>
-                    <div className="text-[13px] leading-[20px]">
+                    <div className="text-[14px] leading-[22px]">
                       <ul className="py-4">
                         <li className="mb-1">
                           Trung thực, Cẩn thận, chính xác.

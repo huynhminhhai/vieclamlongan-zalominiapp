@@ -12,7 +12,7 @@ type ItemInforProps = {
 
 const ItemInfor: React.FC<ItemInforProps> = ({ label, value }) => {
   return (
-    <Text size="xxSmall" className="mb-2"><span className="font-medium">- {label}:</span> {value || 'không có'}</Text>
+    <p className="text-[14px] leading-[22px] mb-2"><span className="font-medium">- {label}:</span> {value || 'không có'}</p>
   )
 }
 

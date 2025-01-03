@@ -34,22 +34,22 @@ const NewsDetailPage: React.FunctionComponent = () => {
             <li className="flex items-start gap-3 mb-4">
               <Icon fontSize={28} icon='icon-park-solid:people' />
               <div>
-                <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Tác giả</Text>
-                <Text size="xSmall">Phong Dao Tao va Gioi thieu viec lam</Text>
+                <Text size="small" className="uppercase mb-1 text-[#949697]">Tác giả</Text>
+                <Text size="small">Phong Dao Tao va Gioi thieu viec lam</Text>
               </div>
             </li>
             <li className="flex items-start gap-3 mb-4">
               <Icon fontSize={28} icon='lets-icons:date-fill' />
               <div>
-                <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Ngày tạo</Text>
-                <Text size="xSmall">26/12/2024</Text>
+                <Text size="small" className="uppercase mb-1 text-[#949697]">Ngày tạo</Text>
+                <Text size="small">26/12/2024</Text>
               </div>
             </li>
             <li className="flex items-start gap-3">
               <Icon fontSize={28} icon='mdi:eye' />
               <div>
-                <Text size="xSmall" className="uppercase mb-1 text-[#949697]">Lượt xem</Text>
-                <Text size="xSmall">12 lượt xem</Text>
+                <Text size="small" className="uppercase mb-1 text-[#949697]">Lượt xem</Text>
+                <Text size="small">12 lượt xem</Text>
               </div>
             </li>
           </ul>

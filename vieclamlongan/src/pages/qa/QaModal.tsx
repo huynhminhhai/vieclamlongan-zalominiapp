@@ -1,35 +1,10 @@
-import { SearchableSelect } from "components/form";
 import InputAreaField from "components/form/InputAreaField";
 import InputField from "components/form/InputField";
 import SelectNormal from "components/form/SelectNormal";
 import ConfirmModal from "components/ModalConfirm";
 import React, { useEffect, useState } from "react";
 import { useStore } from "store/store";
-import { Box, Button, Input, Modal, Text, useSnackbar } from "zmp-ui";
-
-const optionsCourse = [
-    { value: "1", label: "Cắt gọt kim loại" },
-    { value: "2", label: "Công nghệ ô tô" },
-    { value: "3", label: "Hàn" },
-    { value: "4", label: "Vận hành, sửa chữa thiết bị lạnh" },
-    { value: "5", label: "Điện công nghiệp" },
-    { value: "6", label: "Công nghệ thông tin" },
-    { value: "7", label: "May thời trang" },
-    { value: "8", label: "Cơ khí hàn" },
-    { value: "9", label: "Công nghệ ô tô" },
-];
-
-const optionsStatus = [
-    { value: "1", label: "Chưa biết tình trạng NLĐ" },
-    { value: "2", label: "Thất nghiệp, có nhu cầu tìm việc" },
-    { value: "3", label: "Thất nghiệp, KHÔNG có nhu cầu tìm việc" },
-    { value: "4", label: "Đang làm, muốn tìm việc khác" },
-    { value: "5", label: "Đang làm ổn định, KHÔNG ĐỔI" },
-    { value: "6", label: "Đã giới thiệu" },
-    { value: "7", label: "Chờ KQ phỏng vấn" },
-    { value: "8", label: "Phỏng vấn đạt" },
-    { value: "9", label: "Phỏng vấn đạt không đạt" },
-]
+import { Box, Button, Modal, useSnackbar } from "zmp-ui";
 
 type FormData = {
     field: string;
@@ -69,17 +44,30 @@ const QaModal: React.FunctionComponent<QaModalProps> = ({ popupVisible, setPopup
 
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
-        if (!formData.field.trim()) newErrors.field = "Họ tên không được để trống";
-        if (!formData.fullName.trim()) newErrors.fullName = "Họ tên không được để trống";
-        if (!formData.title.trim()) newErrors.title = "Họ tên không được để trống";
-        if (!formData.content.trim()) newErrors.content = "Họ tên không được để trống";
-        if (!/^[0-9]{10}$/.test(formData.phoneNumber))
-            newErrors.phoneNumber = "Số điện thoại không hợp lệ";
-
-
+    
+        // Mảng các trường cần kiểm tra
+        const requiredFields = [
+            { key: 'field', message: 'Lĩnh vực không được để trống' },
+            { key: 'fullName', message: 'Họ tên không được để trống' },
+            { key: 'title', message: 'Tiêu đề không được để trống' },
+            { key: 'content', message: 'Nội dung không được để trống' },
+            { key: 'phoneNumber', message: 'Số điện thoại không hợp lệ', regex: /^[0-9]{10}$/ }
+        ];
+    
+        // Kiểm tra các trường yêu cầu
+        requiredFields.forEach(({ key, message, regex }) => {
+            const value = formData[key as keyof typeof formData]?.trim();
+            if (!value) {
+                newErrors[key] = message;
+            } else if (regex && !regex.test(value)) {
+                newErrors[key] = message;
+            }
+        });
+    
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+    
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({

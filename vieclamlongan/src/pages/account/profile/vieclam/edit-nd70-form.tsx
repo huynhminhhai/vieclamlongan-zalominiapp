@@ -55,21 +55,32 @@ const EditViecLamNd70Page: React.FunctionComponent = () => {
 
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
-
-        if (!formData.jobPosition.trim()) newErrors.jobPosition = "Vị trí công việc không được để trống";
-        if (!formData.jobTitle.trim()) newErrors.jobTitle = "Chức danh công việc không được để trống";
-        if (!formData.numberPerson.trim()) newErrors.numberPerson = "Số lượng (người) không được để trống";
-        if (!formData.fromDate.trim()) newErrors.fromDate = "Thời gian không được để trống";
-        if (!formData.toDate.trim()) newErrors.toDate = "Thời gian không được để trống";
-        if (!formData.salary.trim()) newErrors.salary = "Mức lương không được để trống";
-        if (!formData.location.trim()) newErrors.location = "Địa điểm làm việc không được để trống";
-        if (!formData.jobDesc.trim()) newErrors.jobDesc = "Mô tả không được để trống";
-        if (!formData.qualification.trim()) newErrors.qualification = "Mục này không được để trống";
-        if (!formData.experience.trim()) newErrors.experience = "Mục này không được để trống";
-
+    
+        // Mảng các trường cần kiểm tra
+        const requiredFields = [
+            { key: 'jobPosition', message: 'Vị trí công việc không được để trống' },
+            { key: 'jobTitle', message: 'Chức danh công việc không được để trống' },
+            { key: 'numberPerson', message: 'Số lượng (người) không được để trống' },
+            { key: 'fromDate', message: 'Thời gian không được để trống' },
+            { key: 'toDate', message: 'Thời gian không được để trống' },
+            { key: 'salary', message: 'Mức lương không được để trống' },
+            { key: 'location', message: 'Địa điểm làm việc không được để trống' },
+            { key: 'jobDesc', message: 'Mô tả không được để trống' },
+            { key: 'qualification', message: 'Mục này không được để trống' },
+            { key: 'experience', message: 'Mục này không được để trống' }
+        ];
+    
+        // Kiểm tra các trường yêu cầu
+        requiredFields.forEach(({ key, message }) => {
+            if (!formData[key as keyof typeof formData]?.trim()) {
+                newErrors[key] = message;
+            }
+        });
+    
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+    
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({

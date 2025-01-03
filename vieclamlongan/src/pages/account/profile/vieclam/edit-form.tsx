@@ -197,27 +197,37 @@ const EditViecLamPage: React.FunctionComponent = () => {
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
 
-        if (!formData.jobPosition.trim()) newErrors.jobPosition = "Vị trí công việc không được để trống";
-        if (!formData.jobTitle.trim()) newErrors.jobTitle = "Chức danh công việc không được để trống";
-        if (!formData.numberPerson.trim()) newErrors.numberPerson = "Số lượng (người) không được để trống";
-        if (!formData.salary.trim()) newErrors.salary = "Mức lương không được để trống";
-        if (!formData.location.trim()) newErrors.location = "Địa điểm làm việc không được để trống";
-        if (!formData.jobDesc.trim()) newErrors.jobDesc = "Mô tả không được để trống";
-        if (!formData.qualification.trim()) newErrors.qualification = "Mục này không được để trống";
-        if (!formData.experience.trim()) newErrors.experience = "Mục này không được để trống";
-        if (!formData.gender.trim()) newErrors.gender = "Mục này không được để trống";
-        if (!formData.ageFrom.trim()) newErrors.ageFrom = "Mục này không được để trống";
-        if (!formData.ageTo.trim()) newErrors.ageTo = "Mục này không được để trống";
-        if (!formData.deadline.trim()) newErrors.deadline = "Mục này không được để trống";
-        if (!formData.province.trim()) newErrors.province = "Tỉnh không được để trống";
-        if (!formData.district.trim()) newErrors.district = "Huyện không được để trống";
-        if (!formData.industry.trim()) newErrors.industry = "Mục này không được để trống";
-        if (!formData.workingTime.trim()) newErrors.workingTime = "Mục này không được để trống";
+        // Mảng các trường cần kiểm tra
+        const requiredFields = [
+            { key: 'jobPosition', message: 'Vị trí công việc không được để trống' },
+            { key: 'jobTitle', message: 'Chức danh công việc không được để trống' },
+            { key: 'numberPerson', message: 'Số lượng (người) không được để trống' },
+            { key: 'salary', message: 'Mức lương không được để trống' },
+            { key: 'location', message: 'Địa điểm làm việc không được để trống' },
+            { key: 'jobDesc', message: 'Mô tả không được để trống' },
+            { key: 'qualification', message: 'Mục này không được để trống' },
+            { key: 'experience', message: 'Mục này không được để trống' },
+            { key: 'gender', message: 'Mục này không được để trống' },
+            { key: 'ageFrom', message: 'Mục này không được để trống' },
+            { key: 'ageTo', message: 'Mục này không được để trống' },
+            { key: 'deadline', message: 'Mục này không được để trống' },
+            { key: 'province', message: 'Tỉnh không được để trống' },
+            { key: 'district', message: 'Huyện không được để trống' },
+            { key: 'industry', message: 'Mục này không được để trống' },
+            { key: 'workingTime', message: 'Mục này không được để trống' }
+        ];
 
+        // Kiểm tra các trường yêu cầu
+        requiredFields.forEach(({ key, message }) => {
+            if (!formData[key as keyof typeof formData]?.trim()) {
+                newErrors[key] = message;
+            }
+        });
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({

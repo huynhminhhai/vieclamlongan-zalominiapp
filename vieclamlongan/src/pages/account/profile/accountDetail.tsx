@@ -20,16 +20,28 @@ const AccountDetailPage: React.FunctionComponent = () => {
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
 
-        if (!formData.username.trim()) newErrors.username = "Username không được để trống";
+        // Kiểm tra các trường yêu cầu
+        const requiredFields = [
+            { key: 'username', message: 'Username không được để trống' },
+            { key: 'fullName', message: 'Họ tên không được để trống' }
+        ];
 
-        if (!/^[0-9]{10}$/.test(formData.phoneNumber))
+        // Duyệt qua các trường yêu cầu
+        requiredFields.forEach(({ key, message }) => {
+            if (!formData[key as keyof typeof formData]?.trim()) {
+                newErrors[key] = message;
+            }
+        });
+
+        // Kiểm tra số điện thoại hợp lệ
+        if (!/^[0-9]{10}$/.test(formData.phoneNumber)) {
             newErrors.phoneNumber = "Số điện thoại không hợp lệ";
-
-        if (!formData.fullName.trim()) newErrors.fullName = "Họ tên không được để trống";
+        }
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({
@@ -71,7 +83,7 @@ const AccountDetailPage: React.FunctionComponent = () => {
             <Header title="Thông tin người dùng" />
             <Box>
                 <Box p={4} py={6} className="form form-account bg-white w-[100%]">
-                    
+
                     <InputField
                         disabled
                         label="Username"

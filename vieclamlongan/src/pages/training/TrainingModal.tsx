@@ -66,15 +66,29 @@ const TrainingModal: React.FunctionComponent<TrainingModalProps> = ({ popupVisib
 
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
-        if (!formData.fullName.trim()) newErrors.fullName = "Họ tên không được để trống";
-        if (!formData.course.trim()) newErrors.course = "Khóa học không được để trống";
-        if (!formData.status.trim()) newErrors.status = "Trạng thái không được để trống";
-        if (!/^[0-9]{10}$/.test(formData.phoneNumber))
-            newErrors.phoneNumber = "Số điện thoại không hợp lệ";
-
+    
+        // Mảng các trường cần kiểm tra
+        const requiredFields = [
+            { key: 'fullName', message: 'Họ tên không được để trống' },
+            { key: 'course', message: 'Khóa học không được để trống' },
+            { key: 'status', message: 'Tình trạng không được để trống' },
+            { key: 'phoneNumber', message: 'Số điện thoại không hợp lệ', regex: /^[0-9]{10}$/ }
+        ];
+    
+        // Kiểm tra các trường yêu cầu
+        requiredFields.forEach(({ key, message, regex }) => {
+            const value = formData[key as keyof typeof formData]?.trim();
+            if (!value) {
+                newErrors[key] = message;
+            } else if (regex && !regex.test(value)) {
+                newErrors[key] = message;
+            }
+        });
+    
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+    
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({

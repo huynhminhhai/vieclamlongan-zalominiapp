@@ -54,18 +54,29 @@ const EditHstvPage: React.FunctionComponent = () => {
 
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
-
-        if (!formData.jobPosition.trim()) newErrors.jobPosition = "Vị trí công việc không được để trống";
-        if (!formData.jobTitle.trim()) newErrors.jobTitle = "Tên công việc không được để trống";
-        if (!formData.industry.trim()) newErrors.industry = "Ngành nghề không được để trống";
-        if (!formData.salary.trim()) newErrors.salary = "Mức lương không được để trống";
-        if (!formData.culture.trim()) newErrors.culture = "Văn hóa không được để trống";
-        if (!formData.degree.trim()) newErrors.degree = "Văn bằng không được để trống";
-        if (!formData.experience.trim()) newErrors.experience = "Kinh nghiệm làm việc không được để trống";
-
+    
+        // Mảng các trường cần kiểm tra
+        const requiredFields = [
+            { key: 'jobPosition', message: 'Vị trí công việc không được để trống' },
+            { key: 'jobTitle', message: 'Tên công việc không được để trống' },
+            { key: 'industry', message: 'Ngành nghề không được để trống' },
+            { key: 'salary', message: 'Mức lương không được để trống' },
+            { key: 'culture', message: 'Văn hóa không được để trống' },
+            { key: 'degree', message: 'Văn bằng không được để trống' },
+            { key: 'experience', message: 'Kinh nghiệm làm việc không được để trống' }
+        ];
+    
+        // Kiểm tra các trường yêu cầu
+        requiredFields.forEach(({ key, message }) => {
+            if (!formData[key as keyof typeof formData]?.trim()) {
+                newErrors[key] = message;
+            }
+        });
+    
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+    
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({

@@ -154,53 +154,50 @@ const FormDn: React.FunctionComponent = () => {
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
 
-        if (!/^[0-9]{10}$/.test(formData.phoneNumber))
+        const requiredFields = [
+            { key: 'password', message: 'Mật khẩu không được để trống' },
+            { key: 'passwordConfirm', message: 'Mật khẩu không được để trống' },
+            { key: 'fullName', message: 'Họ tên không được để trống' },
+            { key: 'companyName', message: 'Tên doanh nghiệp không được để trống' },
+            { key: 'taxCode', message: 'Mã số thuế không được để trống' },
+            { key: 'companyCode', message: 'Mã số /Số Giấy phép không được để trống' },
+            { key: 'contactPerson', message: 'Người liên hệ không được để trống' },
+            { key: 'position', message: 'Chức vụ không được để trống' },
+            { key: 'address', message: 'Địa chỉ không được để trống' },
+            { key: 'business', message: 'Mục này không được để trống' },
+            { key: 'amountEmploy', message: 'Tổng số lao động không được để trống' },
+            { key: 'businessType', message: 'Loại hình doanh nghiệp không được để trống' },
+            { key: 'yearOperation', message: 'Năm hoạt động không được để trống' },
+            { key: 'website', message: 'Website không được để trống' },
+            { key: 'economic', message: 'Ngành kinh tế không được để trống' },
+        ];
+
+        requiredFields.forEach(({ key, message }) => {
+            if (!formData[key as keyof typeof formData]?.trim()) {
+                newErrors[key] = message;
+            }
+        });
+
+        if (!/^[0-9]{10}$/.test(formData.phoneNumber)) {
             newErrors.phoneNumber = "Số điện thoại không hợp lệ";
-
-        if (!formData.password.trim()) newErrors.password = "Mật khẩu không được để trống";
-
-        if (!formData.passwordConfirm.trim()) newErrors.passwordConfirm = "Mật khẩu không được để trống";
-
-        if (formData.password !== formData.passwordConfirm) {
-            newErrors.passwordConfirm = "Xác nhận mật khẩu không khớp";
         }
-
-        if (!formData.fullName.trim()) newErrors.fullName = "Họ tên không được để trống";
 
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
             newErrors.email = "Email không hợp lệ";
         }
 
-        if (!formData.companyName.trim()) newErrors.companyName = "Tên doanh nghiệp không được để trống";
-
-        if (!formData.taxCode.trim()) newErrors.taxCode = "Mã số thuế không được để trống";
-
-        if (!formData.companyCode.trim()) newErrors.companyCode = "Mã số /Số Giấy phép không được để trống";
-
-        if (!formData.contactPerson.trim()) newErrors.contactPerson = "Người liên hệ không được để trống";
-
-        if (!formData.position.trim()) newErrors.position = "Chức vụ không được để trống";
-
-        if (!/^[0-9]{10}$/.test(formData.contactPersonPhone))
+        if (!/^[0-9]{10}$/.test(formData.contactPersonPhone)) {
             newErrors.contactPersonPhone = "Số điện thoại không hợp lệ";
+        }
 
-        if (!formData.address.trim()) newErrors.address = "Địa chỉ không được để trống";
-
-        if (!formData.business.trim()) newErrors.business = "Lĩnh vực kinh doanh/hoạt động không được để trống";
-
-        if (!formData.amountEmploy.trim()) newErrors.amountEmploy = "Tổng số lao động không được để trống";
-
-        if (!formData.businessType.trim()) newErrors.businessType = "Loại hình doanh nghiệp không được để trống";
-
-        if (!formData.yearOperation.trim()) newErrors.yearOperation = "Năm hoạt động không được để trống";
-
-        if (!formData.website.trim()) newErrors.website = "Website không được để trống";
-
-        if (!formData.economic.trim()) newErrors.economic = "Ngành kinh tế không được để trống";
+        if (formData.password !== formData.passwordConfirm) {
+            newErrors.passwordConfirm = "Xác nhận mật khẩu không khớp";
+        }
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({

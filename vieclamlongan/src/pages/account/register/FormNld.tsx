@@ -31,39 +31,44 @@ const FormNld: React.FunctionComponent = () => {
 
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
-
-        if (!/^[0-9]{10}$/.test(formData.phoneNumber))
+    
+        // Các trường yêu cầu
+        const requiredFields = [
+            { key: 'password', message: 'Mật khẩu không được để trống' },
+            { key: 'passwordConfirm', message: 'Mật khẩu không được để trống' },
+            { key: 'fullName', message: 'Họ tên không được để trống' },
+            { key: 'cardNumber', message: 'CMND/CCCD không được để trống' },
+            { key: 'cardNumberPlace', message: 'Nơi cấp không được để trống' },
+            { key: 'gender', message: 'Chưa chọn giới tính' },
+            { key: 'address', message: 'Địa chỉ không được để trống' },
+            { key: 'cardNumberDate', message: 'Ngày cấp không được để trống' },
+            { key: 'birthDate', message: 'Ngày sinh không được để trống' },
+        ];
+    
+        requiredFields.forEach(({ key, message }) => {
+            if (!formData[key as keyof typeof formData]?.trim()) {
+                newErrors[key] = message;
+            }
+        });
+    
+        // Kiểm tra biểu thức chính quy
+        if (!/^[0-9]{10}$/.test(formData.phoneNumber)) {
             newErrors.phoneNumber = "Số điện thoại không hợp lệ";
-
-        if (!formData.password.trim()) newErrors.password = "Mật khẩu không được để trống";
-
-        if (!formData.passwordConfirm.trim()) newErrors.passwordConfirm = "Mật khẩu không được để trống";
-
-        if (formData.password !== formData.passwordConfirm) {
-            newErrors.passwordConfirm = "Xác nhận mật khẩu không khớp";
         }
-
-        if (!formData.fullName.trim()) newErrors.fullName = "Họ tên không được để trống";
-
+    
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
             newErrors.email = "Email không hợp lệ";
         }
-
-        if (!formData.cardNumber.trim()) newErrors.cardNumber = "CMND/CCCD không được để trống";
-
-        if (!formData.cardNumberPlace.trim()) newErrors.cardNumberPlace = "Nơi cấp không được để trống";
-
-        if (!formData.gender.trim()) newErrors.gender = "Chưa chọn giới tính";
-
-        if (!formData.address.trim()) newErrors.address = "Địa chỉ không được để trống";
-
-        if (!formData.cardNumberDate.trim()) newErrors.cardNumberDate = "Ngày cấp không được để trống";
-
-        if (!formData.birthDate.trim()) newErrors.birthDate = "Ngày sinh không được để trống";
-
+    
+        // Kiểm tra mật khẩu và xác nhận mật khẩu
+        if (formData.password !== formData.passwordConfirm) {
+            newErrors.passwordConfirm = "Xác nhận mật khẩu không khớp";
+        }
+    
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+    
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({

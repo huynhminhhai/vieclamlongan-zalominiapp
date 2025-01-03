@@ -190,40 +190,45 @@ const ProfileDetailPage: React.FunctionComponent = () => {
 
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
-
-        if (!/^[0-9]{10}$/.test(formData.phoneNumber))
+    
+        // Các trường yêu cầu
+        const requiredFields = [
+            { key: 'fullName', message: 'Họ tên không được để trống' },
+            { key: 'cardNumber', message: 'CMND/CCCD không được để trống' },
+            { key: 'cardNumberPlace', message: 'Nơi cấp không được để trống' },
+            { key: 'gender', message: 'Chưa chọn giới tính' },
+            { key: 'address', message: 'Địa chỉ không được để trống' },
+            { key: 'cardNumberDate', message: 'Ngày cấp không được để trống' },
+            { key: 'birthDate', message: 'Ngày sinh không được để trống' },
+            { key: 'specialization', message: 'Chuyên ngành không được để trống' },
+            { key: 'experience', message: 'Kinh nghiệm làm việc không được để trống' },
+            { key: 'province', message: 'Tỉnh không được để trống' },
+            { key: 'district', message: 'Huyện không được để trống' },
+            { key: 'ward', message: 'Xã không được để trống' },
+            { key: 'status', message: 'Tình trạng lao động không được để trống' },
+            { key: 'certificate', message: 'Văn bằng không được để trống' }
+        ];
+    
+        // Kiểm tra các trường yêu cầu
+        requiredFields.forEach(({ key, message }) => {
+            if (!formData[key as keyof typeof formData]?.trim()) {
+                newErrors[key] = message;
+            }
+        });
+    
+        // Kiểm tra biểu thức chính quy cho số điện thoại và email
+        if (!/^[0-9]{10}$/.test(formData.phoneNumber)) {
             newErrors.phoneNumber = "Số điện thoại không hợp lệ";
-
-        if (!formData.fullName.trim()) newErrors.fullName = "Họ tên không được để trống";
-
+        }
+    
         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
             newErrors.email = "Email không hợp lệ";
         }
-
-        if (!formData.cardNumber.trim()) newErrors.cardNumber = "CMND/CCCD không được để trống";
-
-        if (!formData.cardNumberPlace.trim()) newErrors.cardNumberPlace = "Nơi cấp không được để trống";
-
-        if (!formData.gender.trim()) newErrors.gender = "Chưa chọn giới tính";
-
-        if (!formData.address.trim()) newErrors.address = "Địa chỉ không được để trống";
-
-        if (!formData.cardNumberDate.trim()) newErrors.cardNumberDate = "Ngày cấp không được để trống";
-
-        if (!formData.birthDate.trim()) newErrors.birthDate = "Ngày sinh không được để trống";
-
-        if (!formData.specialization.trim()) newErrors.specialization = "Chuyên ngành không được để trống";
-
-        if (!formData.experience.trim()) newErrors.experience = "Kinh nghiệm làm việc không được để trống";
-        if (!formData.province.trim()) newErrors.province = "Tỉnh không được để trống";
-        if (!formData.district.trim()) newErrors.district = "Huyện không được để trống";
-        if (!formData.ward.trim()) newErrors.ward = "Xã không được để trống";
-        if (!formData.status.trim()) newErrors.status = "Tình trạng lao động không được để trống";
-        if (!formData.certificate.trim()) newErrors.certificate = "Văn bằng không được để trống";
-
+    
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
+    
 
     const handleInputChange = (field: string, value: string) => {
         setFormData({

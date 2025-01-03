@@ -93,6 +93,7 @@ const FormNld: React.FunctionComponent = () => {
             duration: 5000,
         });
         setFormData(initialFormValues)
+        navigate('/')
     }
 
     const handleCancel = () => {

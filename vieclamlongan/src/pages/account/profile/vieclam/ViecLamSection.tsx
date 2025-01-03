@@ -12,7 +12,7 @@ const ViecLamSection: React.FC<ViecLamSectionProps> = () => {
     const navigate = useNavigate()
 
     return (
-        <Box p={4} mt={4} className="text-[#606468] border-t-[1px]">
+        <Box p={4} mt={4} pt={8} className="text-[#606468] border-t-[1px]">
             <h4 className="text-[20px] font-semibold mb-5">Việc làm đã tạo</h4>
             <Box>
                 <div

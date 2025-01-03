@@ -6,7 +6,7 @@ const ApplicationDetailPage: React.FunctionComponent = () => {
     return (
         <Page className="relative flex-1 flex flex-col pb-[66px] bg-white">
             <Header title="Thông tin hồ sơ đã nộp" />
-            <Box p={4} className="text-[#606468]">
+            <Box p={4} className="text-[#606468] text-[13px]">
                 <Box pb={4} className="border-b-[1px]">
                     <h4 className="text-[18px] font-semibold mb-1">Cty Wondo Vina</h4>
                     <h5 className="text-[16px] font-semibold mb-3">may mặc</h5>

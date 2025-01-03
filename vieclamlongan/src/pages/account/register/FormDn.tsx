@@ -232,6 +232,7 @@ const FormDn: React.FunctionComponent = () => {
         });
         setFormData(initialFormValue)
         setValueEconomic("")
+        navigate('/')
     }
 
     const handleCancel = () => {

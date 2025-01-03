@@ -1,9 +1,10 @@
 import { SearchableSelect } from "components/form";
 import FormDatePicker from "components/form/DatePicker";
-import InputAreaField from "components/form/InputAreaField";
 import InputField from "components/form/InputField";
 import SelectNormal from "components/form/SelectNormal";
+import TextEditor from "components/form/textEditor";
 import ConfirmModal from "components/ModalConfirm";
+import Editor from "quill/core/editor";
 import React, { useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom";
 import { Box, Button, Header, Page, useNavigate, useSnackbar } from "zmp-ui"
@@ -179,10 +180,10 @@ const EditViecLamPage: React.FunctionComponent = () => {
                 location: "Ho Chi Minh City",
                 province: "1",
                 district: "1",
-                jobDesc: "We are looking for a talented Software Engineer to join our team. You will be responsible for designing, developing, and maintaining software applications.",
-                experience: "2+ years of experience in software development",
-                qualification: "Bachelor's degree in Computer Science or related field",
-                benefits: "Health insurance, Paid leave, Annual bonus, Training opportunities"
+                jobDesc: "<p>We are looking for a talented Software Engineer to join our team. You will be responsible for designing, developing, and maintaining software applications.</p>",
+                experience: "<p>2+ years of experience in software development</p>",
+                qualification: "<p>Bachelor's degree in Computer Science or related field</p>",
+                benefits: "<p>Health insurance, Paid leave, Annual bonus, Training opportunities</p>"
             })
         }
     }, [id])
@@ -208,10 +209,10 @@ const EditViecLamPage: React.FunctionComponent = () => {
         if (!formData.ageFrom.trim()) newErrors.ageFrom = "Mục này không được để trống";
         if (!formData.ageTo.trim()) newErrors.ageTo = "Mục này không được để trống";
         if (!formData.deadline.trim()) newErrors.deadline = "Mục này không được để trống";
-        if (!formData.province.trim()) newErrors.deadline = "Mục này không được để trống";
-        if (!formData.district.trim()) newErrors.deadline = "Mục này không được để trống";
         if (!formData.province.trim()) newErrors.province = "Tỉnh không được để trống";
         if (!formData.district.trim()) newErrors.district = "Huyện không được để trống";
+        if (!formData.industry.trim()) newErrors.industry = "Mục này không được để trống";
+        if (!formData.workingTime.trim()) newErrors.workingTime = "Mục này không được để trống";
 
 
         setErrors(newErrors);
@@ -409,36 +410,44 @@ const EditViecLamPage: React.FunctionComponent = () => {
                         errors={errors.district}
                     />
 
-                    <InputAreaField
+                    <TextEditor
+                        label={"Mô tả vị trí công việc, chức danh công việc"}
+                        required
+                        value={formData.jobDesc}
+                        onChange={(value) => handleInputChange("jobDesc", value)}
+                        error={errors.jobDesc}
+                    />
+
+                    <TextEditor
+                        label={"Yêu cầu về kinh nghiệm"}
+                        required
+                        value={formData.experience}
+                        onChange={(value) => handleInputChange("experience", value)}
+                        error={errors.experience}
+                    />
+
+                    <TextEditor
+                        label={"Yêu cầu công việc"}
+                        required
+                        value={formData.qualification}
+                        onChange={(value) => handleInputChange("qualification", value)}
+                        error={errors.qualification}
+                    />
+
+                    <TextEditor
+                        label={"Phúc lợi (nếu có)"}
+                        value={formData.benefits}
+                        onChange={(value) => handleInputChange("benefits", value)}
+                        error={errors.benefits}
+                    />
+
+                    {/* <InputAreaField
                         label="Mô tả vị trí công việc, chức danh công việc"
                         value={formData.jobDesc}
                         required
                         error={errors.jobDesc}
                         onChange={(value) => handleInputChange("jobDesc", value)}
-                    />
-
-                    <InputAreaField
-                        label="Yêu cầu về kinh nghiệm"
-                        value={formData.experience}
-                        required
-                        error={errors.experience}
-                        onChange={(value) => handleInputChange("experience", value)}
-                    />
-
-                    <InputAreaField
-                        label="Yêu cầu công việc"
-                        value={formData.qualification}
-                        required
-                        error={errors.qualification}
-                        onChange={(value) => handleInputChange("qualification", value)}
-                    />
-
-                    <InputAreaField
-                        label="Phúc lợi (nếu có)"
-                        value={formData.benefits}
-                        error={errors.benefits}
-                        onChange={(value) => handleInputChange("benefits", value)}
-                    />
+                    /> */}
 
                     <Box py={4}>
                         <Button

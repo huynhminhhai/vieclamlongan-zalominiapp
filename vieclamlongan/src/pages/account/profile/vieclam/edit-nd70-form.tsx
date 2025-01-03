@@ -2,6 +2,7 @@ import FormDatePicker from "components/form/DatePicker";
 import InputAreaField from "components/form/InputAreaField";
 import InputField from "components/form/InputField";
 import SelectNormal from "components/form/SelectNormal";
+import TextEditor from "components/form/textEditor";
 import ConfirmModal from "components/ModalConfirm";
 import React, { useEffect, useState } from "react"
 import { useSearchParams } from "react-router-dom";
@@ -162,45 +163,52 @@ const EditViecLamNd70Page: React.FunctionComponent = () => {
                         onChange={(value) => handleInputChange("toDate", value)}
                     />
 
-                    <InputAreaField
+                    <TextEditor
+                        label="Địa điểm làm việc (liệt kê cụ thể các địa điểm (nếu có) và ghi rõ từng địa điểm theo thứ tự: số nhà, đường phố, xóm, làng; xã/phường/thị trấn; quận/huyện/thị xã/thành phố thuộc tỉnh; tỉnh/thành phố trực thuộc trung ương)"
+                        required
+                        value={formData.location}
+                        onChange={(value) => handleInputChange("location", value)}
+                        error={errors.location}
+                    />
+
+                    <TextEditor
+                        label="Mô tả vị trí công việc, chức danh công việc"
+                        required
+                        value={formData.jobDesc}
+                        onChange={(value) => handleInputChange("jobDesc", value)}
+                        error={errors.jobDesc}
+                    />
+
+                    <TextEditor
+                        label="Yêu cầu về trình độ"
+                        required
+                        value={formData.qualification}
+                        onChange={(value) => handleInputChange("qualification", value)}
+                        error={errors.qualification}
+                    />
+
+                    <TextEditor
+                        label="Yêu cầu về kinh nghiệm"
+                        required
+                        value={formData.experience}
+                        onChange={(value) => handleInputChange("experience", value)}
+                        error={errors.experience}
+                    />
+
+                    <TextEditor
+                        label="Yêu cầu khác"
+                        value={formData.other}
+                        onChange={(value) => handleInputChange("other", value)}
+                        error={errors.other}
+                    />
+
+                    {/* <InputAreaField
                         label="Địa điểm làm việc (liệt kê cụ thể các địa điểm (nếu có) và ghi rõ từng địa điểm theo thứ tự: số nhà, đường phố, xóm, làng; xã/phường/thị trấn; quận/huyện/thị xã/thành phố thuộc tỉnh; tỉnh/thành phố trực thuộc trung ương)"
                         value={formData.location}
                         required
                         error={errors.location}
                         onChange={(value) => handleInputChange("location", value)}
-                    />
-
-                    <InputAreaField
-                        label="Mô tả vị trí công việc, chức danh công việc"
-                        value={formData.jobDesc}
-                        required
-                        error={errors.jobDesc}
-                        onChange={(value) => handleInputChange("jobDesc", value)}
-                    />
-
-                    <InputAreaField
-                        label="Yêu cầu về trình độ"
-                        value={formData.qualification}
-                        required
-                        error={errors.qualification}
-                        onChange={(value) => handleInputChange("qualification", value)}
-                    />
-
-                    <InputAreaField
-                        label="Yêu cầu về kinh nghiệm"
-                        value={formData.experience}
-                        required
-                        error={errors.experience}
-                        onChange={(value) => handleInputChange("experience", value)}
-                    />
-
-                    <InputAreaField
-                        label="Yêu cầu khác "
-                        value={formData.other}
-                        error={errors.other}
-                        onChange={(value) => handleInputChange("other", value)}
-                    />
-
+                    /> */}
 
                     <Box py={4}>
                         <Button

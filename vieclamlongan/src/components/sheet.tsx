@@ -1,12 +1,11 @@
-import React, { Dispatch, FC, SetStateAction } from "react";
+import React, { FC } from "react";
 import { MenuItem } from "types";
 import { Box, Sheet } from 'zmp-ui'
 import { MenuSheet } from "./menuSheet";
 import icons from "../assets/icons";
+import { useStore } from "store/store";
 
 type SheetProps = {
-    sheetVisible: boolean;
-    setSheetVisible: Dispatch<SetStateAction<boolean>>;
 };
 
 export const menus1: Record<string, MenuItem> = {
@@ -51,12 +50,15 @@ export const menus2: Record<string, MenuItem> = {
     },
 }
 
-export const SheetComponet: FC<SheetProps> = ({ sheetVisible, setSheetVisible }) => {
+export const SheetComponet: FC<SheetProps> = ({}) => {
+
+    const sheetVisibleNavi = useStore((state) => state.sheetVisibleNavi)
+    const setSheetVisibleNavi = useStore((state) => state.setSheetVisibleNavi)
 
     return (
         <Sheet
-            visible={sheetVisible}
-            onClose={() => setSheetVisible(false)}
+            visible={sheetVisibleNavi}
+            onClose={() => setSheetVisibleNavi(false)}
             autoHeight
             mask
             handler
@@ -69,7 +71,7 @@ export const SheetComponet: FC<SheetProps> = ({ sheetVisible, setSheetVisible })
                 <MenuSheet menu={menus2} />
                 <button
                     className="py-2 mt-6 w-[100%] border-[1px] font-medium rounded-2xl"
-                    onClick={() => setSheetVisible(false)}
+                    onClick={() => setSheetVisibleNavi(false)}
                 >Đóng</button>
             </Box>
         </Sheet>

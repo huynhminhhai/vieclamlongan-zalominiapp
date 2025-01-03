@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { App, ZMPRouter, AnimationRoutes, SnackbarProvider } from "zmp-ui";
 import { RecoilRoot } from "recoil";
 import HomePage from "pages/index/index";
@@ -53,6 +53,7 @@ import ApplicationDNDetailPage from "pages/account/profile/vieclam/apply-detail"
 import ApplicationDNListPage from "pages/account/profile/vieclam/apply-list";
 import QADetailPage from "pages/qa/detail";
 import CVPage from "pages/cv";
+import { Navigation } from "./navigation";
 
 const MyApp = () => {
   return (
@@ -60,8 +61,8 @@ const MyApp = () => {
       <App>
         <SnackbarProvider>
           <ZMPRouter>
-            <AnimationRoutes>
-            <Route element={<Layout />}>
+            {/* <AnimationRoutes> */}
+            <Routes>
               {/* HOME */}
               <Route path="/" element={<HomePage></HomePage>}></Route>
 
@@ -141,8 +142,9 @@ const MyApp = () => {
               
               {/* CV */}
               <Route path="/cv" element={<CVPage></CVPage>}></Route>
-            </Route>
-            </AnimationRoutes>
+            </Routes>
+            {/* </AnimationRoutes> */}
+            <Navigation />
           </ZMPRouter>
         </SnackbarProvider>
       </App>

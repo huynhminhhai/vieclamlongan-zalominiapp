@@ -4,7 +4,7 @@ import { TabKeys } from "components/navigation";
 import MenuSheetItem from "./MenuSheetItem";
 
 export type MenuSheetProps = {
-    menu: Record<string, MenuItem>
+    menu: Record<string, MenuItem>;
 }
 
 const MenuSheet: FunctionComponent<MenuSheetProps> = props => {
@@ -15,7 +15,7 @@ const MenuSheet: FunctionComponent<MenuSheetProps> = props => {
         <div className="grid grid-cols-3 gap-3">
             {
                 Object.keys(menu).map((path: TabKeys) => (
-                    <MenuSheetItem key={path} path={path} menu={menu} />
+                    <MenuSheetItem key={path} path={path} menu={menu}/>
                 ))
             }
         </div>

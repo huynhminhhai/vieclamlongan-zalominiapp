@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router";
 import { MenuItem } from "types";
 import { BottomNavigation } from "zmp-ui";
 import { SheetComponet } from "./sheet";
+import { useStore } from "store/store";
 
 const tabs: Record<string, MenuItem> = {
   "/": {
@@ -33,7 +34,8 @@ export const Navigation: FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const [sheetVisible, setSheetVisible] = useState(false);
+  const sheetVisibleNavi = useStore((state) => state.sheetVisibleNavi)
+  const setSheetVisibleNavi = useStore((state) => state.setSheetVisibleNavi)
 
   const noBottomNav = useMemo(() => {
     return NO_BOTTOM_NAVIGATION_PAGES.includes(location.pathname);
@@ -66,11 +68,11 @@ export const Navigation: FC = () => {
             activeIcon={<Icon icon="healthicons:ui-menu-grid" />}
             onClick={(e) => {
               e.preventDefault()
-              setSheetVisible(!sheetVisible)
+              setSheetVisibleNavi(!sheetVisibleNavi)
             }}
           />
       </BottomNavigation >
-      <SheetComponet sheetVisible={sheetVisible} setSheetVisible={setSheetVisible} />
+      <SheetComponet />
     </>
   );
 };

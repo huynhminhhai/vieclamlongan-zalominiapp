@@ -205,9 +205,9 @@ const DetailJob70: React.FunctionComponent = () => {
                     <Text.Title className="uppercase">Giới thiệu</Text.Title>
                     <ul className="py-4">
                       <li className="mb-1">
-                        <Text className="flex-1" size="xSmall">
+                        <p className="flex-1 text-[14px] leading-[22px]">
                           Sản xuất tấm mouse xốp PU FOAM các loại và nguyên liệu làm giày
-                        </Text>
+                        </p>
                       </li>
                     </ul>
                   </Box>

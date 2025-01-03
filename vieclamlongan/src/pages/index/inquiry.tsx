@@ -23,7 +23,7 @@ export const Inquiry: FC<{option?: string, autoFocus?: boolean}> = (props) => {
     }, []);
     
     return (
-        <div className="bg-white p-4 flex flex-col gap-2">
+        <div className="bg-white p-4 flex flex-col gap-2 search-wrap">
             <div className="w-[100%]">
                 <Input.Search
                     ref={inputRef}

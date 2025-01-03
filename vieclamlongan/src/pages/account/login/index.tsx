@@ -14,11 +14,29 @@ const LoginPage: React.FunctionComponent = () => {
 
     const [errors, setErrors] = useState<{ [key: string]: string | any }>({});
 
+    // const validate = () => {
+    //     const newErrors: { [key: string]: string } = {};
+    //     if (!formData.username.trim()) newErrors.username = "Tài khoản không được để trống";
+    //     if (!formData.password.trim()) newErrors.password = "Mật khẩu không được để trống";
+
+    //     setErrors(newErrors);
+    //     return Object.keys(newErrors).length === 0;
+    // };
+
     const validate = () => {
         const newErrors: { [key: string]: string } = {};
-        if (!formData.username.trim()) newErrors.username = "Tài khoản không được để trống";
-        if (!formData.password.trim()) newErrors.password = "Mật khẩu không được để trống";
-
+    
+        const requiredFields = [
+            { key: 'username', message: 'Tài khoản không được để trống' },
+            { key: 'password', message: 'Mật khẩu không được để trống' },
+        ];
+    
+        requiredFields.forEach(({ key, message }) => {
+            if (!formData[key as keyof typeof formData]?.trim()) {
+                newErrors[key] = message;
+            }
+        });
+    
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };

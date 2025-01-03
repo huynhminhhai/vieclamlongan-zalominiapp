@@ -43,7 +43,7 @@ const DetailJob70: React.FunctionComponent = () => {
                 <div className="flex items-center justify-start gap-2 fixed bottom-0 left-0 z-[99] bg-white w-[100%] px-4 py-6 border-t-[1px]">
                   <button
                     className="flex-1 text-[16px] text-white font-semibold bg-[#ff7d55] leading-[1] py-4 px-6 rounded-md"
-                    onClick={() => console.log('submit job')}
+                    onClick={() => setPopupVisible(true)}
                   >Nộp đơn</button>
                   <button
                     className="w-[48px] h-[48px] rounded-md border-[1px] border-[#5d5d5d] flex items-center justify-center"

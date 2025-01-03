@@ -1,4 +1,4 @@
-import { useNavigate } from "zmp-ui"
+import { useNavigate, useSnackbar } from "zmp-ui"
 import React, { useState } from "react"
 import { Icon } from "@iconify/react"
 import ConfirmModal from "components/ModalConfirm";
@@ -8,6 +8,7 @@ const ViecLamItem: React.FC = () => {
 
     const navigate = useNavigate()
     const [isConfirmVisible, setConfirmVisible] = useState(false);
+    const { openSnackbar } = useSnackbar();
 
     const fetchApiDelete = () => {
         setConfirmVisible(true);
@@ -16,6 +17,16 @@ const ViecLamItem: React.FC = () => {
     const handleConfirm = () => {
         console.log('call api')
         setConfirmVisible(false)
+        openSnackbar({
+            icon: true,
+            text: "xóa thành công",
+            type: 'success',
+            action: {
+                text: "Đóng",
+                close: true,
+            },
+            duration: 5000,
+        });
     }
 
     const handleCancel = () => {
@@ -34,8 +45,8 @@ const ViecLamItem: React.FC = () => {
                 <div className="flex items-center gap-6">Số lượng: 1</div>
             </div>
             <div className="flex flex-col gap-3 items-center mt-3">
-                    <Icon icon='tabler:edit' fontSize={30} onClick={() => navigate('/vieclam-edit?id=1')} />
-                    <Icon icon='material-symbols:delete-outline' fontSize={30} onClick={() => fetchApiDelete()} />
+                <Icon icon='tabler:edit' fontSize={30} onClick={() => navigate('/vieclam-edit?id=1')} />
+                <Icon icon='material-symbols:delete-outline' fontSize={30} onClick={() => fetchApiDelete()} />
             </div>
 
             <ConfirmModal

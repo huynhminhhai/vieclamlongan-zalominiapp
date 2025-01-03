@@ -62,10 +62,15 @@ const MyApp = () => {
           <ZMPRouter>
             <AnimationRoutes>
             <Route element={<Layout />}>
+              {/* HOME */}
               <Route path="/" element={<HomePage></HomePage>}></Route>
+
+              {/* SEARCH */}
               <Route path="/search-hstd" element={<SearchHstdPage></SearchHstdPage>} ></Route>
               <Route path="/search-hstv" element={<SearchHstvPage></SearchHstvPage>}></Route>
               <Route path="/search-content" element={<SearchContentPage></SearchContentPage>}></Route>
+
+              {/* JOB */}
               <Route path="/tuyendung" element={<TuyendungPage></TuyendungPage>}></Route>
               <Route path="/ho-so-tim-viec" element={<HosotimviecPage></HosotimviecPage>}></Route>
               <Route path="/danh-sach-tuyen-dung" element={<DanhsachtuyendungPage></DanhsachtuyendungPage>}></Route>
@@ -73,22 +78,36 @@ const MyApp = () => {
               <Route path="/detail-job" element={<DetailJob></DetailJob>}></Route>
               <Route path="/detail-job-70" element={<DetailJob70></DetailJob70>}></Route>
               <Route path="/detail-employ" element={<DetailEmploy></DetailEmploy>}></Route>
+
+              {/* NEWS */}
               <Route path="/news" element={<NewsPage></NewsPage>}></Route>
               <Route path="/news-detail" element={<NewsDetailPage></NewsDetailPage>}></Route>
               <Route path="/video-list" element={<VideoPage></VideoPage>}></Route>
               <Route path="/video-detail" element={<VideoDetailPage></VideoDetailPage>}></Route>
+
+              {/* TRAINING */}
               <Route path="/training-list" element={<TrainingPage></TrainingPage>}></Route>
               <Route path="/training-detail" element={<TrainingDetailPage></TrainingDetailPage>}></Route>
+              
+              {/* INSURANCE */}
               <Route path="/insurance-list" element={<InsurancePage></InsurancePage>}></Route>
               <Route path="/insurance-detail" element={<InsuranceDetailPage></InsuranceDetailPage>}></Route>
+
+              {/* FOREIGN */}
               <Route path="/foreign-list" element={<ForeignPage></ForeignPage>}></Route>
               <Route path="/foreign-detail" element={<ForeignDetailPage></ForeignDetailPage>}></Route>
+              
+              {/* DOCUMENT */}
               <Route path="/document-list" element={<DocumentPage></DocumentPage>}></Route>
               <Route path="/document-detail" element={<DocumentDetailPage></DocumentDetailPage>}></Route>
+              
+              {/* ABOUT */}
               <Route path="/about" element={<AboutPage></AboutPage>}></Route>
               <Route path="/gioi-thieu-chung" element={<IntroductionPage></IntroductionPage>}></Route>
               <Route path="/so-do-to-chuc" element={<DiagramCompanyPage></DiagramCompanyPage>}></Route>
               <Route path="/dia-chi" element={<MapPage></MapPage>}></Route>
+              
+              {/* ACCOUNT */}
               <Route path="/login" element={<LoginPage></LoginPage>}></Route>
               <Route path="/account" element={<AccountPage></AccountPage>}></Route>
               <Route path="/register" element={<RegisterPage></RegisterPage>}></Route>
@@ -97,20 +116,30 @@ const MyApp = () => {
               <Route path="/profile-dn-detail" element={<ProfileDNDetailPage></ProfileDNDetailPage>}></Route>
               <Route path="/account-detail" element={<AccountDetailPage></AccountDetailPage>}></Route>
               <Route path="/change-password" element={<ChangePasswordPage></ChangePasswordPage>}></Route>
+              
+              {/* HSTV */}
               <Route path="/hstv" element={<HstvPage></HstvPage>}></Route>
               <Route path="/hstv-list" element={<HstvListPage></HstvListPage>}></Route>
               <Route path="/hstv-edit" element={<EditHstvPage></EditHstvPage>}></Route>
-              <Route path="/application-detail" element={<ApplicationDetailPage></ApplicationDetailPage>}></Route>
-              <Route path="/application-dn-detail" element={<ApplicationDNDetailPage></ApplicationDNDetailPage>}></Route>
-              <Route path="/application-dn-list" element={<ApplicationDNListPage></ApplicationDNListPage>}></Route>
+              
+              {/* APPLY ACCOUNT */}
+              <Route path="/apply-detail" element={<ApplicationDetailPage></ApplicationDetailPage>}></Route>
+              <Route path="/apply-dn-detail" element={<ApplicationDNDetailPage></ApplicationDNDetailPage>}></Route>
+              <Route path="/apply-dn-list" element={<ApplicationDNListPage></ApplicationDNListPage>}></Route>
+              
+              {/* JOB ACCOUNT */}
               <Route path="/vieclam" element={<VieclamPage></VieclamPage>}></Route>
               <Route path="/vieclam-list" element={<VieclamListPage></VieclamListPage>}></Route>
               <Route path="/vieclam-nd70-list" element={<VieclamNd70ListPage></VieclamNd70ListPage>}></Route>
               <Route path="/vieclam-nd70-edit" element={<EditViecLamNd70Page></EditViecLamNd70Page>}></Route>
               <Route path="/vieclam-edit" element={<EditViecLamPage></EditViecLamPage>}></Route>
+              
+              {/* CONTACT */}
               <Route path="/contact" element={<ContactPage></ContactPage>}></Route>
               <Route path="/qa" element={<QAPage></QAPage>}></Route>
               <Route path="/qa-detail" element={<QADetailPage></QADetailPage>}></Route>
+              
+              {/* CV */}
               <Route path="/cv" element={<CVPage></CVPage>}></Route>
             </Route>
             </AnimationRoutes>

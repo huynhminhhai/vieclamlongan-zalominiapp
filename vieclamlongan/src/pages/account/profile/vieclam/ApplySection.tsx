@@ -20,7 +20,7 @@ const ApplicationSection: React.FC<ApplicationSectionProps> = () => {
             <Box>
                 <div className="flex items-center justify-center mt-6">
                     <Button
-                        onClick={() => navigate('/application-dn-list')}
+                        onClick={() => navigate('/apply-dn-list')}
                         size="medium"
                     >Xem tất cả</Button>
                 </div>

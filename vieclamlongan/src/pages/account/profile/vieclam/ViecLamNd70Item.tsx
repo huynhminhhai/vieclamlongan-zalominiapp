@@ -1,4 +1,4 @@
-import { Checkbox, useNavigate } from "zmp-ui"
+import { Checkbox, useNavigate, useSnackbar } from "zmp-ui"
 import React, { useState } from "react"
 import { Icon } from "@iconify/react"
 import ConfirmModal from "components/ModalConfirm";
@@ -11,6 +11,7 @@ const ViecLamNd70Item: React.FC<ViecLamNd70ItemProps> = ({ setDownLoadList }) =>
 
     const navigate = useNavigate()
     const [isConfirmVisible, setConfirmVisible] = useState(false);
+    const { openSnackbar } = useSnackbar();
 
     const fetchApiDelete = () => {
         setConfirmVisible(true);
@@ -19,6 +20,16 @@ const ViecLamNd70Item: React.FC<ViecLamNd70ItemProps> = ({ setDownLoadList }) =>
     const handleConfirm = () => {
         console.log('call api')
         setConfirmVisible(false)
+        openSnackbar({
+            icon: true,
+            text: "Xóa thành công",
+            type: 'success',
+            action: {
+                text: "Đóng",
+                close: true,
+            },
+            duration: 5000,
+        });
     }
 
     const handleCancel = () => {

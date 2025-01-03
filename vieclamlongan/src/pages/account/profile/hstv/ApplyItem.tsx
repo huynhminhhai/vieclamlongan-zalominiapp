@@ -9,7 +9,7 @@ const ApplicationItem: React.FC<any> = () => {
     return (
         <div 
             className="border-[1px] rounded-md p-4 flex items-center"
-            onClick={() => navigate('/application-detail')}
+            onClick={() => navigate('/apply-detail')}
         >
             <div className="flex-1">
                 <h4 className="text-[16px] font-semibold mb-1">Cty Wondo Vina</h4>
